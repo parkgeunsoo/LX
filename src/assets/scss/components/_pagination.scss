@@ -1,0 +1,11 @@
+.pagination{
+  display: flex; align-items: center; justify-content: center; margin-top: 40px; gap: 16px;
+}
+.page-link{ 
+  color: #000; font-size: 18px;
+}
+.page-link.active, .active {
+  >.page-link{
+    border-bottom: 1px solid #000;
+  }
+}

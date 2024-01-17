@@ -1,0 +1,29 @@
+$black: #000;
+$body: #fff;
+$primary: #2E4DBB;
+
+$theme-colors: (
+  "primary":    $primary,
+) !default;
+
+$font-family-base: Sandoll Jeongche;
+$body-color: $body;
+$body-font-color : $black;
+
+$grid-gutter-width: 2rem !default;
+
+$header-height: 60px;
+$header-height-lg: 80px;
+$header-z-index: 99;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1344px,
+) !default;
+
+$container-max-width: 1344px;
+
+$modal-content-bg: $body !default;

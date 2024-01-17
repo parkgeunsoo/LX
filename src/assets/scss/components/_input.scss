@@ -1,0 +1,121 @@
+
+.form-control{
+  display: block; 
+  width: 100%; 
+  border: 1px solid #ccc; 
+  font-size: 18px;
+  line-height: 150%;
+  padding: 9px 20px 10px;
+  caret-color: $primary;
+  color: #000;
+  background-color: transparent;
+  &.white{ background-color: #fff; border: 1px solid #ddd;}
+  &::placeholder{ color: #999;}
+
+  // &:focus {
+  //   outline: 1px solid #222;
+  //   &::placeholder{ color: #222;}
+  // }
+  &[type="file"] {
+    margin-top: 10px;
+  }
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &:disabled {
+    background-color: #fff; color: #ccc; font-weight: 400;
+  }
+  @include media-breakpoint-down(lg){
+    font-size: 13px; padding: 6px 10px;
+  }
+}
+.search-form{
+  position: relative;
+  .form-control{
+    padding: 10px 20px;
+  }
+  .icon-search{
+    position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  }
+}
+.form-password{
+  .input-pw-wrap{
+    position: relative;
+    &.success {
+      .view-pw{
+        right: 54px;
+      }
+      .icon-success {
+        display: block; position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+      }
+    }
+  }
+  .view-pw{
+    position: absolute; right: 20px; top: 50%; transform: translateY(-50%);
+  }
+  .icon-success {
+    display: none;
+  }
+}
+
+.input-form{
+  display: flex;  gap: 50px; margin-bottom: 30px; 
+  &:last-child{margin-bottom: 0;}
+  .input-form-title{ width: 21%;  font-size: 20px; font-weight: 500; margin-top: 10px;}
+  .form, .form-password{
+    width: 100%;
+    }
+    &.error{
+      .form-control{
+        border: 1px solid $danger; color: $danger;
+        &:focus{ outline: $danger;}
+        &.none-error{
+          border: 1px solid #ccc;
+        }
+      }
+
+      .input-txt{display: block;}
+      .select-btn{
+        border: 1px solid $danger; 
+      }
+    }
+    .input-txt{display: none; color: $danger; margin-top: 10px;}
+    .input-info-txt{
+      font-size: 14px; color: #666; margin-top: 10px; display: flex; gap: 6px; 
+    .input-info-txt-filled{
+      line-height: normal; margin-top: 10px;
+    }
+  }
+  //  버튼이 같이 있는 input
+  .certification-form{
+    width: 100%;
+    &.column{
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    >div{ 
+      display: flex; align-items: center; gap: 15px;
+      @include media-breakpoint-down(lg){
+        gap: 4px;
+      }
+      .form-control{ flex-shrink: 1;}
+      .btn{ flex: 1 0 auto;}
+    }
+  }
+  .time-form{
+    position: relative;
+    .timer{
+      position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: $danger; font-size: 14px;
+    }
+  }
+  .g-10{ gap: 10px;}
+  .g-20{ gap: 20px;}
+
+  .direct-input{
+    width: 100%; height: 130px; border: 1px solid #999; margin-top: 10px; border-radius: 6px;
+  }
+  .signup-btn{
+    margin-top: 9.5%;
+  }
+}  
