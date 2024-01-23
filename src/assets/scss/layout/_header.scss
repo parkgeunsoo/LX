@@ -1,16 +1,16 @@
 #header{
   .top-head{
-    background-color: green; padding: 16px 30px; display: flex; align-items: center; justify-content: space-between;
+    background-image:url('../images/gnb-depth-1.png'); padding: 16px 30px; display: flex; align-items: center; justify-content: space-between; background-size: cover;
     .left-content{
-      display: flex; align-items: center; gap: 200px;
+      display: flex; align-items: center; gap: 140px;
     }
   }
   .gnb-depth1{
-    display: flex; align-items: center; background-color: #000; border-radius: 36px;
+    display: flex; align-items: center; background-color: #312e2a; border-radius: 36px;
     li{
       line-height: 32px; 
       a{
-        color: #fff; padding: 0 20px; line-height: 32px;  display: block;
+        color: #fff; padding: 0 22px; line-height: 32px;  display: block; font-size: 15px;
 
       }
       &.active{
@@ -22,20 +22,23 @@
   }
   .user-info{
     display: flex; align-items: center; gap: 30px;
+    .sign-btn{
+      background-color: #003933; font-size: 14px;
+    }
   }
   .info{
-    font-size: 15px; color: #ffffff;
-    strong{
-      margin: 0 4px;
+    font-size: 14px; font-weight: 500; color: #ffffff; display: flex; align-items: center; gap: 20px;
+    .user-id{
+      position: relative;
       &::before{
-        content: ''; display: inline-block; width: 1px; height: 13px; margin-right: 5px; border-left: 1px solid #fff;
+        content: ''; display: block; width: 1px; height: 10px; background-color: #fff; opacity: .6; left: -10px; position:absolute; top: 50%; transform: translateY(-50%);
       }
     }
   }
   .gnb-depth2{
-    display: flex; align-items: center; gap: 60px; background-color: #000; padding: 12px 30px;
+    display: flex; align-items: center; gap: 65px; background-color: #003933; padding: 15px 30px; 
     li{
-      a{ color: #fff;}
+      a{ color: #fff; font-size: 14px; font-weight: 500; line-height: 1.86;}
       &:hover{
         a{ text-decoration: underline;}
       }

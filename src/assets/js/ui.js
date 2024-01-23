@@ -1,105 +1,16 @@
-var html = document.querySelector("html");
-var body = document.querySelector("body");
-let mm = gsap.matchMedia();
-
-gsap.registerPlugin(ScrollTrigger);
-
-var Init = {
-  init: function () {
-    this.windowSize();
-    this.scrolling();
-    window.addEventListener("mousewheel", this.scrolling);
-    window.addEventListener("touchmove", this.scrolling);
-  },
-  scrolling: function (e) {
-    var doc = document.documentElement;
-    var w = window;
-    var prevScroll = w.scrollY || doc.scrollTop;
-    var curScroll;
-    var direction = 0;
-    var prevDirection = 0;
-
-    var checkScroll = function () {
-      /*
-       ** Find the direction of scroll
-       ** 0 - initial, 1 - up, 2 - down
-       */
-      curScroll = w.scrollY || doc.scrollTop;
-      if (curScroll > prevScroll) {
-        //scrolled up
-        direction = 2;
-      } else if (curScroll < prevScroll) {
-        //scrolled down
-        direction = 1;
-      }
-
-      if (direction !== prevDirection) {
-        scrollDirection(direction, curScroll);
-      }
-
-      prevScroll = curScroll;
-    };
-
-    var scrollDirection = function (direction, curScroll) {
-      if (direction === 2) {
-        html.classList.remove("scroll-up");
-        html.classList.add("scroll-down");
-        prevDirection = direction;
-      } else if (direction === 1) {
-        html.classList.remove("scroll-down");
-        html.classList.add("scroll-up");
-        prevDirection = direction;
-      }
-    };
-
-    window.addEventListener("scroll", checkScroll);
-  },
-  windowSize: function () {
-    let vh = window.innerHeight * 0.01;
-    let vw = window.innerWidth * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-    document.documentElement.style.setProperty("--vw", `${vw}px`);
-
-    window.addEventListener("resize", () => {
-      let vh = window.innerHeight * 0.01;
-      let vw = window.innerWidth * 0.01;
-      document.documentElement.style.setProperty("--vh", `${vh}px`);
-      document.documentElement.style.setProperty("--vw", `${vw}px`);
-    });
-  },
-};
-
 var Header = {
   init: function () {
-    this.snb();
-    this.headerSearch();
+    this.aside();
   },
-  snb: function () {
-    $(".menu-btn").on("click", function () {
-      $(".header-snb").toggleClass("show");
-      $(".header-search").removeClass("show");
+  aside: function () {
+    $(document).ready(function(){
+      $('.dep1').click(function(){
+        $(this).next('.dep2').slideToggle();
+        $(this).toggleClass('active');
+      });
     });
+  },
 
-    $(".header-snb .snb .title").on("click", function () {
-      var $parentSnb = $(this).parent(".snb");
-
-      if ($parentSnb.hasClass("active")) {
-        $parentSnb.removeClass("active");
-      } else {
-        $(".snb").removeClass("active");
-        $parentSnb.addClass("active");
-      }
-    });
-  },
-  headerSearch: function () {
-    $(".search-menu").on("click", function () {
-      $(".header-search").toggleClass("show");
-      $(".header-snb").removeClass("show");
-    });
-    $(".icon-close").on("click", function () {
-      $(".header-search").removeClass("show");
-    });
-  },
 };
 
 var Common = {
@@ -141,6 +52,5 @@ var Common = {
   common: function () {},
 };
 
-Init.init();
 Header.init();
 Common.init();

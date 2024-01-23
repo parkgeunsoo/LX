@@ -1,32 +1,38 @@
 #wrap{
+  min-width: 1300px; min-height: 100dvh;
   .content{
     width: 100%; display: flex; min-height: calc(100vh - 123px);
   }
   #aside{
-    flex: 0 0 280px; border-right: 1px solid #000; padding: 12px 24px;
+    flex: 0 0 260px; border-right: 1px solid #e5e8eb; padding: 12px 30px;
     .menu-list{
       > li{
-        padding:16px 0; border-bottom: 1px solid #ddd;
+        padding:24px 0; border-bottom: 1px solid #e5e8eb; cursor: pointer;
         &:last-child{ border-bottom: 0;}
         &.active{
           .dep2{ display: block;}
         }
       }
       .dep1{
-        display: flex; align-items: center; justify-content: space-between; font-weight: 700;
+        display: flex; align-items: center; justify-content: space-between; font-weight: 500;
+        .icon-aside-arrow{transform: rotate(0); transition: all .5s;}
+        &.active{
+          .icon-aside-arrow{transform: rotate(180deg); transition: all .5s;}
+        }
       }
       .dep2{
-        display: block; margin-top: 16px;
+        display: none; padding-top: 16px;
         >li{ 
-          width: 100%; padding-bottom: 16px; 
+          width: 100%; padding-bottom: 23px; 
+          &.active{ margin: -5px 0;} 
           a{
-            font-size: 14px; color: #666; padding: 10px 16px;
+            font-size: 14px; color: #777; font-weight: 500; padding: 7px 15px;
           }
           &.active{
             a{
-              color: green; display: block; position: relative;
+              color: #009881; display: block; position: relative;
               &::before{
-                content:""; width: 100%; height: 100%; background-color: #ddd; border-radius: 36px; position: absolute; top: 0; left: 0; z-index: -1;
+                content:""; width: 100%; height: 100%; background-color: #f1f3f4; border-radius: 36px; position: absolute; top: 0; left: 0; z-index: -1;
               }
             }
           }
