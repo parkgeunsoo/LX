@@ -32,6 +32,11 @@
     background-color: $green !important;
     color: $white !important;
   }
+  &.btn-outline-green{
+    background-color: $white !important;
+    border:1px solid $green;
+    color: $green !important;
+  }
 }
 
 
