@@ -1,5 +1,5 @@
 #wrap{
-  min-width: 1300px; min-height: 100dvh;
+  min-width: 1500px; min-height: 100dvh;
   .content{
     width: 100%; display: flex; min-height: calc(100vh - 123px);
   }
@@ -10,6 +10,7 @@
         padding:24px 0; border-bottom: 1px solid #e5e8eb; cursor: pointer;
         &:last-child{ border-bottom: 0;}
         &.active{
+          a{color: #009881;}
           .dep2{ display: block;}
         }
       }
@@ -44,6 +45,6 @@
     }
   }
   .sub-content{
-    width: 100%; padding: 30px 30px 135px; position: relative;
+    width: 100%; padding: 35px 90px 210px; position: relative;
   }
 }
