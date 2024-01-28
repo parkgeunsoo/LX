@@ -1,8 +1,9 @@
+.table-wrap{
+  border: solid 1px #ebebeb; border-radius: 8px; margin-top: 45px;
+}
 .table {
   width: 100%; table-layout: fixed;
-
   .table-scroll {overflow: auto;}
-
   thead {
     th {font-size: 18px; line-height: normal; padding: 0 0 20px 0; font-weight: 400;}
   }
@@ -11,39 +12,31 @@
       td {
         padding: 20px 5px; line-height: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; border-top: 1px solid #ccc;
       }
-      &:first-child {
-        td {
-          border-bottom: 1px solid #ccc; border-top: 0;
-        }
-      }
     }
   }
 
   &.table-row {
-    font-size: 14px;
-    th {padding: 10px 20px; border: 1px solid #ccc; background-color: #F0EEE6; font-weight: 400;}
-    td {padding: 10px 20px; border: 1px solid #ccc; font-weight: 400; white-space: wrap;}
+    font-size: 15px;
+    th {
+      padding: 22px 30px 22px; border: 0; background-color: #fafafa; font-weight: 400; line-height: 1; 
+    }
+    td {
+      padding: 10px 20px; border: 0; font-weight: 400; white-space: wrap; line-height: 1;
+    }
     tr {
-      &:first-child {
-        td {border-top: 1px solid #ccc;}
+      border-bottom: 1px solid #ebebeb;
+      &:last-child{
+        border-bottom: 0;
       }
     }
-  }
-
-  &.accordian-table {
-    .fold {
-      display: none; transform: translateY(-400px); transition: all 1s ease-in-out;
-      td {padding: 40px 0; white-space: wrap;}
-      .question {margin-bottom: 20px; line-height: normal;}
-      .answer {padding: 40px; background-color: #F0EEE6;}
-      &.open {display: table-row; transform: translateY(0); }
-    }
-  }
-  .no-content {height: 265px; display: flex; justify-content: center; align-items: center;}
-
-  &.table-modal {
-    thead {
-      th {border-bottom: 1px solid #ccc;}
+    .th-txt{
+      display: flex; align-items: center; gap: 10px;
+      &.flex-column{
+        align-items: flex-start; flex-direction: column; gap: 5px;
+      }
+      .exe-txt{
+        color: #999; font-size:13px; line-height: 1;
+      }
     }
   }
 }

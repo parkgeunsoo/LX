@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+      <div class="content">
+        @@include('@@webRoot/_include/_aside.html')
+        <div class="sub-content">
+          <div class="container">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"><i class="icon-home"></i></a></li>
+                <li class="breadcrumb-item"><a href="#">지도관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">영상타일관리체계</li>
+              </ol>
+            </nav>
+            <p class="main-title">영상타일 관리체계 상세/수정</p>
+            
+            <div class="table-wrap">
+              <table class="table table-row">
+                <colgroup>
+                  <col width="200px">
+                  <col>
+                  <col width="200px">
+                  <col>
+                </colgroup>
+                <tr>
+                  <th>작성자</th>
+                  <td>강효두</td>
+                  <th>등록일</th>
+                  <td>등록일</td>
+                </tr>
+                <tr>
+                  <th>수정자</th>
+                  <td>-</td>
+                  <th>수정일</th>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th>*분류</th>
+                  <td>
+                    <div class="select-wrap">
+                      <button type="button" class="select-btn">
+                        <span>기타</span>
+                        <i class="icon-select-arrow"></i>
+                      </button>
+                      <ul class="optionlist">
+                        <li class="optionitem active">기타</li>
+                      </ul>
+                    </div>
+                  </td>
+                  <th>*형태</th>
+                  <td>
+                    <div class="select-wrap">
+                      <button type="button" class="select-btn">
+                        <span>WMS</span>
+                        <i class="icon-select-arrow"></i>
+                      </button>
+                      <ul class="optionlist">
+                        <li class="optionitem active">WMS</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>사용여부</th>
+                  <td>
+                    <div class="select-wrap">
+                      <button type="button" class="select-btn">
+                        <span>사용</span>
+                        <i class="icon-select-arrow"></i>
+                      </button>
+                      <ul class="optionlist">
+                        <li class="optionitem active">사용</li>
+                      </ul>
+                    </div>
+                  </td>
+                  <th>처리상태</th>
+                  <td>
+                    <input type="text" class="form-control" value="발행완료" disabled placeholder=""  />
+                  </td>
+                </tr>
+                <tr>
+                  <th>*지역</th>
+                  <td colspan="3">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="select-wrap" style="width: 140px;">
+                        <button type="button" class="select-btn">
+                          <span>도 선택</span>
+                          <i class="icon-select-arrow"></i>
+                        </button>
+                        <ul class="optionlist">
+                          <li class="optionitem active">경기도</li>
+                        </ul>
+                      </div>
+                      <div class="select-wrap" style="width: 200px;">
+                        <button type="button" class="select-btn">
+                          <span>시군구 선택</span>
+                          <i class="icon-select-arrow"></i>
+                        </button>
+                        <ul class="optionlist">
+                          <li class="optionitem active">수원시</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="th-txt">
+                      <p>*영상명</p>
+                      <p class="exe-txt">
+                        (<span>23</span><span>/25</span>)
+                      </p>
+                    </div>
+                  </th>
+                  <td colspan="3">
+                    <input type="text" class="form-control" value="남해군 기타영상 및 항공영상을 일반영상으로 업로드"  />
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="th-txt flex-column">
+                      <p>첨부파일</p>
+                      <p class="exe-txt">띄어쓰기 포함</p>
+                      <p class="exe-txt">
+                        (<span>23</span><span>/25</span>)
+                      </p>
+                    </div>
+                  </th>
+                  <td colspan="3">
+                    <div class="form-column">
+                      <div class="form-file-custom">
+                        <p id="selectedFile" class="file-name" style="width: 350px;"></p>
+                        <label for="fileInput" id="fileLabel">찾아보기</label>
+                        <input type="file" id="fileInput" style="display: none;">
+                      </div>
+                      <div>
+                        <input type="text" class="form-control" value="사용자 입력 메타정보 표출"  />
+                      </div>
+                      <div>
+                        <input type="text" class="form-control" value="영상데이터에서 보유한 메타정보 (촬영위치/촬영기기정보/촬영일시/해상도 등등)" disabled />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>mapURL</th>
+                  <td colspan="3">
+                    <input type="text" class="form-control" value="https://www.eshare.go.kr/OpenApi/Info/detail.do?svcNo=15"  />
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        @@include('@@webRoot/_include/_footer.html')
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $('#fileInput').on('change', function() {
+            var selectedFiles = this.files;
+
+            if (selectedFiles.length > 0) {
+                $('#selectedFile').text('선택된 파일: ' + selectedFiles[0].name);
+            } else {
+                $('#selectedFile').text('선택된 파일이 없습니다.');
+            }
+        });
+
+        // 레이블을 클릭하면 파일 입력 요소 클릭
+        $('#fileLabel').on('click', function() {
+            $('#fileInput').click();
+        });
+      });
+    </script>
+  </body>
+</html>
