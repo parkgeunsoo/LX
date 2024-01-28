@@ -153,7 +153,57 @@
                     <input type="text" class="form-control" value="https://www.eshare.go.kr/OpenApi/Info/detail.do?svcNo=15"  />
                   </td>
                 </tr>
+                <tr>
+                  <th>좌표계</th>
+                  <td colspan="3">
+                    <div class="select-wrap" style="width: 353px;">
+                      <button type="button" class="select-btn">
+                        <span>선택</span>
+                        <i class="icon-select-arrow"></i>
+                      </button>
+                      <ul class="optionlist">
+                        <li class="optionitem active">선택</li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>매개변수</th>
+                  <td colspan="3">
+                    <div class="form-column scroll">
+                      <div class="form-row">
+                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
+                        <input type="text" style="width: 500px" class="form-control" value="DRONE_2024_11012"  />
+                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                      </div>
+                      <div class="form-row">
+                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
+                        <input type="text" style="width: 500px" class="form-control" value="DRONE_2024_11012"  />
+                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                      </div>
+                      <div class="form-row">
+                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
+                        <input type="text" class="form-control" style="width:500px" value="DRONE_2024_11012"  />
+                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>미리보기</th>
+                  <td colspan="3">
+                    <div class="preveiw-img">
+                      <img src="@@webRoot/assets/images/preview-img.png" alt="">
+                    </div>
+                  </td>
+                </tr>
               </table>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-auto btn-dark btn-md">취소</button>
+              <button type="button" class="btn btn-auto btn-green btn-md">저장</button>
             </div>
           </div>
         @@include('@@webRoot/_include/_footer.html')
