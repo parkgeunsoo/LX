@@ -71,3 +71,19 @@
     }
   }
 }
+[data-picker="date"]{
+  max-width: 150px;
+  padding-right: calc($input-btn-padding-x + 25px);
+  background-size: 20px 20px;
+  font-size: 13px;
+  padding: 10px 20px 10px 10px;
+  background-repeat: no-repeat;
+  background-position: right $input-btn-padding-x top 50%;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17C16.6 17 17 16.6 17 16V6V5.9C16.9 5.4 16.5 5 16 5H14V3.8C14 3.3 13.9 3 13.4 3C12.9 3 12.6 3.4 12.6 3.8V5H7.6V3.8C7.6 3.3 7.3 3 6.8 3C6.3 3 6 3.3 6 3.8V5H4C3.4 5 3 5.4 3 6V16C3 16.6 3.4 17 4 17H16ZM4.5 8H15.5V15.5H4.5V8Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+  &.form-control-sm{
+    max-width: 130px;
+    background-position: right $input-btn-padding-x-sm top 50%;
+    padding-right: calc($input-btn-padding-x-sm + 20px);
+  }
+}
+

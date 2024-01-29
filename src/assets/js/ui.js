@@ -15,13 +15,9 @@ var Header = {
 
 var Common = {
   init: function () {
-    this.landing();
     this.select();
-    this.password();
     this.common();
-  },
-  landing: function () {
-    /* 홈페이지 들어왔을때 애니메이션 */
+    this.datepickerRun();
   },
   select: function () {
     // selectbox 커스텀
@@ -36,19 +32,19 @@ var Common = {
       $(".select-wrap").removeClass("show");
     });
   },
-  password: function () {
-    // 눈표시 클릭 시 패스워드 보이기
-    $(".view-pw").on("click", function () {
-      $(".form-password").toggleClass("active");
-
-      if ($(".form-password").hasClass("active") == true) {
-        $(this).find(".icon-eyes").attr("class", "icon-eyes-out").parents(".form-password").find(".form-control").attr("type", "text");
-        // i 클래스                // 텍스트 보이기 i 클래스
-      } else {
-        $(this).find(".icon-eyes-out").attr("class", "icon-eyes").parents(".form-password").find(".form-control").attr("type", "password");
-      }
+  datepickerRun: function () {
+    $("[data-picker='date']").datepicker({
+      dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+      monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      monthNamesShort: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      showOtherMonths: false,
+      //selectOtherMonths: true,
+      showMonthAfterYear: true,
+      yearSuffix: "년",
+      dateFormat: "yy-mm-dd",
     });
   },
+
   common: function () {},
 };
 

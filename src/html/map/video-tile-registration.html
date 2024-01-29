@@ -17,7 +17,7 @@
                 <li class="breadcrumb-item active" aria-current="page">영상타일관리체계</li>
               </ol>
             </nav>
-            <p class="main-title">영상타일 관리체계 상세/수정</p>
+            <p class="main-title">영상타일 관리체계 등록</p>
             
             <div class="table-wrap">
               <table class="table table-row">
@@ -31,22 +31,14 @@
                 </colgroup>
                 <tr>
                   <th colspan="2">작성자</th>
-                  <td>강효두</td>
-                  <th colspan="2">등록일</th>
-                  <td>등록일</td>
-                </tr>
-                <tr>
-                  <th colspan="2">수정자</th>
-                  <td>-</td>
-                  <th colspan="2">수정일</th>
-                  <td>-</td>
+                  <td colspan="4">강효두</td>
                 </tr>
                 <tr>
                   <th colspan="2">*분류</th>
                   <td>
                     <div class="select-wrap">
                       <button type="button" class="select-btn">
-                        <span>기타</span>
+                        <span>전체</span>
                         <i class="icon-select-arrow"></i>
                       </button>
                       <ul class="optionlist">
@@ -58,11 +50,11 @@
                   <td>
                     <div class="select-wrap">
                       <button type="button" class="select-btn">
-                        <span>WMS</span>
+                        <span>전체</span>
                         <i class="icon-select-arrow"></i>
                       </button>
                       <ul class="optionlist">
-                        <li class="optionitem active">WMS</li>
+                        <li class="optionitem active">전체</li>
                       </ul>
                     </div>
                   </td>
@@ -120,7 +112,7 @@
                     </div>
                   </th>
                   <td colspan="4">
-                    <input type="text" class="form-control" value="남해군 기타영상 및 항공영상을 일반영상으로 업로드"  />
+                    <input type="text" class="form-control" placeholder="등록한 영상명 그대로 노출 및 수정 가능" value=""  />
                   </td>
                 </tr>
                 <tr>
@@ -152,7 +144,7 @@
                 <tr>
                   <th colspan="2">mapURL</th>
                   <td colspan="4">
-                    <input type="text" class="form-control" value="https://www.eshare.go.kr/OpenApi/Info/detail.do?svcNo=15"  />
+                    <input type="text" class="form-control" value=""  />
                   </td>
                 </tr>
                 <tr>
@@ -170,34 +162,53 @@
                   </td>
                 </tr>
                 <tr>
-                  <th colspan="2">매개변수</th>
+                  <th rowspan="4">타일<br>그리드<br>정보</th>
+                </tr>
+                <tr>
+                  <th class="row-col">Origin X</th>
+                  <td colspan="4">
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <th class="row-col">Origin Y</th>
+                  <td colspan="4">
+                    <input type="text" class="form-control" />
+                  </td>
+                </tr>
+                <tr>
+                  <th class="row-col">Resolutions</th>
                   <td colspan="4">
                     <div class="form-column scroll">
                       <div class="form-row">
-                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
-                        <input type="text" style="width: 450px" class="form-control" value="DRONE_2024_11012"  />
+                        <input type="text" class="form-control" style="width: 300px;" value=""  />
+                        <input type="text" style="width: 450px" class="form-control" value=""  />
                         <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
                         <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
                       </div>
                       <div class="form-row">
-                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
-                        <input type="text" style="width: 450px" class="form-control" value="DRONE_2024_11012"  />
-                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
-                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
-                      </div>
-                      <div class="form-row">
-                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
-                        <input type="text" class="form-control" style="width:450px" value="DRONE_2024_11012"  />
+                        <input type="text" class="form-control" style="width: 300px;" value=""  />
+                        <input type="text" class="form-control" style="width:450px" value=""  />
                         <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
                       </div>
                     </div>
                   </td>
                 </tr>
                 <tr>
-                  <th colspan="2">미리보기</th>
+                  <th colspan="2">매개변수</th>
                   <td colspan="4">
-                    <div class="preveiw-img">
-                      <img src="@@webRoot/assets/images/preview-img.png" alt="">
+                    <div class="form-column scroll">
+                      <div class="form-row">
+                        <input type="text" class="form-control" style="width: 300px;" value=""  />
+                        <input type="text" style="width: 450px" class="form-control" value=""  />
+                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                      </div>
+                      <div class="form-row">
+                        <input type="text" class="form-control" style="width: 300px;" value=""  />
+                        <input type="text" class="form-control" style="width:450px" value=""  />
+                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                      </div>
                     </div>
                   </td>
                 </tr>

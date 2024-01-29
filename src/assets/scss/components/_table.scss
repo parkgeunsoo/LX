@@ -17,8 +17,10 @@
 
   &.table-row {
     font-size: 15px;
+   
     th {
       padding: 22px 30px 22px; border: 0; background-color: #fafafa; font-weight: 400; line-height: 1; 
+      &.row-col{ padding: 22px 0; text-align: center; border-left: 1px solid #ebebeb;}
     }
     td {
       padding: 10px 20px; border: 0; font-weight: 400; white-space: wrap; line-height: 1;

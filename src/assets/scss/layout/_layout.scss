@@ -54,7 +54,7 @@
 .breadcrumb{
   display: flex; align-items: center; justify-content: end; gap: 35px;
   .breadcrumb-item{
-    position: relative;
+    position: relative; color: #444; font-size: 13px;
     &::after{
       content: ""; width: 6px; height: 10px; background-image: url('../images/icon-breadcrumb-arrow.svg'); position: absolute; top: 50%; transform: translateY(-50%); right: -20px;
     }

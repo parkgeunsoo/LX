@@ -136,7 +136,7 @@
                   <td colspan="4">
                     <div class="form-column">
                       <div class="form-file-custom">
-                        <p id="selectedFile" class="file-name" style="width: 350px;"></p>
+                        <p id="selectedFile" class="file-name" style="width: 350px;">Sample.tiff</p>
                         <label for="fileInput" id="fileLabel">찾아보기</label>
                         <input type="file" id="fileInput" style="display: none;">
                       </div>
@@ -170,6 +170,39 @@
                   </td>
                 </tr>
                 <tr>
+                  <th rowspan="4">타일<br>그리드<br>정보</th>
+                </tr>
+                <tr>
+                  <th class="row-col">Origin X</th>
+                  <td colspan="4">
+                    <input type="text" class="form-control" value="-20037508.342789" />
+                  </td>
+                </tr>
+                <tr>
+                  <th class="row-col">Origin Y</th>
+                  <td colspan="4">
+                    <input type="text" class="form-control" value="-20037508.342789" />
+                  </td>
+                </tr>
+                <tr>
+                  <th class="row-col">Resolutions</th>
+                  <td colspan="4">
+                    <div class="form-column scroll">
+                      <div class="form-row">
+                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
+                        <input type="text" style="width: 450px" class="form-control" value="DRONE_2024_11012"  />
+                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                      </div>
+                      <div class="form-row">
+                        <input type="text" class="form-control" style="width: 300px;" value="layer"  />
+                        <input type="text" class="form-control" style="width:450px" value="DRONE_2024_11012"  />
+                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
                   <th colspan="2">매개변수</th>
                   <td colspan="4">
                     <div class="form-column scroll">
@@ -197,7 +230,7 @@
                   <th colspan="2">미리보기</th>
                   <td colspan="4">
                     <div class="preveiw-img">
-                      <img src="@@webRoot/assets/images/preview-img.png" alt="">
+                      <img src="@@webRoot/assets/images/map-img.png" alt="">
                     </div>
                   </td>
                 </tr>

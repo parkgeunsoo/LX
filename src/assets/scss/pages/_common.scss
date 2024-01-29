@@ -11,3 +11,7 @@
 .btn-group{
     display: flex ;align-items: center; justify-content: end;gap: 10px; margin-top: 30px; 
 }
+
+.ag-grid{
+    width: 100%; max-height: 800px; height: 600px;
+}
