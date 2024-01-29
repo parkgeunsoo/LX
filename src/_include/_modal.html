@@ -1,19 +1,151 @@
-<!-- <div class="modal" tabindex="-1" id="modal-quiz-submit">
-  <div class="modal-dialog modal-dialog-centered modal-md modal-default">
+<!-- Alert: sample -->
+<div class="modal fade alert" tabindex="-1" id="alert-sample">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <h5 class="modal-title">문학 퀴즈 결과 확인</h5>
-        <div class="modal-desc">
-          <p class="txt">
-            문학 퀴즈 정답을 제출하고 결과를 확인하시겠습니까?<br />
-            제출 후 수정 혹은 취소가 불가합니다.
-          </p>
-        </div>
-        <div class="modal-btns">
-          <button type="button" class="btn btn-mono-60" data-bs-dismiss="modal" aria-label="Close">취소</button>
-          <button type="button" class="btn btn-primary">제출하기</button>
+        <h1 class="alert-title">얼럿 타이틀</h1>
+        <p class="alert-message">
+          <i class="icon-finger"></i>
+          얼럿 메세지
+        </p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div> -->
+</div>
+<!-- //Alert: sample -->
+
+<!-- Alert: sample2(타이틀 X) -->
+<div class="modal fade alert" tabindex="-1" id="alert-sample2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="alert-message">얼럿 메세지</p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: sample2(타이틀 X) -->
+
+<!-- Alert: 사용가능아이디 -->
+<div class="modal fade alert" tabindex="-1" id="alert-id-available">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="alert-message">사용 가능한 아이디입니다.</p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 사용가능아이디 -->
+
+<!-- Alert: 사용불가아이디 -->
+<div class="modal fade alert" tabindex="-1" id="alert-id-unavailable">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="alert-message">이미 생성된 아이디입니다.</p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 사용불가아이디 -->
+
+<!-- Alert: 필수항목 미입력 -->
+<div class="modal fade alert" tabindex="-1" id="alert-not-entered">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="alert-message">필수항목을 모두 입력해주세요.</p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 필수항목 미입력 -->
+
+<!-- Alert: 필수항목 입력 -->
+<div class="modal fade alert" tabindex="-1" id="alert-administrator-add">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="alert-message">필수항목을 모두 입력했습니다.<br />등록하시겠습니까?</p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 필수항목 입력 -->
+
+<!-- Alert: 관리자 정보 삭제 -->
+<div class="modal fade alert" tabindex="-1" id="alert-administrator-del">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="alert-message">선택하신 관리자를 삭제 하시겠습니까?<br />삭제 후 복구 불가합니다.</p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 관리자 정보 삭제 -->
+
+<!-- Alert: 메뉴 정보 수정 -->
+<div class="modal fade alert" tabindex="-1" id="alert-menu-edit">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="alert-message">메뉴 정보를 수정하시겠습니까?</p>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-primary w-100">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 메뉴 정보 수정 -->

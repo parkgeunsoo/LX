@@ -1,0 +1,73 @@
+.ui-datepicker{
+  padding: 1.5rem 1rem;border-radius: 1rem;min-width: 300px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.1);
+  &.ui-widget-content{
+    border: 1px solid #ddd;
+  }
+  table{
+    margin-bottom: 0;font-size: 14px;table-layout: fixed;
+  }
+  .ui-widget-header{
+    background: transparent;border: 0;padding: 0;text-align: center;margin-bottom: 1rem;
+    .ui-icon{display: none;}
+  }
+  .ui-datepicker-month{
+    &::after{content: '월';}
+  }
+  .ui-datepicker-title {
+    line-height: 32px;display: inline-flex;align-items: center;justify-content: center;
+  }
+  th{
+    font-weight: 500;
+  }
+  .ui-datepicker-prev,
+  .ui-datepicker-next{
+    width: 32px;height: 32px;top: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 8px;
+    cursor: pointer;
+    &.ui-state-hover{
+      border: 0;
+    }
+  }
+  .ui-datepicker-prev{
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.64853 11.6899C7.1799 12.1034 6.4201 12.1034 5.95147 11.6899L0.351473 6.7487C0.126429 6.55013 5.15612e-07 6.28082 5.40929e-07 6C5.66246e-07 5.71918 0.126429 5.44987 0.351473 5.2513L5.95147 0.310122C6.4201 -0.103375 7.1799 -0.103375 7.64853 0.310122C8.11716 0.723619 8.11716 1.39403 7.64853 1.80752L2.89706 6L7.64853 10.1925C8.11716 10.606 8.11716 11.2764 7.64853 11.6899Z' fill='white'/%3E%3C/svg%3E%0A");
+  }
+  .ui-datepicker-next{
+    background-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.351472 11.6899C0.820101 12.1034 1.5799 12.1034 2.04853 11.6899L7.64853 6.7487C7.87357 6.55013 8 6.28082 8 6C8 5.71918 7.87357 5.44987 7.64853 5.2513L2.04853 0.310122C1.5799 -0.103375 0.8201 -0.103375 0.351471 0.310122C-0.117158 0.723619 -0.117158 1.39403 0.351471 1.80752L5.10294 6L0.351472 10.1925C-0.117157 10.606 -0.117157 11.2764 0.351472 11.6899Z' fill='white'/%3E%3C/svg%3E%0A");
+  }
+
+  .ui-state-default{
+    border: 0;border-radius: 50%;background: transparent;
+    &.ui-state-highlight{
+      background: rgba($primary, .16);color: #000;
+    }
+
+    &.ui-state-active{
+      color: #fff;background: $primary !important;
+    }
+  }
+
+
+
+  tbody{
+    td, a{
+      .readonly &{
+        pointer-events: none !important;
+      }
+    }
+    td{
+      //padding: .25rem;
+      padding: 0;
+      > span,
+      > a{
+        padding: 0;aspect-ratio: 1/1;display: flex;align-items: center;justify-content: center;
+        z-index: 1;
+        position: relative;
+      }
+    }
+  }
+}

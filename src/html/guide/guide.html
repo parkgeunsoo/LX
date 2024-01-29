@@ -230,21 +230,15 @@
           <div>
             <nav>
               <div class="nav nav-tabs mypage" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info"
-                  type="button" role="tab" aria-controls="nav-info" aria-selected="true">계정정보</button>
-                <button class="nav-link" id="nav-history-tab" data-bs-toggle="tab" data-bs-target="#nav-history"
-                  type="button" role="tab" aria-controls="nav-history" aria-selected="false">활동내역</button>
+                <button class="nav-link active" id="nav-info-tab" data-bs-toggle="tab" data-bs-target="#nav-info" type="button" role="tab" aria-controls="nav-info" aria-selected="true">계정정보</button>
+                <button class="nav-link" id="nav-history-tab" data-bs-toggle="tab" data-bs-target="#nav-history" type="button" role="tab" aria-controls="nav-history" aria-selected="false">활동내역</button>
               </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab"
-                tabindex="0">
-                ...
-              </div>
-              <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab" tabindex="0">
-                ...</div>
+              <div class="tab-pane fade show active" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab" tabindex="0">...</div>
+              <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab" tabindex="0">...</div>
             </div>
-          </div>  
+          </div>
         </div>
       </section>
 
@@ -270,11 +264,16 @@
                 <a class="page-link" href="#"><i class="icon-pagination-right"></i></a>
               </div>
               <div class="page-prev">
-                <a class="page-link" href="#"><i
-                    class="icon-pagination-right-twin"></i></a>
+                <a class="page-link" href="#"><i class="icon-pagination-right-twin"></i></a>
               </div>
             </nav>
-          </div>  
+          </div>
+        </div>
+        <div class="col-auto hstack gap-2">
+          <div class="label">일자</div>
+          <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-picker="date" />
+          <span>~</span>
+          <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-picker="date" />
         </div>
       </section>
     </div>
