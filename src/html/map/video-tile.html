@@ -9,156 +9,129 @@
       <div class="content">
         @@include('@@webRoot/_include/_aside.html')
         <div class="sub-content">
-          <div class="container">
+          <div class="head-content">
+            <p class="main-title">영상타일 관리체계</p>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="#"><i class="icon-home"></i></a></li>
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
                 <li class="breadcrumb-item"><a href="#">지도관리</a></li>
                 <li class="breadcrumb-item active" aria-current="page">영상타일관리체계</li>
               </ol>
             </nav>
-            <p class="main-title">영상타일 관리체계</p>
-            <div class="fileter-box">
-              <div class="filter-top">
-                <div class="row">
-                  <div class="col-4">
-                    <div class="input-form">
-                      <p class="input-form-label">분류</p>
-                      <div class="form">
-                        <div class="select-wrap">
-                          <button type="button" class="select-btn">
-                            <span>전체</span>
-                            <i class="icon-select-arrow"></i>
-                          </button>
-                          <ul class="optionlist">
-                            <li class="optionitem active">전체</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="input-form">
-                      <p class="input-form-label">형태</p>
-                      <div class="form">
-                        <div class="select-wrap">
-                          <button type="button" class="select-btn">
-                            <span>전체</span>
-                            <i class="icon-select-arrow"></i>
-                          </button>
-                          <ul class="optionlist">
-                            <li class="optionitem active">전체</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="input-form">
-                      <p class="input-form-label">일자</p>
-                      <div class="d-flex align-items-center gap-2">
-                        <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-picker="date" />
-                        <span class="flex-shrink-0">~</span>
-                        <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-picker="date" />
-                      </div>
+          </div>
+          <div class="fileter-box">
+            <div class="filter-top gap-90">
+              <div class="filter-flex mr-90">
+                <div class="input-form">
+                  <p class="input-form-label">분류</p>
+                  <div class="form">
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">전체</option>
+                        <option value="">분류</option>
+                      </select>
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-4">
-                    <div class="input-form">
-                      <p class="input-form-label">지역</p>
-                      <div class="form">
-                        <div class="select-wrap">
-                          <button type="button" class="select-btn">
-                            <span>전체</span>
-                            <i class="icon-select-arrow"></i>
-                          </button>
-                          <ul class="optionlist">
-                            <li class="optionitem active">전체</li>
-                          </ul>
-                        </div>
-                      </div>
+                <div class="input-form">
+                  <p class="input-form-label">지역</p>
+                  <div class="form">
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">전체</option>
+                        <option value="">분류</option>
+                      </select>
                     </div>
-                  </div>
-                  <div class="col-8">
-                    <div class="input-form">
-                      <p class="input-form-label">검색어</p>
-                      <div class="form">
-                        <div class="select-wrap">
-                          <button type="button" class="select-btn">
-                            <span>전체</span>
-                            <i class="icon-select-arrow"></i>
-                          </button>
-                          <ul class="optionlist">
-                            <li class="optionitem active">전체</li>
-                          </ul>
-                        </div>
-                        <input type="text" class="form-control" value="" readonly placeholder="검색어를 입력하세요." />
-                      </div>
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">전체</option>
+                        <option value="">분류</option>
+                      </select>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="filter-search">
-                <button type="button" class="btn btn-outline-dark btn-auto search-btn">
-                  <i class="icon-search"></i> 검색
-                </button>
+              <div class="filter-flex mr-30">
+                <div class="input-form">
+                  <p class="input-form-label">형태</p>
+                  <div class="form">
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">전체</option>
+                        <option value="">분류</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-form">
+                  <p class="input-form-label">검색어</p>
+                  <div class="form">
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">전체</option>
+                        <option value="">분류</option>
+                      </select>
+                    </div>
+                    <input type="text" class="form-control" value="" readonly placeholder="" style="width: 220px" />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="main-content">
-              <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+              <div class="filter-flex mr-80">
+                <div class="input-form">
+                  <p class="input-form-label">일자</p>
+                  <div class="d-flex align-items-center gap-10">
+                    <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                    <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                  </div>
+                </div>
+              </div>
+              <div class="filter-flex">
+                <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
+              </div>
             </div>
           </div>
-        @@include('@@webRoot/_include/_footer.html')
+          <div class="main-content">
+            <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+          </div>
+          @@include('@@webRoot/_include/_footer.html')
         </div>
       </div>
     </div>
     <script>
-
       class CompanyLogoRenderer {
         eGui;
 
         init(params) {
-            let companyLogo = document.createElement('img');
-            companyLogo.src = `https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2F54F20A0lQVsJ5J21JxMjnwZLU7uvQSIIXk1p1S5kFi-7YnNh6J9YKAUW4xfExSglsxU%3Dw240-h480-rw&tbnid=_i5PJITUzAb42M&vet=12ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vertaler.koja%26hl%3Dko&docid=VR8lMSDGhOfVDM&w=240&h=240&q=%EB%B2%88%EC%97%AD%EA%B8%B0%20%EC%9D%BC%EB%B3%B8%EC%96%B4&ved=2ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb`;
-            companyLogo.setAttribute(
-                'style',
-                'display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)'
-            );
+          let companyLogo = document.createElement("img");
+          companyLogo.src = `https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2F54F20A0lQVsJ5J21JxMjnwZLU7uvQSIIXk1p1S5kFi-7YnNh6J9YKAUW4xfExSglsxU%3Dw240-h480-rw&tbnid=_i5PJITUzAb42M&vet=12ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vertaler.koja%26hl%3Dko&docid=VR8lMSDGhOfVDM&w=240&h=240&q=%EB%B2%88%EC%97%AD%EA%B8%B0%20%EC%9D%BC%EB%B3%B8%EC%96%B4&ved=2ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb`;
+          companyLogo.setAttribute("style", "display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)");
 
-            let companyName = document.createElement('p');
-            companyName.textContent = params.value;
-            companyName.setAttribute(
-                'style',
-                'text-overflow: ellipsis; overflow: hidden; white-space: nowrap;'
-            );
+          let companyName = document.createElement("p");
+          companyName.textContent = params.value;
+          companyName.setAttribute("style", "text-overflow: ellipsis; overflow: hidden; white-space: nowrap;");
 
-            this.eGui = document.createElement('span');
-            this.eGui.setAttribute(
-                'style',
-                'display: flex; height: 100%; width: 100%; align-items: center'
-            );
-            this.eGui.appendChild(companyLogo);
-            this.eGui.appendChild(companyName);
+          this.eGui = document.createElement("span");
+          this.eGui.setAttribute("style", "display: flex; height: 100%; width: 100%; align-items: center");
+          this.eGui.appendChild(companyLogo);
+          this.eGui.appendChild(companyName);
         }
 
         getGui() {
-            return this.eGui;
+          return this.eGui;
         }
 
         refresh(params) {
-            return false;
+          return false;
         }
       }
 
-      const cellVertical = { 'vertical-align': 'middle' };
-      const rowData = [
-        { check: "", number: "10", name: "남해군 기타 영상 및 항공영상", file: "", division: "3D", classification: "기타", form: "사용", used: "사용", status: "처리중", region: "남해군", writer: "강효두", cellStyle: cellVertical } ,
-      ];
+      const cellVertical = { "vertical-align": "middle" };
+      const rowData = [{ check: "", number: "10", name: "남해군 기타 영상 및 항공영상", file: "", division: "3D", classification: "기타", form: "사용", used: "사용", status: "처리중", region: "남해군", writer: "강효두", cellStyle: cellVertical }];
 
       const columnDefs = [
-        { field: 'athlete', checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
+        { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
         { field: "number", headerName: "번호", cellStyle: cellVertical },
         { field: "name", headerName: "영상명" },
         { field: "file", headerName: "첨부파일", cellRenderer: "CompanyLogoRenderer" }, // 수정된 부분
@@ -168,25 +141,25 @@
         { field: "used", headerName: "사용여부" },
         { field: "status", headerName: "처리상태" },
         { field: "region", headerName: "지역" },
-        { field: "writer", headerName: "작성자" }
+        { field: "writer", headerName: "작성자" },
       ];
 
       const gridOptions = {
         rowData: rowData,
         columnDefs: columnDefs,
-        autoSizeStrategy: { type: 'fitGridWidth', defaultMinWidth: 150 },
-        rowSelection: 'multiple',
+        autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
+        rowSelection: "multiple",
         defaultColDef: {
-            editable: false,
-            filter: true,
+          editable: false,
+          filter: true,
         },
         frameworkComponents: {
-            CompanyLogoRenderer: CompanyLogoRenderer,
+          CompanyLogoRenderer: CompanyLogoRenderer,
         },
       };
 
-      const gridDiv = document.querySelector('#myGrid');
+      const gridDiv = document.querySelector("#myGrid");
       const gridApi = agGrid.createGrid(gridDiv, gridOptions);
-  </script>
+    </script>
   </body>
 </html>

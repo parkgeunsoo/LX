@@ -11,7 +11,7 @@
   background-color: #fff;
   line-height: 1;
   &.white{ background-color: #fff; border: 1px solid #ddd;}
-  &::placeholder{ color: #999;}
+  &::placeholder{ color: #bbb;}
 
   // &:focus {
   //   outline: 1px solid #222;
@@ -62,7 +62,7 @@
 .input-form{
   display: flex; align-items: center;
   .input-form-label{
-    width: 65px; line-height: 1; flex-shrink: 0;
+    width: 60px; line-height: 1; flex-shrink: 0;
   }
   .form{
     width: 100%; display: flex; gap: 10px;
@@ -92,11 +92,17 @@
     border: 1px solid #ebebeb; border-radius: 4px; padding:12px 20px; color: #777; font-size: 15px; line-height: 1; height: 40px;
   }
   #fileLabel {
-    display: inline-block; padding: 10px; color: #111; cursor: pointer;
-    line-height: 1; padding: 13px 16px 12px 15px; border: 1px solid #111; border-radius: 4px;
+    height: 40px; display: inline-block; padding: 10px; color: #111; cursor: pointer;
+    line-height: 1; padding: 12px 16px 12px 15px; border: 1px solid #111; border-radius: 4px;
   }
   
   #fileInput {
     display: none;
+  }
+}
+.exe-input{
+  position: relative;
+  .exe-txt{
+    position: absolute; top: 50%; transform: translateY(-50%); right: 15px; color: #999;
   }
 }

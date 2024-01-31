@@ -1,21 +1,21 @@
 #header{
   .top-head{
-    background-image: linear-gradient(to right, #07cc82, #003b69), linear-gradient(to left, #436aeb, #436aeb); padding: 0 30px; display: flex; align-items: center; justify-content: space-between;
+    height: 80px; background-image: url('../images/depth1-bg.png'); padding: 0 40px 0 30px; display: flex; align-items: center; justify-content: space-between; background-size: cover;
     .left-content{
       display: flex; align-items: center; gap: 140px; padding: 20px 0; 
     }
   }
   .gnb-depth1{
-    display: flex; align-items: center; gap: 3px; margin-bottom: -24px;       
+    display: flex; align-items: center; gap: 3px; margin-bottom: -25px;       
     li{
       min-width: 150px;
       a{
         color: #111; padding: 19px 16px; display: block; font-size: 16px;
-        background-color: #fff; line-height: 1; font-weight: 500;border-radius: 8px 8px 0 0; text-align: center;
+        background-image: url('../images/gnb-menu1.png'); background-size: cover; line-height: 1; font-weight: 500;border-radius: 8px 8px 0 0; text-align: center;
       }
       &.active{
         a{
-          background-color: #0d1517;  color: #fff;
+          background-color: #0d1517;  color: #fff; background-image: none;
         }
       }
     }
@@ -36,14 +36,14 @@
     }
   }
   .gnb-depth2{
-    display: flex; align-items: center; gap: 65px; background-color: #282a35 ; padding: 15px 30px; 
+    height: 54px; display: flex; align-items: center; gap: 65px; background-color: #282a35 ; padding: 15px 30px; 
     li{
       position: relative;
       a{ color: #fff; font-size: 14px; font-weight: 500; line-height: 1.86; position: relative;}
       &:hover{
         a{
           &::after{
-            content: ""; position: absolute; width: 100%; height: 3px; background-color: #10b497; left: 0; bottom: -10px;
+            content: ""; position: absolute; width: 100%; height: 3px; background-color: #10b497; left: 0; bottom: -10px; border-radius: 0.5px;
           }
         }
       }

@@ -3,14 +3,13 @@ var Header = {
     this.aside();
   },
   aside: function () {
-    $(document).ready(function(){
-      $('.dep1').click(function(){
-        $(this).next('.dep2').slideToggle();
-        $(this).toggleClass('active');
+    $(document).ready(function () {
+      $(".dep1").click(function () {
+        $(this).next(".dep2").slideToggle(300);
+        $(this).toggleClass("active");
       });
     });
   },
-
 };
 
 var Common = {
@@ -45,7 +44,19 @@ var Common = {
     });
   },
 
-  common: function () {},
+  common: function () {
+    // textarea 유동적으로 height값 증가
+    $(document).ready(function () {
+      $(".form-textarea").on("input", function () {
+        autoResizeTextarea($(this));
+      });
+    });
+
+    function autoResizeTextarea($textarea) {
+      $textarea.css("height", "auto");
+      $textarea.css("height", $textarea[0].scrollHeight + "px");
+    }
+  },
 };
 
 Header.init();
