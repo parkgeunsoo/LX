@@ -100,11 +100,7 @@
               </tr>
               <tr>
                 <th colspan="2">
-                  <div class="th-txt flex-column">
-                    <p>첨부파일</p>
-                    <p class="exe-txt">띄어쓰기 포함</p>
-                    <p class="exe-txt">(<span>23</span><span>/25</span>)</p>
-                  </div>
+                  <p>첨부파일</p>
                 </th>
                 <td colspan="4">
                   <div class="form-column">
@@ -113,8 +109,12 @@
                       <label for="fileInput" id="fileLabel">찾아보기</label>
                       <input type="file" id="fileInput" style="display: none" />
                     </div>
-                    <div>
-                      <input type="text" class="form-control" value="사용자 입력 메타정보 표출" />
+                    <div class="exe-input lg">
+                      <textarea name="" id="" class="form-control form-textarea" rows="1"></textarea>
+                      <p class="exe-txt">
+                        띄어쓰기 포함
+                        (<span>0</span><span>/500</span>)
+                      </p>
                     </div>
                     <div>
                       <input type="text" class="form-control" value="영상데이터에서 보유한 메타정보 (촬영위치/촬영기기정보/촬영일시/해상도 등등)" disabled />
@@ -131,30 +131,31 @@
               <tr>
                 <th colspan="2">좌표계</th>
                 <td colspan="4">
-                  <div class="select-wrap" style="width: 353px">
-                    <button type="button" class="select-btn">
-                      <span>선택</span>
-                      <i class="icon-select-arrow"></i>
-                    </button>
-                    <ul class="optionlist">
-                      <li class="optionitem active">선택</li>
-                    </ul>
+                  <div class="custom-select" style="width: 530px">
+                    <select name="" id="" class="form-select">
+                      <option value="">선택</option>
+                      <option value="">분류</option>
+                    </select>
                   </div>
                 </td>
               </tr>
               <tr>
-                <th rowspan="4">타일<br />그리드<br />정보</th>
+                <th rowspan="4">
+                  <p class="br-text">
+                    타일<br />그리드<br />정보
+                  </p>
+                </th>
               </tr>
               <tr>
                 <th class="row-col">Origin X</th>
                 <td colspan="4">
-                  <input type="text" class="form-control" />
+                  <input type="text" class="form-control" style="width: 530px;" />
                 </td>
               </tr>
               <tr>
                 <th class="row-col">Origin Y</th>
                 <td colspan="4">
-                  <input type="text" class="form-control" />
+                  <input type="text" class="form-control" style="width: 530px;" />
                 </td>
               </tr>
               <tr>
@@ -162,15 +163,10 @@
                 <td colspan="4">
                   <div class="form-column scroll">
                     <div class="form-row">
-                      <input type="text" class="form-control" style="width: 300px" value="" />
-                      <input type="text" style="width: 450px" class="form-control" value="" />
+                      <input type="text" class="form-control" style="width: 160px" value="1" />
+                      <input type="text" style="width: 360px" class="form-control" value="156543.0383" />
                       <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
                       <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
-                    </div>
-                    <div class="form-row">
-                      <input type="text" class="form-control" style="width: 300px" value="" />
-                      <input type="text" class="form-control" style="width: 450px" value="" />
-                      <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
                     </div>
                   </div>
                 </td>
@@ -180,24 +176,24 @@
                 <td colspan="4">
                   <div class="form-column scroll">
                     <div class="form-row">
-                      <input type="text" class="form-control" style="width: 300px" value="" />
-                      <input type="text" style="width: 450px" class="form-control" value="" />
+                      <input type="text" class="form-control" style="width: 160px" value="layer" />
+                      <input type="text" style="width: 360px" class="form-control" value="DRONE_2024_11012" />
                       <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
                       <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
                     </div>
                     <div class="form-row">
-                      <input type="text" class="form-control" style="width: 300px" value="" />
-                      <input type="text" class="form-control" style="width: 450px" value="" />
+                      <input type="text" class="form-control" style="width: 160px" value="layer" />
+                      <input type="text" class="form-control" style="width: 360px" value="DRONE_2024_11012" />
                       <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
                     </div>
                   </div>
                 </td>
               </tr>
             </table>
-            <div class="btn-group">
-              <button type="button" class="btn btn-auto btn-dark btn-md">취소</button>
-              <button type="button" class="btn btn-auto btn-green btn-md">저장</button>
-            </div>
+          </div>
+          <div class="btn-group justify-content-center">
+            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
           </div>
           @@include('@@webRoot/_include/_footer.html')
         </div>
@@ -209,7 +205,8 @@
           var selectedFiles = this.files;
 
           if (selectedFiles.length > 0) {
-            $("#selectedFile").text("선택된 파일: " + selectedFiles[0].name);
+            $("#selectedFile").text(selectedFiles[0].name);
+            $("#selectedFile").addClass('select')
           } else {
             $("#selectedFile").text("선택된 파일이 없습니다.");
           }

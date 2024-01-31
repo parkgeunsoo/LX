@@ -16,6 +16,9 @@
   &.btn-auto{
     width: auto; padding: 15px 24px;
   }
+  &.btn-min{
+    min-width: 80px;
+  }
   &.btn-md{
     padding: 13px 20px;
   }

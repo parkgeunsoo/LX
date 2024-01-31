@@ -56,6 +56,9 @@ var Common = {
       $textarea.css("height", "auto");
       $textarea.css("height", $textarea[0].scrollHeight + "px");
     }
+    // $(".form-textarea").each(function () {
+    //   autoResizeTextarea($(this));
+    // });
   },
 };
 
