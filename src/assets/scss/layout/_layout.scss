@@ -70,17 +70,20 @@
   }
 }
 
-.fileter-box{
+.filter-wrap{
   border: 1px solid #ebebeb; background-color: #fafafa; padding: 20px 20px 20px 30px;
   border-radius: 8px; margin-top: 45px; margin-bottom: 100px;
-  .filter-top{
+  .filter-container{
+    display: flex; justify-content: space-between;
+  }
+  .filter-content{
     display: flex;
   }
   .filter-flex{
     display: flex; flex-direction: column; gap: 20px;
   }
   .search-btn{
-    width: 100px; height: 100px; display: flex; align-items: center; gap: 7px;
+    width: 100px; height: 100%; max-height: 100px; display: flex; align-items: center; gap: 7px;
   }
 }
 
