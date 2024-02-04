@@ -179,3 +179,18 @@
 //     &::before{background:url("../images/btn-chk-on.png")no-repeat 50% 50% !important;color:$white !important;    background-size: 100% !important;}
 //   }
 // }
+
+.custom-radio {
+  display: flex;
+}
+.custom-radio input {
+  display: none; 
+}
+.custom-radio label {
+  display: inline-block; margin-right: 10px; cursor: pointer; color: #777; border: 1px solid #ddd; border-radius: 4px; font-size: 14.5px;
+  padding: 13px 20px 12px; background-color: #f5f5f5;
+}
+
+.custom-radio input:checked + label{
+  color: $green; border: 1px solid $green; background-color: #fff;
+}
