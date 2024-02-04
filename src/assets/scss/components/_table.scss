@@ -5,7 +5,7 @@
   width: 100%; table-layout: fixed;
   .table-scroll {overflow: auto;}
   thead {
-    th {font-size: 18px; line-height: normal; padding: 0 0 20px 0; font-weight: 400;}
+    th {font-size: 16px; line-height: normal; padding: 23px 0 22px 0; font-weight: 500;}
   }
   tbody {
     tr {
@@ -16,13 +16,12 @@
   }
 
   &.table-row {
-    font-size: 15px;
     th {
-      padding: 22px 30px 22px; border: 0; background-color: #fafafa; font-weight: 500; line-height: 1;
+      padding: 22px 30px 22px; border: 0; background-color: #fafafa; font-weight: 500; line-height: 1; font-size: 15px;
       &.row-col{ padding: 0 10px; text-align: center;  border-left: 1px solid #ebebeb;}
     }
     td {
-      height: 60px; padding: 10px 30px; border: 0; font-weight: 400; white-space: wrap; line-height: 1; color: #777;
+      height: 60px; padding: 10px 30px; border: 0; font-weight: 400; white-space: wrap; line-height: 1; color: #777; font-size: 14.5px;
     }
     tr {
       border-bottom: 1px solid #ebebeb;
@@ -40,4 +39,30 @@
       }
     }
   }
+  &.th-table{
+    th{
+      font-size: 14.5px; background-color: #fafafa; padding: 13px 10px;
+    }
+    td{
+      font-size: 14.5px; color: #777; padding: 13px 10px;
+    }
+    tbody{
+      td{
+        border-top: 0; border-bottom: 1px solid #ebebeb;
+      }
+    }
+  }
+
+}
+.table-scroll{
+  height: 250px; overflow: auto; border: 1px solid #ebebeb; border-radius: 8px;
+}
+
+.ag-theme-quartz {
+  --ag-foreground-color: rgb(126, 46, 132);
+  --ag-background-color: rgb(249, 245, 227);
+  --ag-header-foreground-color: red;
+  --ag-header-background-color: #fff;
+  --ag-header-column-resize-handle-color: red;
+  --ag-font-size: 14.5px;
 }

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+      <div class="content">
+        @@include('@@webRoot/_include/_aside.html')
+        <div class="sub-content">
+          <div class="head-content">
+            <p class="main-title">메뉴관리</p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">권한관리</a></li>
+                <li class="breadcrumb-item"><a href="#">메뉴관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">메뉴관리</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="main-content">
+            <div class="menu-container">
+              <div class="system-wrap">
+                <div class="list-title">
+                  <p>시스템 리스트</p>
+                  <button type="button" class="list-btn"><i class="icon-edit"></i></button>
+                </div>
+                <ul class="system-list">
+                  <li class="system-list__content active">
+                    운영 포탈 시스템
+                  </li>
+                  <li class="system-list__content">
+                    2D 관리
+                  </li>
+                  <li class="system-list__content">
+                    디지털 트윈관리
+                  </li>
+                  <li class="system-list__content">
+                    데이터 관리
+                  </li>
+                  <li class="system-list__content">
+                    인프라 관리
+                  </li>
+                  <li class="system-list__content">
+                    개발자 지원 시스템
+                  </li>
+                  <li class="system-list__content">
+                    2D 사용자 포털
+                  </li>
+                  <li class="system-list__content">
+                    3D 사용자 포털
+                  </li>
+                </ul>
+              </div>
+              <div class="menu-wrap">
+                <div class="list-title">
+                  <p>메뉴</p>
+                  <button type="button" class="list-btn"><i class="icon-plus"></i></button>
+                </div>
+                <div class="menu-list">
+                  <ul class="menu-depth1">
+                    <li>
+                      <div>
+                        <i class="icon-plus"></i>
+                        <p class="dep1-desc">
+                          <i class="icon-menu-depth1"></i>
+                          <span>권한 관리</span>
+                        </p>
+                      </div>
+                      <ul class="menu-depth2">
+                        <li>
+                          <ul class="menu-depth3">
+                            <li></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="active">
+                      <div>
+                        <i class="icon-plus"></i>
+                        <p class="dep1-desc">
+                          <i class="icon-menu-depth1"></i>
+                          <span>포탈관리</span>
+                        </p>
+                      </div>
+                      <ul class="menu-depth2">
+                        <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>사용자포털 메인페이지</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li></li>
+                          </ul>
+                        </li>
+                        <li class="active">
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>베이스맵게시판관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                            <li>
+                              <p class="dep3-desc">자료실관리</p>
+                            </li>
+                            <li class="active">
+                              <p class="dep3-desc">FAQ관리</p>
+                            </li>
+                            <li>
+                              <p class="dep3-desc">자료실관리</p>
+                            </li>
+                            <li>
+                              <p class="dep3-desc">자료실관리</p>
+                            </li>
+                            <li>
+                              <p class="dep3-desc">자료실관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>맵갤러리관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>가이드관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div>
+                        <i class="icon-plus"></i>
+                        <p class="dep1-desc">
+                          <i class="icon-menu-depth1"></i>
+                          <span>권한 관리</span>
+                        </p>
+                      </div>
+                      <ul class="menu-depth2">
+                        <li>
+                          <ul class="menu-depth3">
+                            <li></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div>
+                        <i class="icon-plus"></i>
+                        <p class="dep1-desc">
+                          <i class="icon-menu-depth1"></i>
+                          <span>권한 관리</span>
+                        </p>
+                      </div>
+                      <ul class="menu-depth2">
+                        <li>
+                          <ul class="menu-depth3">
+                            <li></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tool-wrap">
+                <div class="property-wrap">
+                  <div class="list-title mb-30">
+                    <p>속성</p>
+                  </div>
+                  <div class="property-content">
+                    <div class="property-content__row">
+                      <div class="input-form">
+                        <p class="input-form-label">NO</p>
+                        <div class="form">
+                          <input type="text" class="form-control w-100" value="0000000003"  placeholder="" />
+                        </div>
+                      </div>
+                      <div class="input-form">
+                        <p class="input-form-label">* 순서</p>
+                        <div class="form">
+                          <input type="text" class="form-control w-100" value="5"  placeholder="" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="property-content__row">
+                      <div class="input-form">
+                        <p class="input-form-label">* 용량제한</p>
+                        <div class="form">
+                          <div class="custom-select w-100">
+                            <select name="" id="" class="form-select">
+                              <option value="">300 MB</option>
+                              <option value="">500 MB</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-form">
+                        <p class="input-form-label">* 용량제한</p>
+                        <div class="form">
+                          <input type="text" class="form-control w-100" value="5"  placeholder="한글 10자 이내" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="property-content__row">
+                      <div class="input-form w-100">
+                        <p class="input-form-label">* 상위메뉴</p>
+                        <div class="form">
+                          <div class="custom-select w-100">
+                            <select name="" id="" class="form-select">
+                              <option value="">상위메뉴 없음</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="property-content__row">
+                      <div class="input-form">
+                        <p class="input-form-label">* 팝업여부</p>
+                        <div class="form">
+                          <div class="custom-select w-100">
+                            <select name="" id="" class="form-select">
+                              <option value="">선택</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-form">
+                        <p class="input-form-label">* 팝업구분</p>
+                        <div class="form">
+                          <div class="custom-select w-100">
+                            <select name="" id="" class="form-select">
+                              <option value="">선택</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="property-content__row">
+                      <div class="input-form">
+                        <p class="input-form-label">* 메인여부</p>
+                        <div class="form">
+                          <div class="custom-select w-100">
+                            <select name="" id="" class="form-select">
+                              <option value="">선택</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-form">
+                        <p class="input-form-label">* 사용여부</p>
+                        <div class="form">
+                          <div class="custom-select w-100">
+                            <select name="" id="" class="form-select">
+                              <option value="">선택</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-group justify-content-center">
+                      <button type="button" class="btn btn-min btn-auto btn-green btn-md">수정</button>
+                      <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="api-wrap">
+                  <div class="list-title">
+                    <p>API 목록</p>
+                    <button type="button" class="list-btn"><i class="icon-plus"></i></button>
+                  </div>
+                  <div class="table-scroll">
+                    <table class="table th-table">
+                      <thead>
+                        <tr>
+                          <th class="text-center">이름</th>
+                          <th class="text-center">구분</th>
+                          <th class="text-center">유형</th>
+                          <th class="text-center">포맷</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="text-center">사용자 요청관리_R</td>
+                          <td class="text-center">조회</td>
+                          <td class="text-center">REST</td>
+                          <td class="text-center">JSON</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">사용자 요청관리_R</td>
+                          <td class="text-center">조회</td>
+                          <td class="text-center">REST</td>
+                          <td class="text-center">JSON</td>
+                        </tr>
+                        <tr>
+                          <td class="text-center">사용자 요청관리_R</td>
+                          <td class="text-center">조회</td>
+                          <td class="text-center">REST</td>
+                          <td class="text-center">JSON</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          @@include('@@webRoot/_include/_footer.html')
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
