@@ -1,5 +1,5 @@
 .menu-container{
-  display: flex; gap: 60px; margin-top: 22px;
+  display: flex; gap: 60px; margin-top: 33px;
 }
 .system-wrap{
   width: 302px;
@@ -64,13 +64,13 @@
   .menu-depth3{
     display: none; flex-direction: column; padding: 15px 0 0 37px; position: relative;
     &::before{
-      content: ""; position: absolute; left: 25px; width: 1px; height: calc(100% - 47px); background-color: #e0e0e0;
+      content: ""; position: absolute; left: 25px; width: 1px; height: calc(100% - 15px); background-color: #e0e0e0;
     }
     > li{
       padding-bottom: 18px;
       &:last-child{ padding-bottom: 0;}
       .dep3-desc{
-        font-size: 14px; color: #999; 
+        font-size: 14px; color: #999;  display: flex; align-items: center; gap: 10px;
       }
       &.active{
         .dep3-desc{
@@ -87,6 +87,9 @@
       }
     }
   }
+}
+.role-wrap{
+  width: 1150px;
 }
 .tool-wrap{
   width: 780px; display: flex; flex-direction: column; gap: 35px;
@@ -125,5 +128,18 @@
   li{
     font-size: 15px; color: #777; padding: 24px 30px; border-bottom: 1px solid #ebebeb;
     &:last-child{ border-bottom: 0;}
+  }
+}
+
+.check-head{
+  margin-bottom: 10px;
+  .cheko-head__title{
+    font-size: 20px; font-weight: 500; margin-bottom: 20px;
+  }
+  .check-head__btns{
+    display: flex; align-items: center; justify-content: space-between;
+    >div{
+      display: flex; align-items: center; gap: 10px;
+    }
   }
 }

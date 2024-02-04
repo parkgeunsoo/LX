@@ -261,17 +261,17 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="d-flex justify-content-end gx-2">
+        <div class="d-flex justify-content-end mb-10 gap-1">
           <button type="button" class="btns-sign"><i class="icon-recyclebin"></i></button>
           <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
         </div>
         <div class="bor-tb bor-tb2">
           <table>
             <colgroup>
-              <col style="width: 50px" />
-              <col />
-              <col />
-              <col style="width: 90px" />
+              <col style="width: 40px" />
+              <col style="width: 280px" />
+              <col style="width: 160px" />
+              <col style="width: 65px" />
             </colgroup>
             <thead>
               <tr>
@@ -298,7 +298,7 @@
                     </select>
                   </div>
                 </td>
-                <td><input type="text" class="form-control" style="width: 60px" /></td>
+                <td><input type="text" class="form-control text-center" style="width: 60px" /></td>
               </tr>
             </tbody>
           </table>
@@ -346,32 +346,6 @@
   </div>
 </div>
 <script>
-  class CompanyLogoRenderer {
-    eGui;
-
-    init(params) {
-      let companyLogo = document.createElement("img");
-      companyLogo.src = `https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2F54F20A0lQVsJ5J21JxMjnwZLU7uvQSIIXk1p1S5kFi-7YnNh6J9YKAUW4xfExSglsxU%3Dw240-h480-rw&tbnid=_i5PJITUzAb42M&vet=12ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vertaler.koja%26hl%3Dko&docid=VR8lMSDGhOfVDM&w=240&h=240&q=%EB%B2%88%EC%97%AD%EA%B8%B0%20%EC%9D%BC%EB%B3%B8%EC%96%B4&ved=2ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb`;
-      companyLogo.setAttribute("style", "display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)");
-
-      let companyName = document.createElement("p");
-      companyName.textContent = params.value;
-      companyName.setAttribute("style", "text-overflow: ellipsis; overflow: hidden; white-space: nowrap;");
-
-      this.eGui = document.createElement("span");
-      this.eGui.setAttribute("style", "display: flex; height: 100%; width: 100%; align-items: center");
-      this.eGui.appendChild(companyLogo);
-      this.eGui.appendChild(companyName);
-    }
-
-    getGui() {
-      return this.eGui;
-    }
-
-    refresh(params) {
-      return false;
-    }
-  }
 
   const cellVertical = { "vertical-align": "middle" };
   const rowData = [{ check: "", name: "공지사항관리-조회", division: "조회", type: "LINK", format: "JSON", url: "/api/openApiInfo.do?menu_grp=MENU_GRP", keyword: "공지사항,조회,목록", cellStyle: cellVertical }];
@@ -394,9 +368,6 @@
     defaultColDef: {
       editable: false,
       filter: true,
-    },
-    frameworkComponents: {
-      CompanyLogoRenderer: CompanyLogoRenderer,
     },
   };
 

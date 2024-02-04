@@ -52,7 +52,7 @@
                   <td colspan="1">
                     <div class="input-grid">
                       <input type="text" class="form-control" placeholder="" value="" style="width: 160px;" />
-                      <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" style="width: 80px;">재발급</button>
+                      <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" style="width: 80px;" data-bs-toggle="modal" data-bs-target="#alert-pw">재발급</button>
                     </div>
                   </td>
                 </tr>
@@ -173,7 +173,7 @@
           <div class="card-wrap">
             <p class="table-title">
               <span>사용자 권한</span>
-              <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md">권한설정하기</button>
+              <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" data-bs-toggle="modal" data-bs-target="#modal-user-authority">권한설정하기</button>
             </p>
             <div class="table-wrap">
               <table class="table table-row">
@@ -213,6 +213,7 @@
         </div>
       </div>
     </div>
+    @@include('@@webRoot/_include/_modal.html')
     <script>
       $(document).ready(function () {
         $("#fileInput").on("change", function () {

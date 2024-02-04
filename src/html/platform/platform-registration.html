@@ -10,7 +10,7 @@
         @@include('@@webRoot/_include/_aside.html')
         <div class="sub-content">
           <div class="head-content">
-            <p class="main-title">플랫폼 API관리 상세/수정</p>
+            <p class="main-title">플랫폼 API관리 등록</p>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -33,36 +33,11 @@
               </colgroup>
               <tbody>
                 <tr>
-                  <th scope="row">등록자</th>
-                  <td>sigunTest4_4470000</td>
-                  <th scope="row">등록일자</th>
-                  <td>2024-10-13</td>
-                </tr>
-                <tr>
-                  <th scope="row">상태</th>
-                  <td>
-                    <div class="custom-select" style="width: 160px">
-                      <select name="" id="" class="form-select">
-                        <option value="">사용</option>
-                        <option value=""></option>
-                      </select>
-                    </div>
-                  </td>
-                  <th scope="row">최종수정일자</th>
-                  <td>2024-10-13</td>
-                </tr>
-                <tr>
-                  <th scope="row">이름</th>
-                  <td><input type="text" class="form-control" /></td>
-                  <th scope="row">구분</th>
-                  <td><input type="text" class="form-control" style="width: 160px" /></td>
-                </tr>
-                <tr>
                   <th scope="row">유형</th>
                   <td>
                     <div class="custom-select" style="width: 160px">
                       <select name="" id="" class="form-select">
-                        <option value="">LINK</option>
+                        <option value="">사용</option>
                         <option value=""></option>
                       </select>
                     </div>
@@ -78,15 +53,24 @@
                   </td>
                 </tr>
                 <tr>
+                  <th scope="row">이름</th>
+                  <td><input type="text" class="form-control" colspan="3" style="width: 440px" placeholder="API 이름을 입력하세요.  영문, 한글 20자 이하" /></td>
+                </tr>
+                <tr>
+                  <th scope="row">구분</th>
+                  <td><input type="text" class="form-control" colspan="3" style="width: 440px" placeholder="구분을 입력하세요. 한글 6자 이하" /></td>
+                </tr>
+
+                <tr>
                   <th scope="row">URL</th>
                   <td colspan="3">
-                    <input type="text" class="form-control w-100" />
+                    <input type="text" class="form-control w-100" placeholder="URL을 입력하세요." />
                   </td>
                 </tr>
                 <tr>
                   <th scope="row">키워드</th>
                   <td colspan="3">
-                    <input type="text" class="form-control" style="width: 440px" />
+                    <input type="text" class="form-control" style="width: 440px" placeholder="구분을 입력하세요. 한글 20자 이하" />
                   </td>
                 </tr>
               </tbody>
@@ -100,5 +84,6 @@
         </div>
       </div>
     </div>
+@@include('@@webRoot/_include/_modal.html')
   </body>
 </html>

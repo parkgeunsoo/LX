@@ -40,13 +40,17 @@
                       <input type="text" class="form-control" placeholder="영문+숫자,5~20자 이하" value="" style="width: 340px;" />
                       <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" style="width: 92px;">중복확인</button>
                     </div>
+                    <p class="success-msg">사용할 수 있는 아이디 입니다</p>
+                    <p class="fail-msg">사용할 수 없는 아이디 입니다</p>
                   </td>
                   <th colspan="1">비밀번호</th>
                   <td colspan="1">
                     <div class="input-grid">
                       <input type="text" class="form-control" placeholder="영문대/소문자+숫자+특수기호 포함 ~10자이하" value="" style="width: 340px;" />
-                      <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" style="width: 80px;">재발급</button>
+                      <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" style="width: 80px;" data-bs-toggle="modal" data-bs-target="#alert-pw">재발급</button>
                     </div>
+                    <p class="success-msg">형식에 일치합니다.</p>
+                    <p class="fail-msg">형식에 맞지 않아요. 다시 입력하세요</p>
                   </td>
                 </tr>
                 <tr>
@@ -170,7 +174,7 @@
           <div class="card-wrap">
             <p class="table-title">
               <span>사용자 권한</span>
-              <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md">권한설정하기</button>
+              <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" data-bs-toggle="modal" data-bs-target="#modal-user-authority">권한설정하기</button>
             </p>
             <div class="table-wrap">
               <table class="table table-row">
@@ -210,6 +214,7 @@
         </div>
       </div>
     </div>
+    @@include('@@webRoot/_include/_footer.html')
     <script>
       $(document).ready(function () {
         $("#fileInput").on("change", function () {

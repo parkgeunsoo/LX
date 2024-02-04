@@ -27,7 +27,7 @@
               <div class="system-wrap">
                 <div class="list-title">
                   <p>시스템 리스트</p>
-                  <button type="button" class="list-btn"><i class="icon-edit"></i></button>
+                  <button type="button" class="list-btn" data-bs-toggle="modal" data-bs-target="#modal-system-set"><i class="icon-edit"></i></button>
                 </div>
                 <ul class="system-list">
                   <li class="system-list__content active">
@@ -282,7 +282,7 @@
                 <div class="api-wrap">
                   <div class="list-title">
                     <p>API 목록</p>
-                    <button type="button" class="list-btn"><i class="icon-plus"></i></button>
+                    <button type="button" class="list-btn"><i class="icon-plus" data-bs-toggle="modal" data-bs-target="#modal-api-add"></i></button>
                   </div>
                   <div class="table-scroll">
                     <table class="table th-table">
@@ -318,12 +318,12 @@
                   </div>
                 </div>
               </div>
-            </div>
-            
+            </div>  
           </div>
           @@include('@@webRoot/_include/_footer.html')
         </div>
       </div>
     </div>
+@@include('@@webRoot/_include/_modal.html')
   </body>
 </html>

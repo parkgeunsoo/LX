@@ -112,32 +112,6 @@
       </div>
     </div>
     <script>
-      class CompanyLogoRenderer {
-        eGui;
-
-        init(params) {
-          let companyLogo = document.createElement("img");
-          companyLogo.src = `https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2F54F20A0lQVsJ5J21JxMjnwZLU7uvQSIIXk1p1S5kFi-7YnNh6J9YKAUW4xfExSglsxU%3Dw240-h480-rw&tbnid=_i5PJITUzAb42M&vet=12ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vertaler.koja%26hl%3Dko&docid=VR8lMSDGhOfVDM&w=240&h=240&q=%EB%B2%88%EC%97%AD%EA%B8%B0%20%EC%9D%BC%EB%B3%B8%EC%96%B4&ved=2ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb`;
-          companyLogo.setAttribute("style", "display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)");
-
-          let companyName = document.createElement("p");
-          companyName.textContent = params.value;
-          companyName.setAttribute("style", "text-overflow: ellipsis; overflow: hidden; white-space: nowrap;");
-
-          this.eGui = document.createElement("span");
-          this.eGui.setAttribute("style", "display: flex; height: 100%; width: 100%; align-items: center");
-          this.eGui.appendChild(companyLogo);
-          this.eGui.appendChild(companyName);
-        }
-
-        getGui() {
-          return this.eGui;
-        }
-
-        refresh(params) {
-          return false;
-        }
-      }
 
       const cellVertical = { "vertical-align": "middle" };
       const rowData = [{ check: "", number: "10", name: "남해군 기타 영상 및 항공영상", file: "", division: "3D", classification: "기타", form: "사용", used: "사용", status: "처리중", region: "남해군", writer: "강효두", cellStyle: cellVertical }];
@@ -164,9 +138,6 @@
         defaultColDef: {
           editable: false,
           filter: true,
-        },
-        frameworkComponents: {
-          CompanyLogoRenderer: CompanyLogoRenderer,
         },
       };
 

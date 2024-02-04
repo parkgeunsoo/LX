@@ -31,6 +31,10 @@
 .email-wrap{
   display: flex; align-items: center; gap: 6px;
 }
+.success-msg{ font-size: 15px; color: #4285f4; margin-top: 10px;}
+.fail-msg{ font-size: 15px; color: #fe3b30; margin-top: 10px;}
+
+
 .mr-10{ margin-right: 10px !important;}
 .mr-20{ margin-right: 20px !important;}
 .mr-30{ margin-right: 30px !important;}
