@@ -1,151 +1,565 @@
-<!-- Alert: sample -->
-<div class="modal fade alert" tabindex="-1" id="alert-sample">
+<!-- Alert: 재발급 되었어요 -->
+<div class="modal fade alert" tabindex="-1" id="alert-success">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <h1 class="alert-title">얼럿 타이틀</h1>
-        <p class="alert-message">
-          <i class="icon-finger"></i>
-          얼럿 메세지
-        </p>
+        <h1 class="alert-icon"><i class="icon-submit"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">재발급 되었어요.</p>
+        </div>
         <div class="row gx-2">
           <div class="col">
-            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+            <button type="button" class="btn btn-green w-100" data-bs-dismiss="modal">확인</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: sample -->
+<!-- //Alert: 재발급 되었어요 -->
 
-<!-- Alert: sample2(타이틀 X) -->
-<div class="modal fade alert" tabindex="-1" id="alert-sample2">
+<!-- Alert: 비밀번호를 재발급할까요? -->
+<div class="modal fade alert" tabindex="-1" id="alert-pw">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <p class="alert-message">얼럿 메세지</p>
+        <h1 class="alert-icon"><i class="icon-warning"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">비밀번호를 재발급할까요?</p>
+          <p class="txt2">재발급 시, 이전 비밀번호는 삭제됩니다.</p>
+        </div>
         <div class="row gx-2">
           <div class="col">
-            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-primary w-100">확인</button>
+            <button type="button" class="btn btn-green w-100">예</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: sample2(타이틀 X) -->
+<!-- //Alert: 비밀번호를 재발급할까요? -->
 
-<!-- Alert: 사용가능아이디 -->
-<div class="modal fade alert" tabindex="-1" id="alert-id-available">
+<!-- Alert: 삭제 되었어요 -->
+<div class="modal fade alert" tabindex="-1" id="alert-delete-success">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <p class="alert-message">사용 가능한 아이디입니다.</p>
+        <h1 class="alert-icon"><i class="icon-recyclebin"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">삭제 되었어요</p>
+        </div>
         <div class="row gx-2">
           <div class="col">
-            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+            <button type="button" class="btn btn-green w-100" data-bs-dismiss="modal">확인</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: 사용가능아이디 -->
+<!-- //Alert: 삭제 되었어요 -->
 
-<!-- Alert: 사용불가아이디 -->
-<div class="modal fade alert" tabindex="-1" id="alert-id-unavailable">
+<!-- Alert: 삭제 하실래요? -->
+<div class="modal fade alert" tabindex="-1" id="alert-delete">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <p class="alert-message">이미 생성된 아이디입니다.</p>
+        <h1 class="alert-icon"><i class="icon-recyclebin"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">삭제 하실래요?</p>
+        </div>
         <div class="row gx-2">
           <div class="col">
-            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+            <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-green w-100">예</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: 사용불가아이디 -->
+<!-- //Alert: 삭제 하실래요? -->
 
-<!-- Alert: 필수항목 미입력 -->
-<div class="modal fade alert" tabindex="-1" id="alert-not-entered">
+<!-- Alert: 저장 되었어요 -->
+<div class="modal fade alert" tabindex="-1" id="alert-save">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <p class="alert-message">필수항목을 모두 입력해주세요.</p>
+        <h1 class="alert-icon"><i class="icon-submit"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">저장 되었어요</p>
+        </div>
         <div class="row gx-2">
           <div class="col">
-            <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">확인</button>
+            <button type="button" class="btn btn-green w-100" data-bs-dismiss="modal">확인</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: 필수항목 미입력 -->
+<!-- //Alert: 저장 되었어요 -->
 
-<!-- Alert: 필수항목 입력 -->
-<div class="modal fade alert" tabindex="-1" id="alert-administrator-add">
+<!-- Alert: 등록된 내용이 저장 안돼요 -->
+<div class="modal fade alert" tabindex="-1" id="alert-save-fail">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <p class="alert-message">필수항목을 모두 입력했습니다.<br />등록하시겠습니까?</p>
+        <h1 class="alert-icon"><i class="icon-warning"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">등록된 내용이 저장 안돼요<br />취소 하실래요?</p>
+        </div>
         <div class="row gx-2">
           <div class="col">
-            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-primary w-100">확인</button>
+            <button type="button" class="btn btn-green w-100">예</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: 필수항목 입력 -->
+<!-- //Alert: 등록된 내용이 저장 안돼요 -->
 
-<!-- Alert: 관리자 정보 삭제 -->
-<div class="modal fade alert" tabindex="-1" id="alert-administrator-del">
+<!-- Alert: 수정된 내용이 저장 안돼요 -->
+<div class="modal fade alert" tabindex="-1" id="alert-modify-fail">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
-        <p class="alert-message">선택하신 관리자를 삭제 하시겠습니까?<br />삭제 후 복구 불가합니다.</p>
+        <h1 class="alert-icon"><i class="icon-warning"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">수정된 내용이 저장 안돼요<br />취소 하실래요?</p>
+        </div>
         <div class="row gx-2">
           <div class="col">
-            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+            <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-primary w-100">확인</button>
+            <button type="button" class="btn btn-green w-100">예</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: 관리자 정보 삭제 -->
+<!-- //Alert: 수정된 내용이 저장 안돼요 -->
 
-<!-- Alert: 메뉴 정보 수정 -->
-<div class="modal fade alert" tabindex="-1" id="alert-menu-edit">
+<!-- modal: 사용자 권한 설정 -->
+<div class="modal fade" tabindex="-1" id="modal-user-authority">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">사용자 권한 설정</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
       <div class="modal-body">
-        <p class="alert-message">메뉴 정보를 수정하시겠습니까?</p>
-        <div class="row gx-2">
-          <div class="col">
-            <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">취소</button>
+        <div class="bor-tb">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">권한 시스템</th>
+                <th scope="col" class="border-0">역할</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">운영포탈시스템</label>
+                  </div>
+                </td>
+                <td class="border-0">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">플랫폼 총괄 관리자</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">2D 관리</label>
+                  </div>
+                </td>
+                <td class="border-0">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">플랫폼 관리자</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">디지털트윈관리</label>
+                  </div>
+                </td>
+                <td class="border-0">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">지자체 관리자</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">데이터 관리</label>
+                  </div>
+                </td>
+                <td class="border-0">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">개발자</label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">인프라 관리자</label>
+                  </div>
+                </td>
+                <td class="border-0"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="btn-md-box">
+          <button type="button" class="btn btn-md btn-min btn-green">적용</button>
+          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //modal: 사용자 권한 설정 -->
+
+<!-- modal: 시스템 리스트 설정 -->
+<div class="modal fade" tabindex="-1" id="modal-system-set">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">시스템 리스트 설정</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-end gx-2">
+          <button type="button" class="btns-sign"><i class="icon-recyclebin"></i></button>
+          <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+        </div>
+        <div class="bor-tb bor-tb2">
+          <table>
+            <colgroup>
+              <col style="width: 50px" />
+              <col />
+              <col />
+              <col style="width: 90px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                </th>
+                <th scope="col">시스템 명</th>
+                <th scope="col">사용여부</th>
+                <th scope="col">순서</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-0">
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                </td>
+                <td>
+                  <input type="text" class="form-control" />
+                </td>
+                <td>
+                  <div class="custom-select" style="width: 160px">
+                    <select name="" id="" class="form-select">
+                      <option value="">사용</option>
+                    </select>
+                  </div>
+                </td>
+                <td><input type="text" class="form-control" style="width: 60px" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="btn-md-box">
+          <button type="button" class="btn btn-md btn-min btn-green">적용</button>
+          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //modal: 사용자 권한 설정 -->
+
+<!-- modal: API 추가 -->
+<div class="modal fade" tabindex="-1" id="modal-api-add">
+  <div class="modal-dialog modal-dialog-centered modal-xlg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">API 추가</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="srch-box">
+          <label for="">검색어</label>
+          <div class="custom-select">
+            <select name="" id="" class="form-select">
+              <option value="">이름</option>
+            </select>
           </div>
-          <div class="col">
-            <button type="button" class="btn btn-primary w-100">확인</button>
+          <input type="text" class="form-control" />
+          <button type="button" class="btn btn-outline-green btn-min search-btn"><i class="icon-search"></i> 검색</button>
+        </div>
+        <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+
+        <div class="btn-md-box">
+          <button type="button" class="btn btn-md btn-min btn-green">추가</button>
+          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  class CompanyLogoRenderer {
+    eGui;
+
+    init(params) {
+      let companyLogo = document.createElement("img");
+      companyLogo.src = `https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2F54F20A0lQVsJ5J21JxMjnwZLU7uvQSIIXk1p1S5kFi-7YnNh6J9YKAUW4xfExSglsxU%3Dw240-h480-rw&tbnid=_i5PJITUzAb42M&vet=12ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vertaler.koja%26hl%3Dko&docid=VR8lMSDGhOfVDM&w=240&h=240&q=%EB%B2%88%EC%97%AD%EA%B8%B0%20%EC%9D%BC%EB%B3%B8%EC%96%B4&ved=2ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb`;
+      companyLogo.setAttribute("style", "display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)");
+
+      let companyName = document.createElement("p");
+      companyName.textContent = params.value;
+      companyName.setAttribute("style", "text-overflow: ellipsis; overflow: hidden; white-space: nowrap;");
+
+      this.eGui = document.createElement("span");
+      this.eGui.setAttribute("style", "display: flex; height: 100%; width: 100%; align-items: center");
+      this.eGui.appendChild(companyLogo);
+      this.eGui.appendChild(companyName);
+    }
+
+    getGui() {
+      return this.eGui;
+    }
+
+    refresh(params) {
+      return false;
+    }
+  }
+
+  const cellVertical = { "vertical-align": "middle" };
+  const rowData = [{ check: "", name: "공지사항관리-조회", division: "조회", type: "LINK", format: "JSON", url: "/api/openApiInfo.do?menu_grp=MENU_GRP", keyword: "공지사항,조회,목록", cellStyle: cellVertical }];
+
+  const columnDefs = [
+    { field: "check", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
+    { field: "name", headerName: "이름" },
+    { field: "division", headerName: "구분" },
+    { field: "type", headerName: "유형" },
+    { field: "format", headerName: "포맷" },
+    { field: "url", headerName: "URL" },
+    { field: "keyword", headerName: "키워드" },
+  ];
+
+  const gridOptions = {
+    rowData: rowData,
+    columnDefs: columnDefs,
+    autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
+    rowSelection: "multiple",
+    defaultColDef: {
+      editable: false,
+      filter: true,
+    },
+    frameworkComponents: {
+      CompanyLogoRenderer: CompanyLogoRenderer,
+    },
+  };
+
+  const gridDiv = document.querySelector("#myGrid");
+  const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+</script>
+<!-- //modal:  API 추가 -->
+
+<!-- modal: 역할 등록 -->
+<div class="modal fade" tabindex="-1" id="modal-role-reg">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">역할 등록</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row-tb">
+          <table>
+            <colgroup>
+              <col style="width: 90px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">* 시스템</th>
+                <td>
+                  <div class="select-line">
+                    <div class="custom-select">
+                      <select name="" id="" class="form-select">
+                        <option value="">시스템 선택</option>
+                      </select>
+                    </div>
+                    <div class="custom-select">
+                      <select name="" id="" class="form-select">
+                        <option value="">하위시스템</option>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">* 그룹명</th>
+                <td>
+                  <div class="custom-select" style="margin-bottom: 10px">
+                    <select name="" id="" class="form-select">
+                      <option value="">그룹 생성</option>
+                    </select>
+                  </div>
+
+                  <input type="text" class="form-control w-100" placeholder="그룹명을 입력하세요 (한글 15자 이하)" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">* 역할명</th>
+                <td>
+                  <input type="text" class="form-control w-100" placeholder="역할명을 입력하세요 (한글 15자 이하)" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">* 사용여부</th>
+                <td>
+                  <div class="custom-select">
+                    <select name="" id="" class="form-select">
+                      <option value="">시스템 선택</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="btn-md-box">
+          <button type="button" class="btn btn-md btn-min btn-green">적용</button>
+          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //modal: 역할등록 -->
+
+<!-- modal: 역할 수정 -->
+<div class="modal fade" tabindex="-1" id="modal-role-modifty">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">역할 수정</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row-tb-top">
+          <dl>
+            <dt>등록자</dt>
+            <dd>admintest</dd>
+          </dl>
+          <dl>
+            <dt>등록일</dt>
+            <dd>2023-12-22</dd>
+          </dl>
+        </div>
+        <div class="row-tb">
+          <table>
+            <colgroup>
+              <col style="width: 90px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">* 시스템</th>
+                <td>
+                  <div class="custom-select">
+                    <select name="" id="" class="form-select">
+                      <option value="">운영포탈시스템</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">* 그룹명</th>
+                <td>
+                  <div class="custom-select" style="margin-bottom: 10px">
+                    <select name="" id="" class="form-select">
+                      <option value="">그룹 생성</option>
+                    </select>
+                  </div>
+
+                  <input type="text" class="form-control w-100" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">* 역할명</th>
+                <td>
+                  <input type="text" class="form-control w-100" />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">* 사용여부</th>
+                <td>
+                  <div class="custom-select">
+                    <select name="" id="" class="form-select">
+                      <option value="">사용안함</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="btn3">
+          <button type="button" class="btn btn-md btn-min btn-outline-green">복제</button>
+          <div class="btn-md-box">
+            <button type="button" class="btn btn-md btn-min btn-green">적용</button>
+            <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- //Alert: 메뉴 정보 수정 -->
+<!-- //modal: 역할 수정 -->

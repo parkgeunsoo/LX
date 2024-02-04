@@ -3,30 +3,31 @@
   display: flex;
   align-items: center;
   min-height: 16px;
-  padding-right: 24px;
+  padding-right: 24px;    color: #777;
   &.block{
     display: block; text-align: center; padding-right: 0;
     .form-check-label{
-      display: block; margin-left: 0;
+      display: block; margin-left: 0;color:#777;
       p{ font-size: 15px; margin: 5px 0;}
     }
   }
 }
 
 .form-check-input {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   margin-top: 1px;
   vertical-align: top;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   appearance: none;
+  cursor: pointer;
  
 
 
   &[type="checkbox"] {
-    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='3.5' y='3.5' width='17' height='17' rx='1.5' stroke='%23CCCCCC'/%3E%3C/svg%3E%0A");
+    background-image: url("../images/btn-chk-off.png");
   }
 
   &[type="radio"] {
@@ -35,7 +36,7 @@
 
   &:checked {
     &[type="checkbox"] {
-      background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 3C3.89543 3 3 3.89543 3 5V19C3 20.1046 3.89543 21 5 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H5ZM11.5789 16.3536L18.3352 9.59744L17.2745 8.53677L11.0486 14.7626L7.83502 11.549L6.77436 12.6097L10.5182 16.3536L11.0485 16.8839L11.5789 16.3536Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+      background-image: url("../images/btn-chk-on.png");
     }
 
     &[type="radio"] {
@@ -76,9 +77,10 @@
 }
 
 .form-check-label {
-  font-size: 18px;
-  margin-left: 8px;
+  font-size: 15px;
+  margin-left: 15px;
   vertical-align: sub;
+  cursor: pointer;
 }
 
 /* radio btn 커스텀 */
@@ -167,3 +169,13 @@
 .like-wrap {
   input {position: absolute; width: 1px; height: 1px; padding: 0; border: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0);}
 }
+// .ag-checkbox-input-wrapper{
+//   &::after{background:url("../images/btn-chk-off.png")no-repeat 50% 50% !important;color:$white !important;    background-size: 100% !important;}
+//   &.ag-checked{
+//     &::after{background:url("../images/btn-chk-on.png")no-repeat 50% 50% !important;color:$white !important;    background-size: 100% !important;}
+//   }
+//   &::before{background:url("../images/btn-chk-off.png")no-repeat 50% 50% !important;color:$white !important;    background-size: 100% !important;}
+//   &.ag-checked{
+//     &::before{background:url("../images/btn-chk-on.png")no-repeat 50% 50% !important;color:$white !important;    background-size: 100% !important;}
+//   }
+// }

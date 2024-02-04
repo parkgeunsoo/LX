@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+      <div class="content">
+        @@include('@@webRoot/_include/_aside.html')
+        <div class="sub-content">
+          <div class="head-content">
+            <p class="main-title">플랫폼 API관리 등록</p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">권한관리</a></li>
+                <li class="breadcrumb-item"><a href="#">메뉴관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">플랫폼API관리</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table table-row">
+              <colgroup>
+                <col width="290px" />
+                <col width="500px" />
+                <col width="290px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">유형</th>
+                  <td>
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">사용</option>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                  </td>
+                  <th scope="row">포맷</th>
+                  <td>
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">JSON</option>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">이름</th>
+                  <td><input type="text" class="form-control" colspan="3" style="width: 440px" placeholder="API 이름을 입력하세요.  영문, 한글 20자 이하" /></td>
+                </tr>
+                <tr>
+                  <th scope="row">구분</th>
+                  <td><input type="text" class="form-control" colspan="3" style="width: 440px" placeholder="구분을 입력하세요. 한글 6자 이하" /></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">URL</th>
+                  <td colspan="3">
+                    <input type="text" class="form-control w-100" placeholder="URL을 입력하세요." />
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">키워드</th>
+                  <td colspan="3">
+                    <input type="text" class="form-control" style="width: 440px" placeholder="구분을 입력하세요. 한글 20자 이하" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn-group justify-content-center">
+            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+            <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+          </div>
+          @@include('@@webRoot/_include/_footer.html')
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

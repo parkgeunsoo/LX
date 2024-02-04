@@ -20,7 +20,11 @@
     min-width: 80px;
   }
   &.btn-md{
+<<<<<<< Updated upstream
     padding: 13px 20px 12px;
+=======
+    padding: 12px 20px;
+>>>>>>> Stashed changes
   }
   &.btn-sm{
     padding: 9px 20px 8px;
@@ -35,16 +39,32 @@
   &.btn-green{
     background-color: $green !important;
     color: $white !important;
+    border: 1px solid $green !important;
   }
   &.btn-outline-green{
     background-color: $white !important;
-    border:1px solid $green;
+    border:1px solid $green !important;
     color: $green !important;
   }
+  &.btn-light-green{
+    background-color: #cdebe7 !important;
+    color: $green !important;
+    border: 1px solid #cdebe7 !important;
+  }
   &.btn-outline-dark{
-    background-color: #fff;
-    border: 1px solid #111;
-    color: #111;
+    background-color: $white !important;
+    border: 1px solid #111 !important;
+    color: #111 !important;;
+  }
+  &.btn-dark{
+    background-color: #111 !important;
+    border: 1px solid #111 !important;
+    color: $white !important;
+  }
+  &.btn-outline-gray{
+    background-color: $white !important;
+    border: 1px solid #ddd !important;
+    color: #111 !important;
   }
 }
 
