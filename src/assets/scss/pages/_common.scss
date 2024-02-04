@@ -13,7 +13,10 @@
 .btn-group{
     display: flex ;align-items: center; justify-content: end;gap: 10px; margin-top: 30px; 
 }
-
+.table-head{
+    display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;
+    .btn-group{ margin-top: 0;}
+}
 .ag-grid{
     width: 100%; max-height: 800px; height: 600px;
 }
