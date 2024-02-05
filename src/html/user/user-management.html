@@ -97,10 +97,10 @@
             <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
             @@include('@@webRoot/_include/_pagination.html')
           </div>
+          @@include('@@webRoot/_include/_footer.html')
         </div>
       </div>
     </div>
-    @@include('@@webRoot/_include/_footer.html')
     <script>
       class CompanyLogoRenderer {
         eGui;
@@ -130,7 +130,7 @@
       }
 
       const cellVertical = { "vertical-align": "middle" };
-      const rowData = [{ check: "", number: "10", user: "운영자", code: "6430794", name: "강효두", id: "sigunTest4_4470000", region: "충청북도 청주시 상당구", date: "2023-10-30", status: "사용",  cellStyle: cellVertical }];
+      const rowData = [{ check: "", number: "10", user: "운영자", code: "6430794", name: "강효두", id: "sigunTest4_4470000", region: "충청북도 청주시 상당구", date: "2023-10-30", status: "사용", cellStyle: cellVertical }];
 
       const columnDefs = [
         { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
@@ -147,7 +147,7 @@
       const gridOptions = {
         rowData: rowData,
         columnDefs: columnDefs,
-        autoSizeStrategy: { type: "fitGridWidth", },
+        autoSizeStrategy: { type: "fitGridWidth" },
         rowSelection: "multiple",
         defaultColDef: {
           editable: false,
