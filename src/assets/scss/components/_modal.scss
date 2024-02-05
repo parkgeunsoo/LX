@@ -1,3 +1,7 @@
+.scroll-bar{overflow-y:auto;}
+.scroll-bar::-webkit-scrollbar {width: 4px;height:50px;background-color:transparent;}
+.scroll-bar::-webkit-scrollbar-thumb {border-radius:2px;background-color: #b7b9bb;}
+
 .modal{
   --bs-modal-header-padding: 1rem 1.5rem;
   --bs-modal-padding: 2rem 1.5rem;
@@ -13,7 +17,7 @@
 }
 
 .modal-header{
-  padding:15px 30px;background-color: #111;font-size:20px;font-weight:500;line-height:30px;color:$white;
+  padding:15px 30px;background-color: #003868;font-size:20px;font-weight:500;line-height:30px;color:$white;
   .btn-close{
     --bs-btn-close-opacity: 1;
     --bs-btn-close-hover-opacity: 1;
@@ -27,7 +31,7 @@
 
 .modal-title{
   flex-grow: 1;
-  font-size: 20px;font-weight: 700;line-height: 1.4444444;
+  font-size: 20px;font-weight: 500;line-height: 1.5;
   min-height: 26px;
   &.text-center{
     margin-left: 24px;
@@ -44,13 +48,18 @@
       tr{
         border-bottom:1px solid #ebebeb;
         th{
-          padding:17px 0;line-height: 1.76;border-right:1px solid #ebebeb;text-align:center;font-size:14.5px;font-weight:500;
+          padding:12px 0;line-height: 1.76;border-right:1px solid #ebebeb;text-align:center;font-size:14.5px;font-weight:500;
         }
         td{
           padding:18px 0 18px 10px;border-right:1px solid #ebebeb;color:#777777;font-size:15px;
         }
       }
 
+    }
+  }
+  .bor-scroll{
+    table{
+      th{position: sticky;top: 0px;background-color:$white;}
     }
   }
   .bor-tb2{

@@ -162,84 +162,78 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="bor-tb">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">권한 시스템</th>
-                <th scope="col" class="border-0">역할</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">운영포탈시스템</label>
-                  </div>
-                </td>
-                <td class="border-0">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">플랫폼 총괄 관리자</label>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">2D 관리</label>
-                  </div>
-                </td>
-                <td class="border-0">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">플랫폼 관리자</label>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">디지털트윈관리</label>
-                  </div>
-                </td>
-                <td class="border-0">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">지자체 관리자</label>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">데이터 관리</label>
-                  </div>
-                </td>
-                <td class="border-0">
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">개발자</label>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                    <label class="form-check-label">인프라 관리자</label>
-                  </div>
-                </td>
-                <td class="border-0"></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="row">
+          <div class="col">
+            <div class="title">권한 시스템</div>
+            <ul class="scroll-bar list">
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">운영포탈시스템</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">2D 관리</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">디지털트윈관리</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">데이터 관리</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">인프라 관리자</label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="title">권한 시스템</div>
+            <ul class="scroll-bar list">
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">운영포탈시스템</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">2D 관리</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">디지털트윈관리</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">데이터 관리</label>
+                </div>
+              </li>
+              <li>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                  <label class="form-check-label">인프라 관리자</label>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-
         <div class="btn-md-box">
           <button type="button" class="btn btn-md btn-min btn-green">적용</button>
           <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
@@ -346,7 +340,6 @@
   </div>
 </div>
 <script>
-
   const cellVertical = { "vertical-align": "middle" };
   const rowData = [{ check: "", name: "공지사항관리-조회", division: "조회", type: "LINK", format: "JSON", url: "/api/openApiInfo.do?menu_grp=MENU_GRP", keyword: "공지사항,조회,목록", cellStyle: cellVertical }];
 
