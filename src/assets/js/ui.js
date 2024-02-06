@@ -56,6 +56,16 @@ var Common = {
       $textarea.css("height", "auto");
       $textarea.css("height", $textarea[0].scrollHeight + "px");
     }
+
+    // confirm 모달
+    $(document).ready(function(){
+      // 확인 버튼 클릭 시 다른 모달 표시
+      $(".save-btn").click(function(){
+        $('#alert-save-confirm').modal('hide'); // Confirm 모달 닫기
+        $('#alert-save').modal('show');   // 다른 모달 표시
+      });
+    });
+
     // $(".form-textarea").each(function () {
     //   autoResizeTextarea($(this));
     // });

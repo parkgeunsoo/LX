@@ -105,6 +105,29 @@
 </div>
 <!-- //Alert: 저장 되었어요 -->
 
+<!-- Alert: 등록된 내용 저장 -->
+<div class="modal fade alert" tabindex="-1" id="alert-save-confirm">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 class="alert-icon"><i class="icon-warning"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">변경된 내용으로 저장됩니다.<br />저장할까요?</p>
+        </div>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-green w-100 save-btn">예</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 등록된 내용이 저장 안돼요 -->
+
 <!-- Alert: 등록된 내용이 저장 안돼요 -->
 <div class="modal fade alert" tabindex="-1" id="alert-save-fail">
   <div class="modal-dialog modal-dialog-centered">
@@ -119,7 +142,7 @@
             <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-green w-100">예</button>
+            <button type="button" class="btn btn-green w-100" data-bs-toggle="modal" data-bs-target="#alert-save">예</button>
           </div>
         </div>
       </div>

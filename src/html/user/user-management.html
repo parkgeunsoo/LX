@@ -22,69 +22,82 @@
             </nav>
           </div>
           <div class="filter-wrap">
-            <div class="filter-container">
-              <div class="filter-content">
-                <div class="filter-flex mr-50">
-                  <div class="input-form">
-                    <p class="input-form-label">사용자구분</p>
-                    <div class="form">
-                      <div class="custom-select" style="width: 160px">
-                        <select name="" id="" class="form-select">
-                          <option value="">운영자</option>
-                          <option value="">분류</option>
-                        </select>
+            <div class="container">
+              <div class="row">
+                <div class="col-11">
+                  <div class="row mb-10">
+                    <div class="col-4">
+                      <div class="input-form">
+                        <p class="input-form-label">사용자구분</p>
+                        <div class="form">
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">운영자</option>
+                              <option value="">분류</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="input-form">
+                        <p class="input-form-label">지역</p>
+                        <div class="form">
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">충청북도</option>
+                              <option value="">분류</option>
+                            </select>
+                          </div>
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">상담구</option>
+                              <option value="">분류</option>
+                            </select>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="input-form">
-                    <p class="input-form-label">검색어</p>
-                    <div class="form">
-                      <div class="custom-select" style="width: 160px">
-                        <select name="" id="" class="form-select">
-                          <option value="">이름</option>
-                          <option value="">분류</option>
-                        </select>
+                  <div class="row">
+                    <div class="col-4">
+                      <div class="input-form">
+                        <p class="input-form-label">등록일자</p>
+                        <div class="form">
+                          <div class="input-form">
+                            <div class="d-flex align-items-center gap-10">
+                              <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                              <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <input type="text" class="form-control" value="" readonly placeholder="" style="width: 201px" />
+                    </div>
+                    <div class="col-8">
+                      <div class="input-form">
+                        <p class="input-form-label">검색어</p>
+                        <div class="form">
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">이름</option>
+                              <option value="">분류</option>
+                            </select>
+                          </div>
+                          <input type="text" class="form-control" value="" placeholder="" style="width: 457px" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="filter-flex mr-90">
-                  <div class="input-form">
-                    <p class="input-form-label">지역</p>
-                    <div class="form">
-                      <div class="custom-select" style="width: 160px">
-                        <select name="" id="" class="form-select">
-                          <option value="">충청북도</option>
-                          <option value="">분류</option>
-                        </select>
-                      </div>
-                      <div class="custom-select" style="width: 160px">
-                        <select name="" id="" class="form-select">
-                          <option value="">상담구</option>
-                          <option value="">분류</option>
-                        </select>
-                      </div>
-                    </div>
+                <div class="col-1 d-flex justify-content-end">
+                  <div class="filter-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
                   </div>
-                </div>
-              </div>
-              <div class="filter-content">
-                <div class="filter-flex mr-80">
-                  <div class="input-form">
-                    <p class="input-form-label">등록일자</p>
-                    <div class="d-flex align-items-center gap-10">
-                      <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
-                      <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
-                    </div>
-                  </div>
-                </div>
-                <div class="filter-flex justify-content-center">
-                  <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
                 </div>
               </div>
             </div>
           </div>
+       
           <div class="main-content">
             <div class="table-head">
               <p>전체 <span class="text-green">6384</span> 건</p>

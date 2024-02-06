@@ -34,6 +34,71 @@
 .success-msg{ font-size: 15px; color: #4285f4; margin-top: 10px;}
 .fail-msg{ font-size: 15px; color: #fe3b30; margin-top: 10px;}
 
+.table-mode{
+  border: 1px solid #ebebeb; border-radius: 8px;
+  .table-head{
+    display: flex; background-color: #fafafa;
+    .table-head__tr{ 
+      text-align: center; padding: 23px 0 22px; font-size: 14.5px; font-weight: 500;
+    }
+  }
+  .table-body{
+    .table-body__row{
+      display: flex; border-bottom: 1px solid #ebebeb;
+    }
+    .table-body__td{ 
+      text-align: center; padding: 23px 0 ; font-size: 15px; color: #777; 
+    }
+  }
+  &.role{
+    .table-head{
+      .table-head__tr{ 
+        width: 25%; 
+      }
+    }
+    .table-body{
+      height: 636px; overflow-y: auto;
+      .table-body__td{ 
+        width: 25%; 
+      }
+      &::-webkit-scrollbar {
+        width: 5px; border-radius: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #c0c0c0;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  &.api{
+    .table-head{
+      .table-head__tr{ 
+        width: 25%; 
+      }
+    }
+    .table-body{
+      height: 210px; overflow-y: auto;
+      .table-body__td{ 
+        width: 25%; 
+      }
+      &::-webkit-scrollbar {
+        width: 5px; border-radius: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #c0c0c0;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f5f5f5;
+      }
+   
+    }
+  }
+}
+
+
+
 
 .mr-10{ margin-right: 10px !important;}
 .mr-20{ margin-right: 20px !important;}
