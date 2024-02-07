@@ -27,7 +27,7 @@
               <div class="system-wrap">
                 <div class="list-title">
                   <p>시스템 리스트</p>
-                  <button type="button" class="list-btn" data-bs-toggle="modal" data-bs-target="#modal-system-set"><i class="icon-edit"></i></button>
+                  <button type="button" class="list-btn edit-btn" data-bs-toggle="modal" data-bs-target="#modal-system-set"><i class="icon-edit"></i></button>
                 </div>
                 <ul class="system-list">
                   <li class="system-list__content active">
@@ -59,7 +59,7 @@
               <div class="menu-wrap">
                 <div class="list-title">
                   <p>메뉴</p>
-                  <button type="button" class="list-btn"><i class="icon-plus"></i></button>
+                  <button type="button" class="list-btn menu-btn"><i class="icon-plus"></i></button>
                 </div>
                 <div class="menu-list">
                   <ul class="menu-depth1">
@@ -73,8 +73,69 @@
                       </div>
                       <ul class="menu-depth2">
                         <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>역할 관리</span>
+                          </p>
                           <ul class="menu-depth3">
-                            <li></li>
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="">
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>메뉴 관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>사용자 계정관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div>
+                        <i class="icon-plus"></i>
+                        <p class="dep1-desc">
+                          <i class="icon-menu-depth1"></i>
+                          <span>지도 관리</span>
+                        </p>
+                      </div>
+                      <ul class="menu-depth2">
+                        <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>베이스맵 관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="">
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>영상타일관리체계</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
                           </ul>
                         </li>
                       </ul>
@@ -94,13 +155,15 @@
                             <span>사용자포털 메인페이지</span>
                           </p>
                           <ul class="menu-depth3">
-                            <li></li>
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
                           </ul>
                         </li>
                         <li class="active">
                           <p class="dep2-desc">
                             <i class="icon-menu-depth2"></i>
-                            <span>베이스맵게시판관리</span>
+                            <span>게시판관리</span>
                           </p>
                           <ul class="menu-depth3">
                             <li class="">
@@ -109,7 +172,7 @@
                             <li>
                               <p class="dep3-desc">자료실관리</p>
                             </li>
-                            <li class="active">
+                            <li class="">
                               <p class="dep3-desc">FAQ관리</p>
                             </li>
                             <li>
@@ -129,7 +192,9 @@
                             <span>맵갤러리관리</span>
                           </p>
                           <ul class="menu-depth3">
-                            <li></li>
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
                           </ul>
                         </li>
                         <li>
@@ -138,7 +203,9 @@
                             <span>가이드관리</span>
                           </p>
                           <ul class="menu-depth3">
-                            <li></li>
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
                           </ul>
                         </li>
                       </ul>
@@ -153,8 +220,36 @@
                       </div>
                       <ul class="menu-depth2">
                         <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>역할 관리</span>
+                          </p>
                           <ul class="menu-depth3">
-                            <li></li>
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="">
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>메뉴 관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>사용자 계정관리</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
                           </ul>
                         </li>
                       </ul>
@@ -164,13 +259,30 @@
                         <i class="icon-plus"></i>
                         <p class="dep1-desc">
                           <i class="icon-menu-depth1"></i>
-                          <span>권한 관리</span>
+                          <span>지도 관리</span>
                         </p>
                       </div>
                       <ul class="menu-depth2">
                         <li>
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>베이스맵 관리</span>
+                          </p>
                           <ul class="menu-depth3">
-                            <li></li>
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="">
+                          <p class="dep2-desc">
+                            <i class="icon-menu-depth2"></i>
+                            <span>영상타일관리체계</span>
+                          </p>
+                          <ul class="menu-depth3">
+                            <li class="">
+                              <p class="dep3-desc">공지사항관리</p>
+                            </li>
                           </ul>
                         </li>
                       </ul>
@@ -282,7 +394,7 @@
                 <div class="api-wrap">
                   <div class="list-title">
                     <p>API 목록</p>
-                    <button type="button" class="list-btn"><i class="icon-plus" data-bs-toggle="modal" data-bs-target="#modal-api-add"></i></button>
+                    <button type="button" class="list-btn menu-btn" data-bs-toggle="modal" data-bs-target="#modal-api-add"><i class="icon-plus"></i></button>
                   </div>
                   <div class="table-mode api">
                     <div class="table-head">

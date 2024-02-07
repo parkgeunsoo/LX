@@ -7,7 +7,7 @@
     flex: 0 0 260px; border-right: 1px solid #e5e8eb; padding: 12px 30px;
     .menu-list{
       > li{
-        padding:24px 0; border-bottom: 1px solid #e5e8eb; cursor: pointer;
+        border-bottom: 1px solid #e5e8eb; cursor: pointer;
         &:last-child{ border-bottom: 0;}
         &.active{
           a{color: #009881;}
@@ -15,12 +15,11 @@
         }
       }
       .dep1{
-        display: flex; align-items: center; justify-content: space-between; font-weight: 500;
+        display: flex; align-items: center; justify-content: space-between; font-weight: 500; padding:24px 0;
         &.active{
-          margin-bottom: 23px;
           .icon-aside-arrow{background-image: url('../images/icon-arrow-active.svg');}
           &+.dep2{
-            opacity: 1;
+            opacity: 1; display: block; padding-bottom: 23px;
           }
         }
       }

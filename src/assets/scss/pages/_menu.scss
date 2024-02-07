@@ -9,6 +9,16 @@
       p{ font-size: 20px; font-weight: 500;}
       .list-btn{
         width: 40px; height: 40px; border: 1px solid #ebebeb; border-radius: 4px; display: flex; align-items: center; justify-content: center;
+        &.edit-btn{
+          &:hover{
+            .icon-edit{ background-image: url('../images/icon-edit-hover.png');}
+          }
+        }
+        &.menu-btn{
+          &:hover{
+            .icon-plus{ background-image: url('../images/icon-plus-hover.png');}
+          }
+        }
       }
     }
   }
@@ -16,6 +26,9 @@
     display: flex; flex-direction: column; gap: 10px;
     .system-list__content{
       border-radius: 8px; background-color: #f1f3f4; padding: 22px 29px; cursor: pointer;
+      &:hover{
+        background-color: #fff;
+      }
       &.active{
         background-color: $green; color: #fff;
       }
@@ -40,7 +53,7 @@
     display: flex; flex-direction: column; gap: 20px;
     > li{
       >div{
-        display: flex; align-items: center; gap: 15px;
+        display: flex; align-items: center; gap: 15px; cursor: pointer;
         .dep1-desc{
           display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500;
         }
@@ -56,7 +69,7 @@
     }
   }
   .menu-depth2{
-    display: none; flex-direction: column; gap: 15px; padding: 20px 0 0 40px;
+    display: none; flex-direction: column; gap: 15px; padding: 20px 0 0 40px;cursor: pointer;
     > li{
       .dep2-desc{
         display: flex; align-items: center; gap: 10px; font-size: 14px; color: #666;
@@ -71,7 +84,7 @@
     }
   }
   .menu-depth3{
-    display: none; flex-direction: column; padding: 15px 0 0 37px; position: relative;
+    display: none; flex-direction: column; padding: 15px 0 0 37px; position: relative;cursor: pointer;
     &::before{
       content: ""; position: absolute; left: 25px; width: 1px; height: calc(100% - 15px); background-color: #e0e0e0;
     }
@@ -101,13 +114,13 @@
   width: 1150px;
 }
 .tool-wrap{
-  width: 780px; display: flex; flex-direction: column; gap: 35px;
+  width: 780px; flex-direction: column; gap: 35px; display: none;
 }
 .property-wrap{
   .property-content{
     border-radius: 8px; box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.1); border: solid 1px #ebebeb; padding: 30px 30px 20px 30px; display: flex; flex-direction: column; gap: 10px;
     .btn-group{
-      margin-top: 0; padding-top: 30px; border-top: 1px solid #ebebeb;
+      margin-top: 0; padding-top: 20px; border-top: 1px solid #ebebeb;
     }
   }
 }

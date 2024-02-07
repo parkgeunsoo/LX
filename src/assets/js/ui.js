@@ -5,7 +5,7 @@ var Header = {
   aside: function () {
     $(document).ready(function () {
       $(".dep1").click(function () {
-        $(this).next(".dep2").slideToggle(300);
+        $(this).next(".dep2").slideToggle(200);
         $(this).toggleClass("active");
       });
     });
@@ -66,9 +66,26 @@ var Common = {
       });
     });
 
-    // $(".form-textarea").each(function () {
-    //   autoResizeTextarea($(this));
-    // });
+    // 메뉴관리 메뉴
+    $('.menu-depth1 > li > div').click(function(){
+      $(this).parent('li').toggleClass('active');
+    })
+    $('.menu-depth2 > li > .dep2-desc').click(function(){
+      $(this).parent('li').toggleClass('active');
+    })
+    $('.menu-depth3 > li > .dep3-desc').click(function(){
+      $(this).parent('li').addClass('active').siblings().removeClass('active');
+      $('.tool-wrap').css('display','flex');
+    })
+
+    $('.form-check-input.authority').change(function(){
+      // 체크박스가 체크되었는지 확인
+      if($(this).is(":checked")){
+        $('.role .list').show();
+      } else {
+        $('.role .list').hide();
+      }
+  });
   },
 };
 
