@@ -324,7 +324,71 @@
     </div>
   </div>
 </div>
-<!-- //modal: 사용자 권한 설정 -->
+<!-- //modal: 시스템 리스트 설정 -->
+
+<!-- modal: 분류 추가 -->
+<div class="modal fade" tabindex="-1" id="modal-classification-add">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">분류 추가</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex justify-content-end mb-10 gap-1">
+          <button type="button" class="btns-sign"><i class="icon-recyclebin-bk"></i></button>
+          <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+        </div>
+        <div class="bor-tb bor-tb2">
+          <table>
+            <colgroup>
+              <col style="width: 40px" />
+              <col style="width: 270px" />
+              <col style="width: 160px" />
+              <col style="width: 65px" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                </th>
+                <th scope="col">분류 명</th>
+                <th scope="col">사용여부</th>
+                <th scope="col">순서</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-0">
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                </td>
+                <td>
+                  <input type="text" class="form-control" />
+                </td>
+                <td>
+                  <div class="custom-select" style="width: 160px">
+                    <select name="" id="" class="form-select">
+                      <option value="">사용</option>
+                    </select>
+                  </div>
+                </td>
+                <td><input type="text" class="form-control text-center" style="width: 60px" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="btn-md-box">
+          <button type="button" class="btn btn-md btn-min btn-green">적용</button>
+          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //modal: 시스템 리스트 설정 -->
 
 <!-- modal: API 추가 -->
 <div class="modal fade" tabindex="-1" id="modal-api-add">

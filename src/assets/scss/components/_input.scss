@@ -31,6 +31,9 @@
   &.form-textarea{
     overflow-y: hidden; line-height: 25.5px;
   }
+  &.title{
+    font-size: 20px; font-weight: 500; color: #111; padding: 7px 20px;
+  }
 }
 .search-form{
   position: relative;
@@ -116,4 +119,7 @@
       padding: 8px 130px 10px 20px;
     }
   }
+}
+.textarea-form{
+  height: 240px;
 }

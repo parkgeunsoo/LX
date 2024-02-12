@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+      <div class="content">
+        @@include('@@webRoot/_include/_aside.html')
+        <div class="sub-content">
+          <div class="head-content">
+            <p class="main-title">자료실 관리 상세/수정</p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                <li class="breadcrumb-item"><a href="#">게시판관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">자료실관리</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="table-wrap">
+            <table class="table table-row">
+              <colgroup>
+                <col width="150px" />
+                <col />
+                <col width="150px" />
+                <col />
+                <col width="150px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td colspan="5">
+                    <input type="text" class="form-control title w-100" placeholder="제목을 입력하세요 (한글 100자 이하)" value="(소식)공간정보포탈의 다양한 공간정보" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-wrap mt-20">
+            <table class="table table-row">
+              <colgroup>
+                <col width="150px" />
+                <col />
+                <col width="150px" />
+                <col />
+                <col width="150px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">시스템</th>
+                  <td>2D 사용자포탈</td>
+                  <th scope="row">시스템 하위</th>
+                  <td>시흥시</td>
+                  <th scope="row">부서</th>
+                  <td>서울 강남 지자체</td>
+                </tr>
+                <tr>
+                  <th scope="row">작성자</th>
+                  <td>강효두</td>
+                  <th scope="row">작성자ID</th>
+                  <td>B60177</td>
+                  <th scope="row">등록일자</th>
+                  <td>2023-10-30</td>
+                </tr>
+                <tr>
+                  <th scope="row">사용여부</th>
+                  <td>
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">공개</option>
+                        <option value="">분류</option>
+                      </select>
+                    </div>
+                  </td>
+                  <th scope="row">조회수</th>
+                  <td>17</td>
+                  <th scope="row">수정일자</th>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <th scope="row">첨부파일</th>
+                  <td colspan="5">
+                    <div class="form-file-custom">
+                      <p id="selectedFile" class="file-name" style="width: 440px">파일을 첨부해주세요.</p>
+                      <label for="fileInput" id="fileLabel">파일찾기</label>
+                      <input type="file" id="fileInput" style="display: none">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="editor-wrap mt-50">
+            에디터 영역
+          </div>
+          <div class="btn-group justify-content-center">
+            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+            <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+          </div>
+          @@include('@@webRoot/_include/_footer.html')
+        </div>
+      </div>
+    </div>
+@@include('@@webRoot/_include/_modal.html')
+<script>
+  $(document).ready(function () {
+    $("#fileInput").on("change", function () {
+      var selectedFiles = this.files;
+
+      if (selectedFiles.length > 0) {
+        $("#selectedFile").text(selectedFiles[0].name);
+        $("#selectedFile").addClass("select");
+      } else {
+        $("#selectedFile").text("선택된 파일이 없습니다.");
+      }
+    });
+  });
+</script>
+  </body>
+</html>

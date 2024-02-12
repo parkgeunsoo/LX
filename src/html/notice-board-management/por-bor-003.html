@@ -10,14 +10,15 @@
         @@include('@@webRoot/_include/_aside.html')
         <div class="sub-content">
           <div class="head-content">
-            <p class="main-title">사용자 계정관리</p>
+            <p class="main-title">FAQ 관리</p>
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <a href="#"><i class="icon-home"></i></a>
                 </li>
-                <li class="breadcrumb-item"><a href="#">권한관리</a></li>
-                <li class="breadcrumb-item active" aria-current="page">사용자계정관리</li>
+                <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                <li class="breadcrumb-item"><a href="#">게시판관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">FAQ관리</li>
               </ol>
             </nav>
           </div>
@@ -26,33 +27,35 @@
               <div class="row">
                 <div class="col-11">
                   <div class="row mb-10">
-                    <div class="col-4">
+                    <div class="col-5">
                       <div class="input-form">
-                        <p class="input-form-label">사용자구분</p>
+                        <p class="input-form-label">시스템구분</p>
                         <div class="form">
-                          <div class="custom-select" style="width: 160px">
-                            <select name="" id="" class="form-select">
-                              <option value="">운영자</option>
-                              <option value="">분류</option>
-                            </select>
+                          <div class="d-flex align-items-center gap-10">
+                            <div class="custom-select" style="width: 160px">
+                              <select name="" id="" class="form-select">
+                                <option value="">2D 사용자포탈</option>
+                                <option value="">분류</option>
+                              </select>
+                            </div>
+                            <div class="custom-select" style="width: 160px">
+                              <select name="" id="" class="form-select">
+                                <option value="">시흥시</option>
+                                <option value="">분류</option>
+                              </select>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-4">
                       <div class="input-form">
-                        <p class="input-form-label">지역</p>
+                        <p class="input-form-label">분류</p>
                         <div class="form">
                           <div class="custom-select" style="width: 160px">
                             <select name="" id="" class="form-select">
-                              <option value="">충청북도</option>
-                              <option value="">분류</option>
-                            </select>
-                          </div>
-                          <div class="custom-select" style="width: 160px">
-                            <select name="" id="" class="form-select">
-                              <option value="">상담구</option>
-                              <option value="">분류</option>
+                              <option value="">서비스신청</option>
+                              <option value="">전체</option>
                             </select>
                           </div>
                         </div>
@@ -60,30 +63,32 @@
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-4">
+                    <div class="col-5">
                       <div class="input-form">
-                        <p class="input-form-label">등록일자</p>
-                        <div class="form">
-                          <div class="input-form">
-                            <div class="d-flex align-items-center gap-10">
-                              <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
-                              <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
-                            </div>
+                        <p class="input-form-label">일자</p>
+                        <div class="d-flex align-items-center gap-10">
+                          <div class="custom-select" style="width: 100px">
+                            <select name="" id="" class="form-select">
+                              <option value="">등록일</option>
+                              <option value="">분류</option>
+                            </select>
                           </div>
+                          <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                          <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
                         </div>
                       </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-5">
                       <div class="input-form">
                         <p class="input-form-label">검색어</p>
                         <div class="form">
                           <div class="custom-select" style="width: 160px">
                             <select name="" id="" class="form-select">
+                              <option value="">전체</option>
                               <option value="">이름</option>
-                              <option value="">분류</option>
                             </select>
                           </div>
-                          <input type="text" class="form-control" value="" placeholder="" style="width: 457px" />
+                          <input type="text" class="form-control" value="" placeholder="" style="width: 200px" />
                         </div>
                       </div>
                     </div>
@@ -97,7 +102,6 @@
               </div>
             </div>
           </div>
-       
           <div class="main-content">
             <div class="table-head">
               <p>전체 <span class="text-green">6384</span> 건</p>
@@ -114,9 +118,9 @@
                     </div>
                   </div>
                 </div>
+                <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" data-bs-toggle="modal" data-bs-target="#modal-classification-add">분류추가</button>
                 <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
                 <button type="button" class="btn btn-min btn-auto btn-green btn-md">등록</button>
-                <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md"><i class="icon-download mr-10"></i> 엑셀다운로드</button>
               </div>
             </div>
             <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
@@ -126,60 +130,30 @@
         </div>
       </div>
     </div>
+    @@include('@@webRoot/_include/_modal.html')
     <script>
-      class CompanyLogoRenderer {
-        eGui;
-
-        init(params) {
-          let companyLogo = document.createElement("img");
-          companyLogo.src = `https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2F54F20A0lQVsJ5J21JxMjnwZLU7uvQSIIXk1p1S5kFi-7YnNh6J9YKAUW4xfExSglsxU%3Dw240-h480-rw&tbnid=_i5PJITUzAb42M&vet=12ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vertaler.koja%26hl%3Dko&docid=VR8lMSDGhOfVDM&w=240&h=240&q=%EB%B2%88%EC%97%AD%EA%B8%B0%20%EC%9D%BC%EB%B3%B8%EC%96%B4&ved=2ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb`;
-          companyLogo.setAttribute("style", "display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)");
-
-          let companyName = document.createElement("p");
-          companyName.textContent = params.value;
-          companyName.setAttribute("style", "text-overflow: ellipsis; overflow: hidden; white-space: nowrap;");
-
-          this.eGui = document.createElement("span");
-          this.eGui.setAttribute("style", "display: flex; height: 100%; width: 100%; align-items: center");
-          this.eGui.appendChild(companyLogo);
-          this.eGui.appendChild(companyName);
-        }
-
-        getGui() {
-          return this.eGui;
-        }
-
-        refresh(params) {
-          return false;
-        }
-      }
 
       const cellVertical = { "vertical-align": "middle" };
-      const rowData = [{ check: "", number: "10", user: "운영자", code: "6430794", name: "강효두", id: "sigunTest4_4470000", region: "충청북도 청주시 상당구", date: "2023-10-30", status: "사용", cellStyle: cellVertical }];
+      const rowData = [{ check: "", number: "10", title: "공간 정보 포털의 다양한 공간정보를 알려드리면서 다음…", system: "2D사용자포탈 시흥시", classification: "가입", writer: "강효두", registrationDate: "2023-10-30",  cellStyle: cellVertical }];
 
       const columnDefs = [
         { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
         { field: "number", headerName: "번호", cellStyle: cellVertical },
-        { field: "user", headerName: "사용자구분" },
-        { field: "code", headerName: "기관코드" },
-        { field: "name", headerName: "사용자명" },
-        { field: "id", headerName: "사용자ID" },
-        { field: "region", headerName: "지역" },
-        { field: "date", headerName: "등록일자" },
-        { field: "status", headerName: "상태" },
+        { field: "title", headerName: "제목" },
+        { field: "system", headerName: "시스템" },
+        { field: "classification", headerName: "분류" },
+        { field: "writer", headerName: "작성자" },
+        { field: "registrationDate", headerName: "등록일자" },
       ];
 
       const gridOptions = {
         rowData: rowData,
         columnDefs: columnDefs,
-        autoSizeStrategy: { type: "fitGridWidth" },
+        autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
         rowSelection: "multiple",
         defaultColDef: {
           editable: false,
           filter: true,
-        },
-        frameworkComponents: {
-          CompanyLogoRenderer: CompanyLogoRenderer,
         },
       };
 

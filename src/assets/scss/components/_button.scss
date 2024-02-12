@@ -15,7 +15,8 @@
   border-radius: 4px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   &.btn-auto{
-    width: auto; padding: 15px 24px;
+    width: auto;
+    padding: 0;
   }
   &.btn-min{
     min-width: 80px;
@@ -62,6 +63,16 @@
     background-color: $white !important;
     border: 1px solid #ddd !important;
     color: #111 !important;
+  }
+  &.btn-blue{
+    background-color: #0d4483 !important;
+    border: 1px solid #0d4483 !important;
+    color: $white !important;
+  }
+  &.btn-excel{
+    background-color: #cceae6 !important;
+    border: 1px solid #cceae6 !important;
+    color: #009881 !important;
   }
 }
 

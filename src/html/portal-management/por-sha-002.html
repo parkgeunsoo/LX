@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+      <div class="content">
+        @@include('@@webRoot/_include/_aside.html')
+        <div class="sub-content">
+          <div class="head-content">
+            <p class="main-title">플랫폼 공유관리</p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">플랫폼 공유관리</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table table-row">
+              <colgroup>
+                <col width="150px" />
+                <col />
+                <col width="150px" />
+                <col />
+                <col width="150px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">시스템</th>
+                  <td>2D 사용자포탈</td>
+                  <th scope="row">시스템 하위</th>
+                  <td>시흥시</td>
+                  <th scope="row">부서</th>
+                  <td>서울 강남 지자체</td>
+                </tr>
+                <tr>
+                  <th scope="row">신청자</th>
+                  <td>권순찬</td>
+                  <th scope="row">신청일</th>
+                  <td>2023-10-30</td>
+                  <th scope="row">처리상태</th>
+                  <td>
+                    <div class="d-flex align-items-center gap-30">
+                      <p>신청</p>
+                      <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">승인</button>
+                      <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">반려</button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">테이블명(한글)</th>
+                  <td colspan="5">기획재정부_온라인복권 판매점주소_수원권</td>
+                </tr>
+                <tr>
+                  <th scope="row">테이블명(영문)</th>
+                  <td colspan="5">DIP_CNVR_TABLE_00000001793</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn-group justify-content-center">
+            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+            <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+          </div>
+          @@include('@@webRoot/_include/_footer.html')
+        </div>
+      </div>
+    </div>
+@@include('@@webRoot/_include/_modal.html')
+<script>
+  $(document).ready(function () {
+    $("#fileInput").on("change", function () {
+      var selectedFiles = this.files;
+
+      if (selectedFiles.length > 0) {
+        $("#selectedFile").text(selectedFiles[0].name);
+        $("#selectedFile").addClass("select");
+      } else {
+        $("#selectedFile").text("선택된 파일이 없습니다.");
+      }
+    });
+  });
+</script>
+  </body>
+</html>

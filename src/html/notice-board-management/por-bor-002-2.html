@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+      <div class="content">
+        @@include('@@webRoot/_include/_aside.html')
+        <div class="sub-content">
+          <div class="head-content">
+            <p class="main-title">자료실 관리 등록</p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                <li class="breadcrumb-item"><a href="#">게시판관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">자료실관리</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="table-wrap">
+            <table class="table table-row">
+              <colgroup>
+                <col width="290px" />
+                <col />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th scope="row">시스템 선택</th>
+                  <td>
+                    <div class="d-flex align-items-center gap-10">
+                      <div class="custom-select" style="width: 160px">
+                        <select name="" id="" class="form-select">
+                          <option value="">시스템 선택</option>
+                          <option value="">분류</option>
+                        </select>
+                      </div>
+                      <div class="custom-select" style="width: 160px">
+                        <select name="" id="" class="form-select">
+                          <option value="">하위시스템</option>
+                          <option value="">분류</option>
+                        </select>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">사용여부</th>
+                  <td>
+                    <div class="custom-select" style="width: 160px">
+                      <select name="" id="" class="form-select">
+                        <option value="">선택</option>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">제목</th>
+                  <td><input type="text" class="form-control w-100" placeholder="제목을 입력하세요 (한글 100자 이하)" /></td>
+                </tr>
+                <tr>
+                  <th scope="row">내용</th>
+                  <td>
+                    <div class="editor-wrap">
+                      에디터 영역
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">첨부파일</th>
+                  <td>
+                    <div class="form-file-custom">
+                      <p id="selectedFile" class="file-name" style="width: 440px">파일을 첨부해주세요.</p>
+                      <label for="fileInput" id="fileLabel">파일찾기</label>
+                      <input type="file" id="fileInput" style="display: none">
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="btn-group justify-content-center">
+            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
+          </div>
+          @@include('@@webRoot/_include/_footer.html')
+        </div>
+      </div>
+    </div>
+@@include('@@webRoot/_include/_modal.html')
+  </body>
+</html>
