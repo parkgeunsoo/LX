@@ -94,7 +94,7 @@
               <p>전체 <span class="text-green">6384</span> 건</p>
               <div class="btn-group justify-content-center">
                 <div class="input-form">
-                  <p class="input-form-label" style="width:37px;">보기</p>
+                  <p class="input-form-label" style="width: 37px">보기</p>
                   <div class="form">
                     <div class="custom-select" style="width: 80px">
                       <select name="" id="" class="form-select">
@@ -117,9 +117,8 @@
       </div>
     </div>
     <script>
-
       const cellVertical = { "vertical-align": "middle" };
-      const rowData = [{ check: "", number: "10", title: "공간 정보 포털의 다양한 공간정보를 알려드리면서 다음…", system: "2D사용자포탈 시흥시", answer: "완료", writer: "강효두", registrationDate: "2023-10-30",  cellStyle: cellVertical }];
+      const rowData = [{ check: "", number: "10", title: "공간 정보 포털의 다양한 공간정보를 알려드리면서 다음…", system: "2D사용자포탈 시흥시", answer: "완료", writer: "강효두", registrationDate: "2023-10-30", cellStyle: cellVertical }];
 
       const columnDefs = [
         { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
@@ -132,6 +131,7 @@
       ];
 
       const gridOptions = {
+        domLayout: "autoHeight",
         rowData: rowData,
         columnDefs: columnDefs,
         autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },

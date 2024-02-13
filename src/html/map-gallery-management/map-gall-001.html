@@ -107,7 +107,7 @@
               <p>전체 <span class="text-green">6384</span> 건</p>
               <div class="btn-group justify-content-center">
                 <div class="input-form">
-                  <p class="input-form-label" style="width:37px;">보기</p>
+                  <p class="input-form-label" style="width: 37px">보기</p>
                   <div class="form">
                     <div class="custom-select" style="width: 80px">
                       <select name="" id="" class="form-select">
@@ -131,7 +131,6 @@
       </div>
     </div>
     <script>
-
       const cellVertical = { "vertical-align": "middle" };
       const rowData = [{ check: "", number: "10", title: "0207 표준템플릿 테스트", system: "2D사용자포탈 시흥시", classification: "웹맵", applicant: "강효두", registrationDate1: "2023-10-30", manager: "강효두", registrationDate2: "2023-10-30", status: "승인", preview: "미리보기", cellStyle: cellVertical }];
 
@@ -149,8 +148,8 @@
         { field: "preview", headerName: "미리보기" },
       ];
 
-
       const gridOptions = {
+        domLayout: "autoHeight",
         rowData: rowData,
         columnDefs: columnDefs,
         autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
@@ -166,4 +165,3 @@
     </script>
   </body>
 </html>
-
