@@ -27,7 +27,7 @@
     .system-list__content{
       border-radius: 8px; background-color: #f1f3f4; padding: 22px 29px; cursor: pointer;
       &:hover{
-        background-color: #fff;
+        background-image: url('../images/system-content-bg.png'); background-size: cover;
       }
       &.active{
         background-color: $green; color: #fff;
@@ -59,27 +59,25 @@
         }
       }
       &.active{
-        .menu-depth2{
-          display: flex;
-        }
+        .menu-depth2{display: block;}
         .icon-plus{
-          width:10px; height: 2px; background-image: url('../images/icon-minus-active.png');
+          width:12px; height: 2px; background-image: url('../images/icon-minus-active.png');
         }
       }
     }
   }
   .menu-depth2{
-    display: none; flex-direction: column; gap: 15px; padding: 20px 0 0 40px;cursor: pointer;
+    display: none; flex-direction: column; padding: 20px 0 0 40px;cursor: pointer; 
     > li{
+      padding-bottom: 15px;
+      &:last-child{ padding-bottom: 0;}
       .dep2-desc{
         display: flex; align-items: center; gap: 10px; font-size: 14px; color: #666;
       }
       &.active{
+        .menu-depth3{display: block;}
         .dep2-desc{color: #111;}
         .icon-menu-depth2{background-image: url('../images/icon-menu-depth2-active.png'); }
-        .menu-depth3{
-          display: flex;
-        }
       }
     }
   }
@@ -114,7 +112,7 @@
   width: 1150px;
 }
 .tool-wrap{
-  width: 780px; flex-direction: column; gap: 35px; display: none;
+  width: 760px; flex-direction: column; gap: 35px; display: none;
 }
 .property-wrap{
   .property-content{

@@ -120,6 +120,20 @@
     }
   }
 }
+.exe-lg-input{
+  position: relative; display: flex; align-items: flex-end; gap: 8px;
+  .form-control{
+    padding: 10px 65px 10px 20px; border: 0; height: 140px; border: solid 1px #ebebeb; border-radius: 4px
+  }
+  .exe-txt{
+    color: #999; font-size: 13px; flex-shrink: 0; line-height: 1.5;
+  }
+  &.lg{
+    .form-control{
+      padding: 8px 130px 10px 20px;
+    }
+  }
+}
 .textarea-form{
   height: 240px;
 }

@@ -4,7 +4,7 @@ var Header = {
   },
   aside: function () {
     $(document).ready(function () {
-      $(".dep1").click(function () {
+      $(".more-depth").click(function () {
         $(this).next(".dep2").slideToggle(200);
         $(this).toggleClass("active");
       });
@@ -42,20 +42,19 @@ var Common = {
       yearSuffix: "년",
       dateFormat: "yy-mm-dd",
     });
+    $("[month-data-picker='date']").datepicker({
+      dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+      monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      monthNamesShort: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
+      showOtherMonths: false,
+      //selectOtherMonths: true,
+      showMonthAfterYear: true,
+      yearSuffix: "년",
+      dateFormat: "yy-mm",
+    });
   },
 
   common: function () {
-    // textarea 유동적으로 height값 증가
-    $(document).ready(function () {
-      $(".form-textarea").on("input", function () {
-        autoResizeTextarea($(this));
-      });
-    });
-
-    function autoResizeTextarea($textarea) {
-      $textarea.css("height", "auto");
-      $textarea.css("height", $textarea[0].scrollHeight + "px");
-    }
 
     // confirm 모달
     $(document).ready(function(){
@@ -68,9 +67,11 @@ var Common = {
 
     // 메뉴관리 메뉴
     $('.menu-depth1 > li > div').click(function(){
+      $(this).siblings('.menu-depth2').slideToggle();
       $(this).parent('li').toggleClass('active');
     })
     $('.menu-depth2 > li > .dep2-desc').click(function(){
+      $(this).siblings('.menu-depth3').slideToggle();
       $(this).parent('li').toggleClass('active');
     })
     $('.menu-depth3 > li > .dep3-desc').click(function(){

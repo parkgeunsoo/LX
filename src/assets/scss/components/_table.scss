@@ -25,8 +25,12 @@
     }
     tr {
       border-bottom: 1px solid #ebebeb;
+      &:first-child{
+        th{ border-radius: 8px 0 0 0;}
+      }
       &:last-child{
         border-bottom: 0;
+        th{ border-radius: 0 0 0 8px;}
       }
     }
     .th-txt{
