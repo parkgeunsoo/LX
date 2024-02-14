@@ -54,15 +54,17 @@
     > li{
       >div{
         display: flex; align-items: center; gap: 15px; cursor: pointer;
+        &.open{
+          .icon-plus{
+            width:12px; height: 2px; background-image: url('../images/icon-minus-active.png');
+          }
+        }
         .dep1-desc{
-          display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500;
+          display: flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 500;
         }
       }
       &.active{
         .menu-depth2{display: block;}
-        .icon-plus{
-          width:12px; height: 2px; background-image: url('../images/icon-minus-active.png');
-        }
       }
     }
   }
@@ -72,12 +74,14 @@
       padding-bottom: 15px;
       &:last-child{ padding-bottom: 0;}
       .dep2-desc{
-        display: flex; align-items: center; gap: 10px; font-size: 14px; color: #666;
+        display: flex; align-items: center; gap: 10px; font-size: 16px; color: #666;
+        &.open{
+          .icon-menu-depth2{background-image: url('../images/icon-menu-depth2-active.png'); }
+          color: #111;
+        }
       }
       &.active{
         .menu-depth3{display: block;}
-        .dep2-desc{color: #111;}
-        .icon-menu-depth2{background-image: url('../images/icon-menu-depth2-active.png'); }
       }
     }
   }
@@ -90,7 +94,7 @@
       padding-bottom: 18px;
       &:last-child{ padding-bottom: 0;}
       .dep3-desc{
-        font-size: 14px; color: #999;  display: flex; align-items: center; gap: 10px;
+        font-size: 15px; color: #999;  display: flex; align-items: center; gap: 10px;
       }
       &.active{
         .dep3-desc{

@@ -67,12 +67,12 @@ var Common = {
 
     // 메뉴관리 메뉴
     $('.menu-depth1 > li > div').click(function(){
-      $(this).siblings('.menu-depth2').slideToggle();
-      $(this).parent('li').toggleClass('active');
+      $(this).siblings('.menu-depth2').slideToggle('active');
+      $(this).toggleClass('open');
     })
     $('.menu-depth2 > li > .dep2-desc').click(function(){
-      $(this).siblings('.menu-depth3').slideToggle();
-      $(this).parent('li').toggleClass('active');
+      $(this).siblings('.menu-depth3').slideToggle('active');
+      $(this).toggleClass('open');
     })
     $('.menu-depth3 > li > .dep3-desc').click(function(){
       $(this).parent('li').addClass('active').siblings().removeClass('active');
