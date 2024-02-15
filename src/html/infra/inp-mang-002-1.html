@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">지자체 인프라관리</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">인프라관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">지자체인프라관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <p class="table-title">신청번호</p>
+                <div class="table-wrap mt-20">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="290px" />
+                            <col />
+                            <col width="290px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">신청번호</th>
+                                <td>20231212-114</td>
+                                <th scope="row">시스템</th>
+                                <td>2D사용자포탈  |  시흥시</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">신청일</th>
+                                <td>2023.11.23</td>
+                                <th scope="row">승인일</th>
+                                <td>2023.12.02</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">신청자명</th>
+                                <td>강효두</td>
+                                <th scope="row">소속부서</th>
+                                <td>기획총무부</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">기관명</th>
+                                <td colspan="3">충북 경제자유구역청</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">서비스명</th>
+                                <td colspan="3">지도상 주요시 길 검색 기능</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-title">인프라 정보</p>
+                <div class="infra-info"></div>
+                <div class="btn-group justify-content-center">
+                    <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+@@include('@@webRoot/_include/_modal.html')
+<script>
+  $(document).ready(function () {
+    $("#fileInput").on("change", function () {
+      var selectedFiles = this.files;
+
+      if (selectedFiles.length > 0) {
+        $("#selectedFile").text(selectedFiles[0].name);
+        $("#selectedFile").addClass("select");
+      } else {
+        $("#selectedFile").text("선택된 파일이 없습니다.");
+      }
+    });
+  });
+</script>
+  </body>
+</html>

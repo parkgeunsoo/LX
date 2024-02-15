@@ -1,5 +1,6 @@
 {
   "editor.wordWrap": "bounded",
+  "editor.formatOnSave": true,
   "editor.wordWrapColumn": 400,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[html]": {

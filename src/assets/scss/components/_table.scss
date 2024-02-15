@@ -1,6 +1,9 @@
 .table-wrap{
   border: solid 1px #ebebeb; border-radius: 8px; margin-top: 45px;
 }
+.table-title{
+  font-size: 20px; font-weight: 500; line-height: 1.25; color: #111; margin-top: 33px;
+}
 .table {
   width: 100%; table-layout: fixed;
   .table-scroll {overflow: auto;}
