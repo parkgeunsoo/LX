@@ -74,10 +74,14 @@
       padding-bottom: 15px;
       &:last-child{ padding-bottom: 0;}
       .dep2-desc{
-        display: flex; align-items: center; gap: 10px; font-size: 16px; color: #666;
+        display: flex; align-items: center; gap: 10px; font-size: 16px; position: relative;
+        .icon-plus{
+          position: absolute; left: -25px; top: 50%; transform: translateY(-50%);
+        }
         &.open{
-          .icon-menu-depth2{background-image: url('../images/icon-menu-depth2-active.png'); }
-          color: #111;
+          .icon-plus{
+            width:12px; height: 2px; background-image: url('../images/icon-minus-active.png');
+          }
         }
       }
       &.active{
@@ -94,7 +98,7 @@
       padding-bottom: 18px;
       &:last-child{ padding-bottom: 0;}
       .dep3-desc{
-        font-size: 15px; color: #999;  display: flex; align-items: center; gap: 10px;
+        font-size: 15px; display: flex; align-items: center; gap: 10px;
       }
       &.active{
         .dep3-desc{

@@ -75,7 +75,7 @@ var Common = {
       $(this).siblings('.menu-depth3').slideToggle('active');
       $(this).toggleClass('open');
     })
-    $('.menu-depth3 > li > .dep3-desc').click(function(){
+    $('.open-tool').click(function(){
       $(this).parent('li').addClass('active').siblings().removeClass('active');
       $('.tool-wrap').css('display','flex');
     })
