@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">서비스신청 상세/수정</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                            <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">신청관리</a></li>
+                            <li class="breadcrumb-item"><a href="#">서비스신청관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">서비스신청</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="table-wrap mt-30">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="290px" />
+                            <col />
+                            <col width="290px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">신청번호</th>
+                                <td>
+                                    20231212-114
+                                </td>
+                                <th scope="row">시스템</th>
+                                <td>
+                                    <div class="half">
+                                        <span>2D사용자포탈</span>
+                                        <span class="after">시흥시</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">신청일</th>
+                                <td>
+                                    2023.11.23
+                                </td>
+                                <th scope="row">반려일</th>
+                                <td>
+                                   -
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">승인일</th>
+                                <td>
+                                    2023.12.03
+                                </td>
+                                <th scope="row">확인단계</th>
+                                <td>
+                                    <p class="text-green">승인</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">신청자명</th>
+                                <td>
+                                  강효두
+                                </td>
+                                <th scope="row">소속부서</th>
+                                <td>
+                                   기획총무부
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">기관명</th>
+                                <td colspan="3">
+                                  충북 경제자유구역청
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">반려사유</th>
+                                <td colspan="3">
+                                  -
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">서비스명</th>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" value="지도상 주요시 길 검색 기능" placeholder="지도상 주요시 길 검색 기능" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">서비스명(영문)</th>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" value="Route search function for major cities on the map" placeholder="Route search function for major cities on the map" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">시나리오파일</th>
+                                <td colspan="3">
+                                    <div class="form-file-custom">
+                                        <p id="selectedFile" class="file-name" style="width: 440px">시나리오 파일 이미지.PDF</p>
+                                        <label for="fileInput" id="fileLabel">파일찾기</label>
+                                        <input type="file" id="fileInput" style="display: none">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">기능설명</th>
+                                <td colspan="3">
+                                    <input type="text" class="form-control" value="강남구 전체 주요 시 길 상세 검색 기능 서비스를 구현하려 합니다." placeholder="" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+         
+                <div class="btn-group justify-content-center">
+                    <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+  </body>
+</html>

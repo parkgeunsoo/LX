@@ -38,6 +38,11 @@
     background-color: $green !important;
     color: $white !important;
     border: 1px solid $green !important;
+    &:disabled{
+      background-color: #c9c9c9 !important;
+      border: 1px solid #c9c9c9 !important;
+      color: $white !important;
+    }
   }
   &.btn-outline-green{
     background-color: $white !important;
@@ -68,6 +73,11 @@
     background-color: #0d4483 !important;
     border: 1px solid #0d4483 !important;
     color: $white !important;
+    &:disabled{
+      background-color: #c9c9c9 !important;
+      border: 1px solid #c9c9c9 !important;
+      color: $white !important;
+    }
   }
   &.btn-excel{
     background-color: #cceae6 !important;

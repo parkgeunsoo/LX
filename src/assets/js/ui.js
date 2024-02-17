@@ -88,6 +88,18 @@ var Common = {
         $('.role .list').hide();
       }
   });
+  $(document).ready(function () {
+    $("#fileInput").on("change", function () {
+      var selectedFiles = this.files;
+
+      if (selectedFiles.length > 0) {
+        $("#selectedFile").text(selectedFiles[0].name);
+        $("#selectedFile").addClass("select");
+      } else {
+        $("#selectedFile").text("선택된 파일이 없습니다.");
+      }
+    });
+  });
   },
 };
 

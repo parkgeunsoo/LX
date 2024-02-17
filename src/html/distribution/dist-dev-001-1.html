@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">배포현황</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                            <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">배포관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">배포현황</li>
+                        </ol>
+                    </nav>
+                </div>
+                <p class="table-title">서비스 신청번호</p>
+                <div class="table-wrap mt-3">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="145px" />
+                            <col />
+                            <col width="145px" />
+                            <col />
+                            <col width="145px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">시스템</th>
+                                <td>
+                                    <div class="half">
+                                        <span>2D사용자포탈</span>
+                                        <span class="after">시흥시</span>
+                                    </div>
+                                </td>
+                                <th scope="row">신청번호</th>
+                                <td>20231212-114</td>
+                                <th scope="row">신청일</th>
+                                <td>2023.11.23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">신청자</th>
+                                <td>강효두</td>
+                                <th scope="row">소속부서</th>
+                                <td>기획총무부</td>
+                                <th scope="row">기관명</th>
+                                <td>충북 경제자유구역청</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">서비스명</th>
+                                <td colspan="3">지도상 주요시 길 검색 기능</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-title">배포 정보</p>
+                <div class="table-wrap mt-3">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="145px" />
+                            <col />
+                            <col width="145px" />
+                            <col />
+                            <col width="145px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">구분</th>
+                                <td>운영</td>
+                                <th scope="row">상태</th>
+                                <td>완료</td>
+                                <th scope="row">버전</th>
+                                <td>2.x</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배포일</th>
+                                <td colspan="3">2023.11.23</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">반려사유</th>
+                                <td colspan="3">지도상 주요시 길 검색 기능</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">URL</th>
+                                <td colspan="3"><a href="https://github.com/xpressengine/xpressengine" target="_blank" class="text-green text-underline">https://github.com/xpressengine/xpressengine</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-group justify-content-center">
+                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+@@include('@@webRoot/_include/_modal.html')
+
+  </body>
+</html>
+

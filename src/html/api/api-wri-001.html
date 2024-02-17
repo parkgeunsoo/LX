@@ -10,14 +10,14 @@
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
                 <div class="head-content">
-                    <p class="main-title">지자체 인프라관리</p>
+                    <p class="main-title">API 현황</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                             <a href="#"><i class="icon-home"></i></a>
                             </li>
-                            <li class="breadcrumb-item"><a href="#">인프라관리</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">지자체인프라관리</li>
+                            <li class="breadcrumb-item"><a href="#">API관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">API현황</li>
                         </ol>
                     </nav>
                 </div>
@@ -26,35 +26,14 @@
                         <div class="row">
                             <div class="col-11">
                                 <div class="row mb-10">
-                                    <div class="col-4">
+                                    <div class="col-5">
                                         <div class="input-form">
-                                            <p class="input-form-label">시스템</p>
-                                            <div class="form">
-                                                <div class="d-flex align-items-center gap-10">
-                                                    <div class="custom-select" style="width: 160px">
-                                                        <select name="" id="" class="form-select">
-                                                            <option value="">2D</option>
-                                                            <option value="">분류</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-select" style="width: 160px">
-                                                        <select name="" id="" class="form-select">
-                                                            <option value="">2D</option>
-                                                            <option value="">분류</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="input-form">
-                                            <p class="input-form-label">신청구분</p>
+                                            <p class="input-form-label">구분</p>
                                             <div class="form">
                                                 <div class="custom-select" style="width: 160px">
                                                     <select name="" id="" class="form-select">
-                                                        <option value="">개발</option>
-                                                        <option value=""></option>
+                                                        <option value="">2D</option>
+                                                        <option value="">분류</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -62,39 +41,44 @@
                                     </div>
                                     <div class="col-4">
                                         <div class="input-form">
-                                            <p class="input-form-label" style="width: 50px;
-                                            margin-left: 35px;">일자</p>
-                                            <div class="d-flex align-items-center gap-10">
-                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
-                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                                            <p class="input-form-label">분류</p>
+                                            <div class="form">
+                                                <div class="custom-select" style="width: 160px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">데이터</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="input-form">
+                                            <p class="input-form-label">상태</p>
+                                            <div class="form">
+                                                <div class="custom-select" style="width: 160px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">개발자 공개</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-4">
-                                        <div class="d-flex align-items-center gap-10">
-                                            <div class="input-form">
-                                                <p class="input-form-label">지역</p>
-                                                <div class="form">
-                                                    <div class="custom-select" style="width: 160px">
-                                                        <select name="" id="" class="form-select">
-                                                            <option value="">전체</option>
-                                                            <option value="">분류</option>
-                                                        </select>
-                                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-form">
+                                            <p class="input-form-label">일자</p>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <div class="custom-select" style="width: 100px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">등록일</option>
+                                                        <option value=""></option>
+                                                    </select>
                                                 </div>
-                                            </div>
-                                            <div class="input-form">
-                                                <p class="input-form-label" style="width:41px;">구분</p>
-                                                <div class="form">
-                                                    <div class="custom-select" style="width: 160px">
-                                                        <select name="" id="" class="form-select">
-                                                            <option value="">지자체</option>
-                                                            <option value="">분류</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
                                             </div>
                                         </div>
                                     </div>
@@ -108,7 +92,7 @@
                                                     <option value="">분류</option>
                                                 </select>
                                                 </div>
-                                                <input type="text" class="form-control" value="" placeholder="" style="width: 220px" />
+                                                <input type="text" class="form-control" value="" placeholder="" style="width: 200px" />
                                             </div>
                                         </div>
                                     </div>
@@ -151,17 +135,20 @@
     </div>
     <script>
       const cellVertical = { "vertical-align": "middle" };
-      const rowData = [{ check: "", number: "10", system: "2D사용자포탈 제주시", applicationNumber: "20231212-114", applicationCategory: "개발", division: "지자체", webServer: "CPU 8 Core / RAM 16GB / SSD 50GB", apiServer: "CPU 8 Core / RAM 16GB / SSD 50GB", cellStyle: cellVertical }];
+      const rowData = [{ check: "", number: "10", division: "2D", classification: "기능", group: "분석", functionName: "위치찾기", apiCode: "A100011", apiName: "출발점과 목적지 연결분석", category: "REST", format: "XML", url: "https://www.eshare.go.kr/OpenApi/Info/detail.do?svcNo=15", cellStyle: cellVertical }];
 
       const columnDefs = [
         { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
         { field: "number", headerName: "번호", cellStyle: cellVertical },
-        { field: "system", headerName: "시스템" },
-        { field: "applicationNumber", headerName: "신청번호"},
-        { field: "applicationCategory", headerName: "신청구분" },
         { field: "division", headerName: "구분" },
-        { field: "webServer", headerName: "WEB서버" },
-        { field: "apiServer", headerName: "API서버" },
+        { field: "classification", headerName: "분류" },
+        { field: "group", headerName: "그룹명" },
+        { field: "functionName", headerName: "기능명"},
+        { field: "apiCode", headerName: "API코드" },
+        { field: "apiName", headerName: "API명" },
+        { field: "category", headerName: "유형" },
+        { field: "format", headerName: "포맷" },
+        { field: "url", headerName: "URL" },
       ];
 
       const gridOptions = {

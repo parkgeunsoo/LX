@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">개발자관리</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                            <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">신청관리</a></li>
+                            <li class="breadcrumb-item"><a href="#">서비스신청관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">개발자관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="filter-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-11">
+                                <div class="row mb-10">
+                                    <div class="col-5">
+                                        <div class="input-form">
+                                            <p class="input-form-label">지역</p>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <div class="custom-select" style="width: 160px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">충청북도</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                                <div class="custom-select" style="width: 160px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">상당구</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="input-form">
+                                            <p class="input-form-label">일자</p>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <div class="custom-select" style="width: 100px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">등록일</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" value="2024-01-01" />
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" value="2024-01-23" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="input-form">
+                                            <p class="input-form-label">검색어</p>
+                                            <div class="form">
+                                                <div class="custom-select" style="width: 160px">
+                                                <select name="" id="" class="form-select">
+                                                    <option value="">서비스명</option>
+                                                    <option value="">분류</option>
+                                                </select>
+                                                </div>
+                                                <input type="text" class="form-control" value="" placeholder="" style="width: 320px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <div class="filter-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="table-head">
+                        <div class="case">
+                            <p>전체 <span class="text-green">6384</span> 건</p>
+                            <p>대기 <span class="text-blue">12</span> 건</p>
+                            <p>승인 <span class="text-green">82</span> 건</p>
+                        </div>
+                        <div class="btn-group justify-content-center">
+                            <div class="input-form">
+                                <p class="input-form-label" style="width: 37px">보기</p>
+                                <div class="form">
+                                    <div class="custom-select" style="width: 80px">
+                                        <select name="" id="" class="form-select">
+                                        <option value="">100</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">신청</button>
+                        </div>
+                    </div>
+                    <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+                    @@include('@@webRoot/_include/_pagination.html')
+                </div>
+            @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    <script>
+         const cellVertical = { "vertical-align": "middle" };
+        const rowData = [{ 
+            check: "", 
+            number: "10", 
+            applicationNumber:"20231212-114",  
+            serviceName: "지도상 주요시 길 검색 기능", 
+            userName: "강효두", 
+            userId: "sigunTest4_4470000", 
+            registrationDate: "2023-10-30", 
+            situation: "대기", 
+            cellStyle: cellVertical 
+        }];
+  
+        const columnDefs = [
+          { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
+          { field: "number", headerName: "번호", cellStyle: cellVertical },
+          { field: "applicationNumber", headerName: "신청번호" },
+          { field: "serviceName", headerName: "서비스명" },
+          { field: "userName", headerName: "사용자명" },
+          { field: "userId", headerName: "사용자ID" },
+          { field: "registrationDate", headerName: "등록일" },
+          { field: "situation", headerName: "상태" },
+        ];
+  
+        const gridOptions = {
+          domLayout: "autoHeight",
+          rowData: rowData,
+          columnDefs: columnDefs,
+          autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
+          rowSelection: "multiple",
+          defaultColDef: {
+            editable: false,
+            filter: true,
+          },
+        };
+  
+        const gridDiv = document.querySelector("#myGrid");
+        const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+      </script>
+  </body>
+</html>

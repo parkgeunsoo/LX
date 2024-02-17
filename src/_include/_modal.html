@@ -609,3 +609,122 @@
   </div>
 </div>
 <!-- //modal: 역할 수정 -->
+
+
+<!-- modal: 신청 반려 -->
+<div class="modal fade" tabindex="-1" id="modal-application-rejected">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">신청 반려</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-form-title">신청을 반려합니다.</p>
+        <p class="modal-form-desc">작성 완료 시 반려 상태가 되며, 수정 되지 않습니다.</p>
+        <textarea name="" class="form-control reject-form" placeholder="반려사유 작성 (50자 이내)"></textarea>
+        <div class="btn3 justify-content-center">
+          <div class="btn-md-box">
+            <button type="button" class="btn btn-md btn-min btn-green">적용</button>
+            <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //modal: 신청 반려 -->
+
+<!-- modal: API 상세 -->
+<div class="modal fade" tabindex="-1" id="modal-api-detail">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 1060px">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">API 상세</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="table-title mt-30">인프라 요청정보</p>
+        <div class="table-wrap mt-3">
+            <table class="table table-row">
+                <colgroup>
+                    <col width="145px" />
+                    <col />
+                    <col width="145px" />
+                    <col />
+                </colgroup>
+                <tbody>
+                  <tr>
+                      <th scope="row">상태</th>
+                      <td>
+                        제한
+                      </td>
+                      <th scope="row">수정일</th>
+                      <td>
+                          2024.01.19
+                      </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">그룹명</th>
+                    <td colspan="3">
+                      건축물
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">API명</th>
+                    <td colspan="3">
+                      경북 걷기길
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">API주소</th>
+                    <td colspan="3">
+                      /DATA/dataM/relDataM/jobM
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">기능명</th>
+                    <td colspan="3">
+                      경상북도 경주시_걷기길 정보
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">제한사유</th>
+                    <td colspan="3">
+                      <textarea name="" class="form-control" style="height: 90px;"></textarea>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="table-title mt-60">인프라 요청정보</p>
+        <div class="table-mode infra mt-3">
+          <div class="table-head">
+            <div class="table-head__tr">No</div>
+            <div class="table-head__tr">일자</div>
+            <div class="table-head__tr">변경</div>
+            <div class="table-head__tr">제한사유</div>
+          </div>
+          <div class="table-body">
+            @@for(i=1; i < 20; i++){
+              <div class="table-body__row">
+                <div class="table-body__td">005</div>
+                <div class="table-body__td">2024.01.19</div>
+                <div class="table-body__td">제한</div>
+                <div class="table-body__td">2023년 10월부터 사용을 금지한 API입니다.</div>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="btn-md-box">
+          <button type="button" class="btn btn-md btn-min btn-green">저장</button>
+          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">기능현황 등록</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                            <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">API관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">기능현황</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="table-wrap mt-30">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="145px" />
+                            <col />
+                            <col width="145px" />
+                            <col />
+                            <col width="145px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">구분</th>
+                                <td>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">2D</option>
+                                            <option value="">분류</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th scope="row">분류</th>
+                                <td>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">기능</option>
+                                            <option value="">분류</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th scope="row">상태</th>
+                                <td>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">공개</option>
+                                            <option value="">비공기</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrap mt-50">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="290px" />
+                            <col />
+                            <col width="290px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">그룹명</th>
+                                <td>
+                                    <div class="custom-select" style="width: 200px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">그룹을 선택하세요</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th scope="row">기능(데이터)명</th>
+                                <td>
+                                    <div class="custom-select" style="width: 200px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">기능명을 선택하세요</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-group justify-content-center">
+                    <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                    <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+  </body>
+</html>

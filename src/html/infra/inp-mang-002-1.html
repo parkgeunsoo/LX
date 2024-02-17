@@ -71,19 +71,6 @@
         </div>
     </div>
 @@include('@@webRoot/_include/_modal.html')
-<script>
-  $(document).ready(function () {
-    $("#fileInput").on("change", function () {
-      var selectedFiles = this.files;
 
-      if (selectedFiles.length > 0) {
-        $("#selectedFile").text(selectedFiles[0].name);
-        $("#selectedFile").addClass("select");
-      } else {
-        $("#selectedFile").text("선택된 파일이 없습니다.");
-      }
-    });
-  });
-</script>
   </body>
 </html>
