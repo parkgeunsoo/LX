@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">가이드관리 목록</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                            <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">가이드관리 목록</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="filter-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-11">
+                                <div class="row mb-10">
+                                    <div class="col-5">
+                                        <div class="input-form">
+                                            <p class="input-form-label">분류</p>
+                                            <div class="custom-select" style="width: 160px">
+                                                <select name="" id="" class="form-select">
+                                                    <option value="">플랫폼 이용</option>
+                                                    <option value="">전체</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="input-form">
+                                            <p class="input-form-label">일자</p>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <div class="custom-select" style="width: 100px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">등록일</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" value="2024-01-01" />
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" value="2024-01-23" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="input-form">
+                                            <p class="input-form-label">검색어</p>
+                                            <div class="form">
+                                                <div class="custom-select" style="width: 160px">
+                                                <select name="" id="" class="form-select">
+                                                    <option value="">전체</option>
+                                                    <option value="">분류</option>
+                                                </select>
+                                                </div>
+                                                <input type="text" class="form-control" value="" placeholder="" style="width: 320px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <div class="filter-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="table-head">
+                        <div class="case">
+                            <p>전체 <span class="text-green">6384</span> 건</p>
+                            <p>대기 <span class="text-blue">12</span> 건</p>
+                            <p>승인 <span class="text-green">82</span> 건</p>
+                            <p>반려 <span class="text-danger">8</span> 건</p>
+                        </div>
+                        <div class="btn-group justify-content-center">
+                            <div class="input-form">
+                                <p class="input-form-label" style="width: 37px">보기</p>
+                                <div class="form">
+                                    <div class="custom-select" style="width: 80px">
+                                        <select name="" id="" class="form-select">
+                                        <option value="">100</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">신청</button>
+                        </div>
+                    </div>
+                    <div class="guide-wrap">
+                        <div class="guide-list">
+                            <div class="guide-content">
+                                <div class="guide-content__head">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
+                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
+                                    </div>
+                                    <p>No.012</p>
+                                </div>
+                                <div class="guide-content__body">
+                                    <div class="d-flex align-items-center justify-content-between ">
+                                        <span class="badge badge-dark w-auto">개발</span>
+                                        <div class="desc">
+                                            <p>
+                                                <span>다운로드 :</span>
+                                                <span>17</span>
+                                            </p>
+                                            <p class="after">2023-10-30</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="move-link">개발가이드 2024</a>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btns">
+                                        <i class="icon-img-download"></i>
+                                    </button>
+                                    <button type="button" class="btns" style="border-left: 1px solid #ddd;">
+                                        <i class="icon-view"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="guide-content">
+                                <div class="guide-content__head">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
+                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
+                                    </div>
+                                    <p>No.012</p>
+                                </div>
+                                <div class="guide-content__body">
+                                    <div class="d-flex align-items-center justify-content-between ">
+                                        <span class="badge badge-blue w-auto">플랫폼 이용</span>
+                                        <div class="desc">
+                                            <p>
+                                                <span>다운로드 :</span>
+                                                <span>17</span>
+                                            </p>
+                                            <p class="after">2023-10-30</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="move-link">플랫폼 이용가이드-01</a>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btns">
+                                        <i class="icon-img-download"></i>
+                                    </button>
+                                    <button type="button" class="btns" style="border-left: 1px solid #ddd;">
+                                        <i class="icon-view"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="guide-content">
+                                <div class="guide-content__head">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
+                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
+                                    </div>
+                                    <p>No.012</p>
+                                </div>
+                                <div class="guide-content__body">
+                                    <div class="d-flex align-items-center justify-content-between ">
+                                        <span class="badge badge-purple w-auto">개발환경구성</span>
+                                        <div class="desc">
+                                            <p>
+                                                <span>다운로드 :</span>
+                                                <span>17</span>
+                                            </p>
+                                            <p class="after">2023-10-30</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="move-link">개발환경 구성가이드</a>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btns">
+                                        <i class="icon-img-download"></i>
+                                    </button>
+                                    <button type="button" class="btns" style="border-left: 1px solid #ddd;">
+                                        <i class="icon-view"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="guide-content">
+                                <div class="guide-content__head">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
+                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
+                                    </div>
+                                    <p>No.012</p>
+                                </div>
+                                <div class="guide-content__body">
+                                    <div class="d-flex align-items-center justify-content-between ">
+                                        <span class="badge badge-orange w-auto">인프라 이용</span>
+                                        <div class="desc">
+                                            <p>
+                                                <span>다운로드 :</span>
+                                                <span>17</span>
+                                            </p>
+                                            <p class="after">2023-10-30</p>
+                                        </div>
+                                    </div>
+                                    <a href="javascript:void(0)" class="move-link">개발환경 구성가이드</a>
+                                </div>
+                                <div class="btn-group">
+                                    <button type="button" class="btns">
+                                        <i class="icon-img-download"></i>
+                                    </button>
+                                    <button type="button" class="btns" style="border-left: 1px solid #ddd;">
+                                        <i class="icon-view"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

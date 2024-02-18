@@ -4,7 +4,7 @@
   "editor.wordWrapColumn": 400,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "HookyQR.beautify",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },

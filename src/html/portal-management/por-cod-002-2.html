@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+      @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">중분류 코드관리 상세/수정</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                            <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                            <li class="breadcrumb-item"><a href="#">코드관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">중분류코드관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="table-wrap mt-30">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="290px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">사용여부</th>
+                                <td>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                          <option value="">선택하세요</option>
+                                          <option value="">분류</option>
+                                        </select>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">대분류명</th>
+                                <td>
+                                    <div class="custom-select" style="width: 330px">
+                                        <select name="" id="" class="form-select">
+                                          <option value="">선택하세요</option>
+                                          <option value="">분류</option>
+                                        </select>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">중분류ID</th>
+                                <td>
+                                    <div class="input-grid">
+                                        <input type="text" class="form-control" placeholder="" value="" style="width: 330px" />
+                                        <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" style="" data-bs-toggle="modal" data-bs-target="#alert-duplicate-id" >중복확인</button>
+                                      </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">중분류명</th>
+                                <td>
+                                    <input type="text" class="form-control" value="" placeholder="" style="width: 330px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">설명</th>
+                                <td>
+                                    <textarea name="" class="form-control" style="height: 100px;"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+         
+                <div class="btn-group justify-content-center">
+                    <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                    <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+  </body>
+</html>

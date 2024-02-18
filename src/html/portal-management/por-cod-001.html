@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    @@include('@@webRoot/_include/_head.html')
+  </head>
+  <body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">대분류 코드관리</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                            <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                            <li class="breadcrumb-item"><a href="#">코드관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">대분류코드관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="filter-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-11">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="input-form">
+                                            <p class="input-form-label">등록일자</p>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="input-form">
+                                            <p class="input-form-label">검색어</p>
+                                            <div class="form">
+                                                <div class="custom-select" style="width: 160px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">이름</option>
+                                                        <option value="">분류</option>
+                                                    </select>
+                                                </div>
+                                                <input type="text" class="form-control" value="" placeholder="" style="width: 320px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <div class="filter-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="table-head">
+                        <p>전체 <span class="text-green">6384</span> 건</p>
+                        <div class="btn-group justify-content-center">
+                            <div class="input-form">
+                                <p class="input-form-label" style="width: 37px">보기</p>
+                                <div class="form">
+                                    <div class="custom-select" style="width: 80px">
+                                        <select name="" id="" class="form-select">
+                                        <option value="">100</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">등록</button>
+                            <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active mr-10"></i> 엑셀다운로드</button>
+                        </div>
+                    </div>
+                    <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+                    @@include('@@webRoot/_include/_pagination.html')
+                </div>
+            @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    <script>
+      const cellVertical = { "vertical-align": "middle" };
+      const rowData = [{ 
+            check: "", 
+            number: "10", 
+            system: "2D사용자포탈 시흥시", 
+            mainCategoryId: "USR", 
+            mainCategoryName: "사용자활용", 
+            use: "사용",  
+            cellStyle: cellVertical 
+        }];
+
+      const columnDefs = [
+        { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
+        { field: "number", headerName: "번호", cellStyle: cellVertical },
+        { field: "system", headerName: "시스템" },
+        { field: "mainCategoryId", headerName: "대분류ID" },
+        { field: "mainCategoryName", headerName: "대분류명" },
+        { field: "use", headerName: "사용여부"},
+      ];
+
+      const gridOptions = {
+        domLayout: "autoHeight",
+        rowData: rowData,
+        columnDefs: columnDefs,
+        autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
+        rowSelection: "multiple",
+        defaultColDef: {
+          editable: false,
+          filter: true,
+        },
+      };
+
+      const gridDiv = document.querySelector("#myGrid");
+      const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+    </script>
+  </body>
+</html>

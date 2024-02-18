@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">베이스 맵 등록</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">지도관리</a></li>
+                            <li class="breadcrumb-item"><a href="#">베이스맵관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">베이스맵</li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="150px" />
+                            <col width="70px" />
+                            <col width="70px" />
+                            <col width="490px" />
+                            <col width="290px" />
+                            <col width="490px" />
+                        </colgroup>
+                        <tr>
+                            <th colspan="3">
+                                <div class="th-txt">
+                                    <p>베이스맵 명</p>
+                                </div>
+                            </th>
+                            <td colspan="5">
+                                <input type="text" class="form-control" placeholder="" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">베이스맵 등록여부</th>
+                            <td colspan="5">
+                                <div class="custom-select" style="width: 160px">
+                                    <select name="" id="" class="form-select">
+                                        <option value="">등록</option>
+                                        <option value="">분류</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">배경지도 분류</th>
+                            <td colspan="5">
+                                <div class="custom-select" style="width: 160px">
+                                    <select name="" id="" class="form-select">
+                                        <option value="">일반지도</option>
+                                        <option value="">분류</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">레이어 타입</th>
+                            <td colspan="5">
+                                <div class="custom-select" style="width: 320px">
+                                    <select name="" id="" class="form-select">
+                                        <option value="">WMTS</option>
+                                        <option value="">분류</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">URL</th>
+                            <td colspan="5">
+                                <input type="text" class="form-control" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">
+                                <p>첨부파일</p>
+                            </th>
+                            <td colspan="5">
+                                <div class="form-column">
+                                    <div class="form-file-custom">
+                                        <p id="selectedFile" class="file-name" style="width: 440px">파일을 첨부해주세요.</p>
+                                        <label for="fileInput" id="fileLabel">찾아보기</label>
+                                        <input type="file" id="fileInput" style="display: none" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">매개변수</th>
+                            <td colspan="5">
+                                <div class="form-column scroll">
+                                    <div class="form-row">
+                                        <input type="text" class="form-control" style="width: 160px" value="layer" />
+                                        <input type="text" style="width: 360px" class="form-control"
+                                            value="DRONE_2024_11012" />
+                                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                                    </div>
+                                    <div class="form-row">
+                                        <input type="text" class="form-control" style="width: 160px" value="layer" />
+                                        <input type="text" class="form-control" style="width: 360px"
+                                            value="DRONE_2024_11012" />
+                                        <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="btn-group justify-content-center">
+                    <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                    <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#fileInput").on("change", function () {
+                var selectedFiles = this.files;
+
+                if (selectedFiles.length > 0) {
+                    $("#selectedFile").text(selectedFiles[0].name);
+                    $("#selectedFile").addClass("select");
+                } else {
+                    $("#selectedFile").text("선택된 파일이 없습니다.");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
