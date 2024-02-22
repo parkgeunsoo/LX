@@ -206,7 +206,8 @@
             <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-green w-100" data-bs-toggle="modal" data-bs-target="#alert-save">예</button>
+            <button type="button" class="btn btn-green w-100" data-bs-toggle="modal"
+              data-bs-target="#alert-save">예</button>
           </div>
         </div>
       </div>
@@ -330,32 +331,59 @@
           </div>
           <div class="list-box role">
             <div class="title">역할</div>
-            <ul class="scroll-bar list bg">
-              <li>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                  <label class="form-check-label">플랫폼 총괄 관리자</label>
-                </div>
-              </li>
-              <li>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                  <label class="form-check-label">플랫폼 관리자</label>
-                </div>
-              </li>
-              <li>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                  <label class="form-check-label">지자체 관리자</label>
-                </div>
-              </li>
-              <li>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                  <label class="form-check-label">개발자</label>
-                </div>
-              </li>
-            </ul>
+            <div class="role-sub-wrap">
+              <p class="sub-title">운영포탈시스템</p>
+              <ul class="scroll-bar list bg">
+                <li>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">권한관리 - 메뉴관리</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">플랫폼 관리자</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">권한관리 - 사용자계정관리</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">통계관리</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">대시보드</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="role-sub-wrap">
+              <p class="sub-title">데이터관리</p>
+              <ul class="scroll-bar list bg">
+                <li>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">3D 자원전환 - 레이어관리</label>
+                  </div>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
+                    <label class="form-check-label">3D 자원전환 - 작업현황</label>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
           </div>
         </div>
         <div class="btn-md-box">
@@ -395,7 +423,8 @@
             <thead>
               <tr>
                 <th scope="col">
-                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name=""
+                      autocomplete="off" /></label>
                 </th>
                 <th scope="col">시스템 명</th>
                 <th scope="col">사용여부</th>
@@ -405,7 +434,8 @@
             <tbody>
               <tr>
                 <td class="p-0">
-                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name=""
+                      autocomplete="off" /></label>
                 </td>
                 <td>
                   <input type="text" class="form-control" />
@@ -459,7 +489,8 @@
             <thead>
               <tr>
                 <th scope="col">
-                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name=""
+                      autocomplete="off" /></label>
                 </th>
                 <th scope="col">분류 명</th>
                 <th scope="col">사용여부</th>
@@ -469,7 +500,8 @@
             <tbody>
               <tr>
                 <td class="p-0">
-                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name="" autocomplete="off" /></label>
+                  <label class="form-check-label m-0"> <input type="checkbox" class="form-check-input" name=""
+                      autocomplete="off" /></label>
                 </td>
                 <td>
                   <input type="text" class="form-control" />
@@ -529,23 +561,59 @@
   </div>
 </div>
 <script>
-  const cellVertical = { "vertical-align": "middle" };
-  const rowData = [{ check: "", name: "공지사항관리-조회", division: "조회", type: "LINK", format: "JSON", url: "/api/openApiInfo.do?menu_grp=MENU_GRP", keyword: "공지사항,조회,목록", cellStyle: cellVertical }];
+  const cellVertical = {
+    "vertical-align": "middle"
+  };
+  const rowData = [{
+    check: "",
+    name: "공지사항관리-조회",
+    division: "조회",
+    type: "LINK",
+    format: "JSON",
+    url: "/api/openApiInfo.do?menu_grp=MENU_GRP",
+    keyword: "공지사항,조회,목록",
+    cellStyle: cellVertical
+  }];
 
-  const columnDefs = [
-    { field: "check", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
-    { field: "name", headerName: "이름" },
-    { field: "division", headerName: "구분" },
-    { field: "type", headerName: "유형" },
-    { field: "format", headerName: "포맷" },
-    { field: "url", headerName: "URL" },
-    { field: "keyword", headerName: "키워드" },
+  const columnDefs = [{
+      field: "check",
+      checkboxSelection: true,
+      headerCheckboxSelection: true,
+      headerName: ""
+    },
+    {
+      field: "name",
+      headerName: "이름"
+    },
+    {
+      field: "division",
+      headerName: "구분"
+    },
+    {
+      field: "type",
+      headerName: "유형"
+    },
+    {
+      field: "format",
+      headerName: "포맷"
+    },
+    {
+      field: "url",
+      headerName: "URL"
+    },
+    {
+      field: "keyword",
+      headerName: "키워드"
+    },
   ];
 
   const gridOptions = {
     rowData: rowData,
     columnDefs: columnDefs,
-    autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
+    autoSizeStrategy: {
+      type: "fitGridWidth",
+      defaultMinWidth: 150
+    },
     rowSelection: "multiple",
     defaultColDef: {
       editable: false,
@@ -757,56 +825,56 @@
       <div class="modal-body">
         <p class="table-title mt-30">인프라 요청정보</p>
         <div class="table-wrap mt-3">
-            <table class="table table-row">
-                <colgroup>
-                    <col width="145px" />
-                    <col />
-                    <col width="145px" />
-                    <col />
-                </colgroup>
-                <tbody>
-                  <tr>
-                      <th scope="row">상태</th>
-                      <td>
-                        제한
-                      </td>
-                      <th scope="row">수정일</th>
-                      <td>
-                          2024.01.19
-                      </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">그룹명</th>
-                    <td colspan="3">
-                      건축물
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">API명</th>
-                    <td colspan="3">
-                      경북 걷기길
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">API주소</th>
-                    <td colspan="3">
-                      /DATA/dataM/relDataM/jobM
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">기능명</th>
-                    <td colspan="3">
-                      경상북도 경주시_걷기길 정보
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">제한사유</th>
-                    <td colspan="3">
-                      <textarea name="" class="form-control" style="height: 90px;"></textarea>
-                    </td>
-                  </tr>
-                </tbody>
-            </table>
+          <table class="table table-row">
+            <colgroup>
+              <col width="145px" />
+              <col />
+              <col width="145px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row">상태</th>
+                <td>
+                  제한
+                </td>
+                <th scope="row">수정일</th>
+                <td>
+                  2024.01.19
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">그룹명</th>
+                <td colspan="3">
+                  건축물
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">API명</th>
+                <td colspan="3">
+                  경북 걷기길
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">API주소</th>
+                <td colspan="3">
+                  /DATA/dataM/relDataM/jobM
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">기능명</th>
+                <td colspan="3">
+                  경상북도 경주시_걷기길 정보
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">제한사유</th>
+                <td colspan="3">
+                  <textarea name="" class="form-control" style="height: 90px;"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <p class="table-title mt-60">인프라 요청정보</p>
         <div class="table-mode infra mt-3">
@@ -817,21 +885,20 @@
             <div class="table-head__tr">제한사유</div>
           </div>
           <div class="table-body">
-            @@for(i=1; i < 20; i++){
-              <div class="table-body__row">
-                <div class="table-body__td">005</div>
-                <div class="table-body__td">2024.01.19</div>
-                <div class="table-body__td">제한</div>
-                <div class="table-body__td">2023년 10월부터 사용을 금지한 API입니다.</div>
-              </div>
-            }
+            @@for(i=1; i < 20; i++){ <div class="table-body__row">
+              <div class="table-body__td">005</div>
+              <div class="table-body__td">2024.01.19</div>
+              <div class="table-body__td">제한</div>
+              <div class="table-body__td">2023년 10월부터 사용을 금지한 API입니다.</div>
           </div>
+          }
         </div>
-        <div class="btn-md-box">
-          <button type="button" class="btn btn-md btn-min btn-green">저장</button>
-          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
-        </div>
+      </div>
+      <div class="btn-md-box">
+        <button type="button" class="btn btn-md btn-min btn-green">저장</button>
+        <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
       </div>
     </div>
   </div>
+</div>
 </div>

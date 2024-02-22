@@ -83,9 +83,9 @@ var Common = {
     $('.form-check-input.authority').change(function(){
       // 체크박스가 체크되었는지 확인
       if($(this).is(":checked")){
-        $('.role .list').show();
+        $('.role .role-sub-wrap').show();
       } else {
-        $('.role .list').hide();
+        $('.role .role-sub-wrap').hide();
       }
   });
   $(document).ready(function () {
