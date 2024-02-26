@@ -43,63 +43,76 @@ var Common = {
       dateFormat: "yy-mm-dd",
     });
 
-    var currentYear = (new Date()).getFullYear();
-    var startYear = currentYear-10;
+    var currentYear = new Date().getFullYear();
+    var startYear = currentYear - 10;
     var options = {
       startYear: startYear,
       finalYear: currentYear,
-      pattern: 'yyyy-mm',
-      monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월']
-
+      pattern: "yyyy-mm",
+      monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
     };
-    $('#schMonth').monthpicker(options);
+    $("#schMonth").monthpicker(options);
   },
 
   common: function () {
-
     // confirm 모달
-    $(document).ready(function(){
+    $(document).ready(function () {
       // 확인 버튼 클릭 시 다른 모달 표시
-      $(".save-btn").click(function(){
-        $('#alert-save-confirm').modal('hide'); // Confirm 모달 닫기
-        $('#alert-save').modal('show');   // 다른 모달 표시
+      $(".save-btn").click(function () {
+        $("#alert-save-confirm").modal("hide"); // Confirm 모달 닫기
+        $("#alert-save").modal("show"); // 다른 모달 표시
       });
     });
 
     // 메뉴관리 메뉴
-    $('.menu-depth1 > li > div').click(function(){
-      $(this).siblings('.menu-depth2').slideToggle('active');
-      $(this).toggleClass('open');
-    })
-    $('.menu-depth2 > li > .dep2-desc').click(function(){
-      $(this).siblings('.menu-depth3').slideToggle('active');
-      $(this).toggleClass('open');
-    })
-    $('.open-tool').click(function(){
-      $(this).parent('li').addClass('active').siblings().removeClass('active');
-      $('.tool-wrap').css('display','flex');
-    })
+    $(".menu-depth1 > li > div").click(function () {
+      $(this).siblings(".menu-depth2").slideToggle("active");
+      $(this).toggleClass("open");
+    });
+    $(".menu-depth2 > li > .dep2-desc").click(function () {
+      $(this).siblings(".menu-depth3").slideToggle("active");
+      $(this).toggleClass("open");
+    });
+    $(".open-tool").click(function () {
+      $(this).parent("li").addClass("active").siblings().removeClass("active");
+      $(".tool-wrap").css("display", "flex");
+    });
 
-    $('.form-check-input.authority').change(function(){
+    $(".form-check-input.authority").change(function () {
       // 체크박스가 체크되었는지 확인
-      if($(this).is(":checked")){
-        $('.role .role-sub-wrap').show();
+      if ($(this).is(":checked")) {
+        $(".role .role-sub-wrap").show();
       } else {
-        $('.role .role-sub-wrap').hide();
-      }
-  });
-  $(document).ready(function () {
-    $("#fileInput").on("change", function () {
-      var selectedFiles = this.files;
-
-      if (selectedFiles.length > 0) {
-        $("#selectedFile").text(selectedFiles[0].name);
-        $("#selectedFile").addClass("select");
-      } else {
-        $("#selectedFile").text("선택된 파일이 없습니다.");
+        $(".role .role-sub-wrap").hide();
       }
     });
-  });
+    $(document).ready(function () {
+      $("#fileInput").on("change", function () {
+        var selectedFiles = this.files;
+
+        if (selectedFiles.length > 0) {
+          $("#selectedFile").text(selectedFiles[0].name);
+          $("#selectedFile").addClass("select");
+        } else {
+          $("#selectedFile").text("선택된 파일이 없습니다.");
+        }
+      });
+    });
+    let currentProgress = 0;
+    const targetProgress = 100;
+    const increment = 0.8; // 증가할 값 (1%)
+
+    function updateProgressBar() {
+      const progressBar = document.querySelector(".progress");
+      if (currentProgress < targetProgress) {
+        currentProgress += increment;
+        progressBar.style.width = currentProgress + "%";
+        requestAnimationFrame(updateProgressBar);
+      }
+    }
+
+    // 초기 호출
+    requestAnimationFrame(updateProgressBar);
   },
 };
 
