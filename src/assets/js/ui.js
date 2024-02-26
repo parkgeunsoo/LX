@@ -100,19 +100,34 @@ var Common = {
     });
     let currentProgress = 0;
     const targetProgress = 100;
-    const increment = 0.8; // 증가할 값 (1%)
+    const increment = 1; // 증가할 값 (1%)
 
     function updateProgressBar() {
       const progressBar = document.querySelector(".progress");
+      const progressText = document.querySelector(".progress-text");
+
       if (currentProgress < targetProgress) {
         currentProgress += increment;
         progressBar.style.width = currentProgress + "%";
+        progressText.textContent = Math.floor(currentProgress) + "%";
         requestAnimationFrame(updateProgressBar);
       }
     }
 
     // 초기 호출
     requestAnimationFrame(updateProgressBar);
+
+    const image = document.querySelector('.loading-image');
+
+    function rotateImage() {
+      image.style.transform = `rotate(${currentAngle}deg)`;
+      currentAngle += 1; // 회전 각도 증가
+      if (currentAngle >= 360) {
+        currentAngle = 0;
+      }
+      requestAnimationFrame(rotateImage);
+    }
+    rotateImage();
   },
 };
 

@@ -529,21 +529,3 @@
   }
 }
 
-.progress-bar {
-  width: 87%;
-  background-color: #eee;
-  position: absolute;
-  top: 90px;
-  left: 30px;
-}
-.progress {
-  width: 0;
-  height: 5px;
-  background-color: #14907f; /* 게이지 색상 */
-  text-align: center;
-  line-height: 5px;
-  color: white;
-  @include media-breakpoint-down(md) {
-    height: 1.7px;
-  }
-}

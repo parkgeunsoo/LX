@@ -1,5 +1,5 @@
 #wrap{
-  min-width: 1900px; min-height: 100dvh;
+  min-width: 1900px; min-height: 100dvh; position: relative;
   .content{
     width: 100%; display: flex; min-height: calc(100vh - 123px);
   }
@@ -94,4 +94,87 @@
     font-size: 24px; color: #000; letter-spacing: -1.2px; font-weight: 700;
   }
 }
+.progress-wrap{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  &::before{
+    content:""; width: 100vw; height: 100vh; background-color: #000; opacity: .6; z-index: 1; position: absolute;
+  }
+}
+.progress-bar {
+  width: 400px;
+  background-color: #ced6e5;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.progress-text{
+  position: absolute;
+  top: 52.5%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  font-size: 14px;
+  color: #fff;
+}
+.progress {
+  width: 0;
+  height: 5px;
+  border-radius: 2px;
+  background-color: #14907f; /* 게이지 색상 */
+  text-align: center;
+  line-height: 5px;
+  color: white;
+  @include media-breakpoint-down(md) {
+    height: 1.7px;
+  }
+}
 
+.loading-wrap{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  &::before{
+    content:""; width: 100vw; height: 100vh; background-color: #000; opacity: .6; z-index: 1; position: absolute;
+  }
+  .loading-box{
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  .loading {
+    border: 4px solid #fff;
+    border-top-color: #00b8a3;
+    border-radius: 100%;
+    height: 82px;
+    width: 82px;
+    animation: rotate 2s infinite linear;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  .loading-text{
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+}
