@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
         @@include('@@webRoot/_include/_header.html')
         <div class="content">
@@ -14,10 +16,10 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">가이드관리 목록</li>
+                            <li class="breadcrumb-item active" aria-current="page">가이드관리</li>
                         </ol>
                     </nav>
                 </div>
@@ -59,10 +61,10 @@
                                             <p class="input-form-label">검색어</p>
                                             <div class="form">
                                                 <div class="custom-select" style="width: 160px">
-                                                <select name="" id="" class="form-select">
-                                                    <option value="">전체</option>
-                                                    <option value="">분류</option>
-                                                </select>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">전체</option>
+                                                        <option value="">분류</option>
+                                                    </select>
                                                 </div>
                                                 <input type="text" class="form-control" value="" placeholder="" style="width: 320px" />
                                             </div>
@@ -79,12 +81,13 @@
                     </div>
                 </div>
                 <div class="main-content">
-                    <div class="table-head">
-                        <div class="case">
+                    <div class="table-head border-head">
+                        <div class="case border-case">
+                            <div class="form-check p-0">
+                                <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
+                                <label class="form-check-label" for="chx1">전체선택</label>
+                            </div>
                             <p>전체 <span class="text-green">6384</span> 건</p>
-                            <p>대기 <span class="text-blue">12</span> 건</p>
-                            <p>승인 <span class="text-green">82</span> 건</p>
-                            <p>반려 <span class="text-danger">8</span> 건</p>
                         </div>
                         <div class="btn-group justify-content-center">
                             <div class="input-form">
@@ -92,15 +95,15 @@
                                 <div class="form">
                                     <div class="custom-select" style="width: 80px">
                                         <select name="" id="" class="form-select">
-                                        <option value="">100</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
+                                            <option value="">100</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
-                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">신청</button>
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">등록</button>
                         </div>
                     </div>
                     <div class="guide-wrap">
@@ -109,13 +112,12 @@
                                 <div class="guide-content__head">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
-                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
                                     </div>
                                     <p>No.012</p>
                                 </div>
                                 <div class="guide-content__body">
                                     <div class="d-flex align-items-center justify-content-between ">
-                                        <span class="badge badge-dark w-auto">개발</span>
+                                        <span class="badge badge-dark w-auto badge-lg">개발</span>
                                         <div class="desc">
                                             <p>
                                                 <span>다운로드 :</span>
@@ -139,13 +141,12 @@
                                 <div class="guide-content__head">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
-                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
                                     </div>
                                     <p>No.012</p>
                                 </div>
                                 <div class="guide-content__body">
                                     <div class="d-flex align-items-center justify-content-between ">
-                                        <span class="badge badge-blue w-auto">플랫폼 이용</span>
+                                        <span class="badge badge-blue w-auto badge-lg">플랫폼 이용</span>
                                         <div class="desc">
                                             <p>
                                                 <span>다운로드 :</span>
@@ -169,13 +170,12 @@
                                 <div class="guide-content__head">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
-                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
                                     </div>
                                     <p>No.012</p>
                                 </div>
                                 <div class="guide-content__body">
                                     <div class="d-flex align-items-center justify-content-between ">
-                                        <span class="badge badge-purple w-auto">개발환경구성</span>
+                                        <span class="badge badge-purple w-auto badge-lg">개발환경구성</span>
                                         <div class="desc">
                                             <p>
                                                 <span>다운로드 :</span>
@@ -199,13 +199,12 @@
                                 <div class="guide-content__head">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="chx1" autocomplete="off" />
-                                        <label class="form-check-label" for="chx1">운영포탈시스템</label>
                                     </div>
                                     <p>No.012</p>
                                 </div>
                                 <div class="guide-content__body">
                                     <div class="d-flex align-items-center justify-content-between ">
-                                        <span class="badge badge-orange w-auto">인프라 이용</span>
+                                        <span class="badge badge-orange w-auto badge-lg">인프라 이용</span>
                                         <div class="desc">
                                             <p>
                                                 <span>다운로드 :</span>
@@ -228,9 +227,10 @@
                         </div>
                     </div>
                 </div>
-            @@include('@@webRoot/_include/_footer.html')
+                @@include('@@webRoot/_include/_footer.html')
             </div>
         </div>
     </div>
-  </body>
+</body>
+
 </html>

@@ -150,7 +150,7 @@
 <!-- //Alert: 삭제 하실래요? -->
 
 <!-- Alert: 저장 되었어요 -->
-<div class="modal fade alert" tabindex="-1" id="alert-save">
+<div class="modal fade alert" tabindex="-1" id="alert-save" data-overlap="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-body">
@@ -897,3 +897,49 @@
   </div>
 </div>
 </div>
+
+<!-- Alert: 저장 -->
+<div class="modal fade alert" tabindex="-1" id="alert-save-agree">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 class="alert-icon"><i class="icon-warning"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">저장 하시겠습니까?</p>
+        </div>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-green w-100 save-btn">예</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 저장 -->
+
+<!-- Alert: 리셋 -->
+<div class="modal fade alert" tabindex="-1" id="alert-reset">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 class="alert-icon"><i class="icon-warning"></i></h1>
+        <div class="alert-message">
+          <p class="txt1">초기화 하시겠습니까?</p>
+        </div>
+        <div class="row gx-2">
+          <div class="col">
+            <button type="button" class="btn btn-light-green w-100" data-bs-dismiss="modal">아니오</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-green w-100">예</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //Alert: 저장 -->
