@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
                 <div class="head-content">
-                    <p class="main-title">서비스신청 상세/수정</p>
+                    <p class="main-title">서비스 신청관리 상세/수정</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">신청관리</a></li>
                             <li class="breadcrumb-item"><a href="#">서비스신청관리</a></li>
@@ -38,24 +40,21 @@
                                 </td>
                                 <th scope="row">시스템</th>
                                 <td>
-                                    <div class="half">
-                                        <span>2D사용자포탈</span>
-                                        <span class="after">시흥시</span>
-                                    </div>
+                                    2D사용자포탈
                                 </td>
                             </tr>
                             <tr>
+                                <th scope="row">지자체구분</th>
+                                <td>
+                                    서울특별시 종로구 종로도서관
+                                </td>
                                 <th scope="row">신청일</th>
                                 <td>
-                                    2023.11.23
-                                </td>
-                                <th scope="row">반려일</th>
-                                <td>
-                                   -
+                                    2023.12.03
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">승인일</th>
+                                <th scope="row">승인(반려)일</th>
                                 <td>
                                     2023.12.03
                                 </td>
@@ -63,31 +62,27 @@
                                 <td>
                                     <div class="d-flex align-items-center gap-10">
                                         <span>대기</span>
-                                        <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">승인</button>
-                                        <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;" data-bs-toggle="modal" data-bs-target="#modal-application-rejected">반려</button>
+                                        <button type="button" class="btn btn-auto btn-min btn-blue"
+                                            style="min-width: 56px;">승인</button>
+                                        <button type="button" class="btn btn-auto btn-min btn-blue"
+                                            style="min-width: 56px;" data-bs-toggle="modal"
+                                            data-bs-target="#modal-application-rejected">반려</button>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">신청자명</th>
                                 <td>
-                                  강효두
+                                    강효두
                                 </td>
-                                <th scope="row">소속부서</th>
+                                <th scope="row"></th>
                                 <td>
-                                   기획총무부
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">기관명</th>
-                                <td colspan="3">
-                                  충북 경제자유구역청
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">반려사유</th>
                                 <td colspan="3">
-                                  -
+                                    -
                                 </td>
                             </tr>
                             <tr>
@@ -99,7 +94,8 @@
                             <tr>
                                 <th scope="row">서비스명(영문)</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control" value="Route search function for major cities on the map" placeholder="" />
+                                    <input type="text" class="form-control"
+                                        value="Route search function for major cities on the map" placeholder="" />
                                 </td>
                             </tr>
                             <tr>
@@ -115,21 +111,23 @@
                             <tr>
                                 <th scope="row">기능설명</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control" value="강남구 전체 주요 시 길 상세 검색 기능 서비스를 구현하려 합니다." placeholder="" />
+                                    <input type="text" class="form-control"
+                                        value="강남구 전체 주요 시 길 상세 검색 기능 서비스를 구현하려 합니다." placeholder="" />
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-         
+
                 <div class="btn-group justify-content-center">
                     <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
-                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">취소</button>
                 </div>
                 @@include('@@webRoot/_include/_footer.html')
             </div>
         </div>
     </div>
     @@include('@@webRoot/_include/_modal.html')
-  </body>
+</body>
+
 </html>

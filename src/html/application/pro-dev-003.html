@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
@@ -14,7 +16,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">신청관리</a></li>
                             <li class="breadcrumb-item active" aria-current="page">개발계획신청관리</li>
@@ -23,15 +25,18 @@
                 </div>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                      <a class="nav-link" href="@@webRoot/html/application/pro-dev-002.html">기능 API <span class="badge badge-blue">대기</span></a>
+                        <a class="nav-link" href="@@webRoot/html/application/pro-dev-002.html">인프라 <span
+                                class="badge badge-danger">반려</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link active" href="@@webRoot/html/application/pro-dev-003.html">데이터 API <span class="badge badge-green">승인</span></a>
+                        <a class="nav-link active" href="@@webRoot/html/application/pro-dev-003.html">데이터 API <span
+                                class="badge badge-green">승인</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="@@webRoot/html/application/pro-dev-004.html">인프라 <span class="badge badge-danger">반려</span></a>
+                        <a class="nav-link" href="@@webRoot/html/application/pro-dev-004.html">기능 API <span
+                                class="badge badge-blue">대기</span></a>
                     </li>
-                  </ul>
+                </ul>
                 <div class="table-wrap mt-30">
                     <table class="table table-row">
                         <colgroup>
@@ -49,9 +54,9 @@
                                         <span class="after">시흥시</span>
                                     </div>
                                 </td>
-                                <th scope="row">신청번호</th>
+                                <th scope="row">지자체구분</th>
                                 <td>
-                                    20231212-114
+                                    20231212-114서울특별시 종로구 종로도서관
                                 </td>
                             </tr>
                             <tr>
@@ -59,9 +64,9 @@
                                 <td>
                                     강효두
                                 </td>
-                                <th scope="row">기능API신청</th>
+                                <th scope="row">신청번호</th>
                                 <td>
-                                   신청
+                                    20231212-114
                                 </td>
                             </tr>
                             <tr>
@@ -69,23 +74,26 @@
                                 <td>
                                     지도상 주요시 길 검색 기능
                                 </td>
-                                <th scope="row">승인상태</th>
+                                <th scope="row">데이터API신청</th>
                                 <td>
-                                    <div class="d-flex align-items-center gap-10">
-                                        <span>대기</span>
-                                        <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">승인</button>
-                                        <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;" data-bs-toggle="modal" data-bs-target="#modal-application-rejected">반려</button>
-                                    </div>
+                                    미신청
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">반려일</th>
+                                <th scope="row">승인(반려)일</th>
                                 <td>
-                                  -
+                                    -
                                 </td>
-                                <th scope="row">승인일</th>
+                                <th scope="row">승인여부</th>
                                 <td>
-                                   2023.11.13
+                                    <div class="d-flex align-items-center gap-10">
+                                        <span>대기</span>
+                                        <button type="button" class="btn btn-auto btn-min btn-blue"
+                                            style="min-width: 56px;">승인</button>
+                                        <button type="button" class="btn btn-auto btn-min btn-blue"
+                                            style="min-width: 56px;" data-bs-toggle="modal"
+                                            data-bs-target="#modal-application-rejected">반려</button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -106,16 +114,17 @@
                         <p class="input-form-label">API 검색</p>
                         <div class="form">
                             <div class="custom-select" style="width: 160px">
-                            <select name="" id="" class="form-select">
-                                <option value="">서비스명</option>
-                                <option value="">분류</option>
-                            </select>
+                                <select name="" id="" class="form-select">
+                                    <option value="">서비스명</option>
+                                    <option value="">분류</option>
+                                </select>
                             </div>
                             <input type="text" class="form-control" value="" placeholder="" style="width: 368px" />
                         </div>
                     </div>
                     <div class="filter-flex justify-content-center">
-                        <button type="button" class="btn btn-outline-green btn-auto search-btn" style="width: 76px;"><i class="icon-search"></i> 검색</button>
+                        <button type="button" class="btn btn-outline-green btn-auto search-btn" style="width: 76px;"><i
+                                class="icon-search"></i> 검색</button>
                     </div>
                 </div>
 
@@ -133,9 +142,9 @@
                                 <div class="form">
                                     <div class="custom-select" style="width: 80px">
                                         <select name="" id="" class="form-select">
-                                        <option value="">100</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
+                                            <option value="">100</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
                                         </select>
                                     </div>
                                 </div>
@@ -147,49 +156,92 @@
                     <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
                     @@include('@@webRoot/_include/_pagination.html')
                 </div>
-
                 @@include('@@webRoot/_include/_footer.html')
             </div>
         </div>
     </div>
-    @@include('@@webRoot/_include/_modal.html')
     <script>
-        const cellVertical = { "vertical-align": "middle" };
-        const rowData = [{ 
-            check: "", 
-            groupName: "관광", 
-            apiName:"전남 명소길",  
-            apiAddress: "/DATA/dataM/relDataM/jobM", 
-            functionName: "전라남도,공원/길 명소,전남 공원/길..", 
-            situation: "대기", 
-            modificationDate: "2023.11.11", 
-            cellStyle: cellVertical 
+        const cellVertical = {
+            "vertical-align": "middle"
+        };
+        const rowData = [{
+            check: "",
+            number: "10",
+            system: "2D사용자포탈",
+            localGovernmentClassification: "서울특별시 종로구 종로도서관",
+            applicationInformation: "20231212-114",
+            serviceName: "지도상 주요시 길 검색 기능",
+            applicant: "강효두",
+            applicationDate: "2023-10-30",
+            approvalStatus: "대기 승인 대기",
+            finalApprovalStatus: "대기",
+            cellStyle: cellVertical
         }];
-    
-        const columnDefs = [
-            { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
-            { field: "groupName", headerName: "그룹명", cellStyle: cellVertical },
-            { field: "apiName", headerName: "API명" },
-            { field: "apiAddress", headerName: "API주소" },
-            { field: "functionName", headerName: "기능명" },
-            { field: "situation", headerName: "상태" },
-            { field: "modificationDate", headerName: "수정일" },
+
+        const columnDefs = [{
+                field: "athlete",
+                checkboxSelection: true,
+                headerCheckboxSelection: true,
+                headerName: ""
+            },
+            {
+                field: "number",
+                headerName: "번호",
+                cellStyle: cellVertical
+            },
+            {
+                field: "system",
+                headerName: "시스템"
+            },
+            {
+                field: "localGovernmentClassification",
+                headerName: "지자체구분"
+            },
+            {
+                field: "applicationInformation",
+                headerName: "신청정보"
+            },
+            {
+                field: "serviceName",
+                headerName: "서비스명"
+            },
+            {
+                field: "applicant",
+                headerName: "신청자"
+            },
+            {
+                field: "applicationDate",
+                headerName: "신청일"
+            },
+            {
+                field: "approvalStatus",
+                headerName: "승인상태"
+            },
+            {
+                field: "finalApprovalStatus",
+                headerName: "최종승인상태"
+            },
         ];
-    
+
         const gridOptions = {
             domLayout: "autoHeight",
             rowData: rowData,
             columnDefs: columnDefs,
-            autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
+            autoSizeStrategy: {
+                type: "fitGridWidth",
+                defaultMinWidth: 150
+            },
             rowSelection: "multiple",
             defaultColDef: {
-            editable: false,
-            filter: true,
+                editable: false,
+                filter: true,
             },
         };
-    
+
         const gridDiv = document.querySelector("#myGrid");
         const gridApi = agGrid.createGrid(gridDiv, gridOptions);
     </script>
-  </body>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
 </html>

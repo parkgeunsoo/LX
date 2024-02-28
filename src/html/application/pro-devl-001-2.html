@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
@@ -14,7 +16,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">신청관리</a></li>
                             <li class="breadcrumb-item"><a href="#">서비스신청관리</a></li>
@@ -22,7 +24,7 @@
                         </ol>
                     </nav>
                 </div>
-                <p class="table-title">등록자 정보</p>
+                <p class="table-title">신청자 정보</p>
                 <div class="table-wrap mt-3">
                     <table class="table table-row">
                         <colgroup>
@@ -33,39 +35,29 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">등록자</th>
+                                <th scope="row">신청자</th>
                                 <td>
                                     전현서
                                 </td>
-                                <th scope="row">등록일자</th>
+                                <th scope="row">신청일</th>
                                 <td>
-                                   2023-10-30
+                                    2023-10-30
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">기관코드</th>
+                                <th scope="row">시스템</th>
                                 <td>
-                                    6430794
+                                    개발자지원시스템
                                 </td>
-                                <th scope="row">기관명</th>
+                                <th scope="row">지자체구분</th>
                                 <td>
-                                    충북 경제자유구역청
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">소속부서</th>
-                                <td>
-                                   기획총무부
-                                </td>
-                                <th scope="row">지역</th>
-                                <td>
-                                    충청북도 청주시 상당구
+                                    서울특별시 종로구 종로도서관
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <p class="table-title mt-60">등록자 정보</p>
+                <p class="table-title mt-60">사용자 정보</p>
                 <div class="table-wrap mt-3">
                     <table class="table table-row">
                         <colgroup>
@@ -82,10 +74,12 @@
                                 </td>
                                 <th scope="row">비밀번호</th>
                                 <td>
-                                  <div class="input-grid">
-                                    <input type="password" class="form-control" placeholder="" value="********" style="width: 160px">
-                                    <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" style="width: 70px">재발급</button>
-                                  </div>
+                                    <div class="input-grid">
+                                        <input type="password" class="form-control" placeholder="" value="********"
+                                            style="width: 160px">
+                                        <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md"
+                                            style="width: 70px">재발급</button>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
@@ -108,28 +102,32 @@
                                 <td>
                                     <div class="input-grid">
                                         <div class="custom-select" style="width: 80px">
-                                          <select name="" id="" class="form-select">
-                                            <option value="">선택</option>
-                                            <option value="">010</option>
-                                          </select>
+                                            <select name="" id="" class="form-select">
+                                                <option value="">선택</option>
+                                                <option value="">010</option>
+                                            </select>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="0000" value="" style="width: 80px" />
-                                        <input type="text" class="form-control" placeholder="0000" value="" style="width: 80px" />
+                                        <input type="text" class="form-control" placeholder="0000" value=""
+                                            style="width: 80px" />
+                                        <input type="text" class="form-control" placeholder="0000" value=""
+                                            style="width: 80px" />
                                     </div>
                                 </td>
                                 <th scope="row">이메일</th>
                                 <td>
                                     <div class="input-grid">
                                         <div class="email-wrap">
-                                          <input type="text" class="form-control" placeholder="이메일아이디" value="" style="width: 135px" />
-                                          <span>@</span>
-                                          <input type="text" class="form-control" placeholder="" value="" style="width: 135px" />
+                                            <input type="text" class="form-control" placeholder="이메일아이디" value=""
+                                                style="width: 135px" />
+                                            <span>@</span>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                style="width: 135px" />
                                         </div>
                                         <div class="custom-select" style="width: 135px">
-                                          <select name="" id="" class="form-select">
-                                            <option value="">naver</option>
-                                            <option value="">gmail</option>
-                                          </select>
+                                            <select name="" id="" class="form-select">
+                                                <option value="">naver</option>
+                                                <option value="">gmail</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </td>
@@ -141,69 +139,72 @@
                                 </td>
                                 <th scope="row">최종접속일시</th>
                                 <td>
-                                  2024-09-11 15:36:27
+                                    2024-09-11 15:36:27
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">상태</th>
                                 <td>
                                     <div class="d-flex align-items-center gap-10">
-                                      <span>대기</span>
-                                      <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">승인</button>
+                                        <span>대기</span>
+                                        <button type="button" class="btn btn-auto btn-min btn-blue"
+                                            style="min-width: 56px;">승인</button>
                                     </div>
                                 </td>
                                 <th scope="row">사용여부</th>
                                 <td>
-                                   <div class="custom-radio">
-                                    <input type="radio" id="radio1" name="radioGroup" checked>
-                                    <label for="radio1">사용</label>
-                                
-                                    <input type="radio" id="radio2" name="radioGroup">
-                                    <label for="radio2">사용안함</label>
-                                  </div>
+                                    <div class="custom-radio">
+                                        <input type="radio" id="radio1" name="radioGroup" checked>
+                                        <label for="radio1">사용</label>
+
+                                        <input type="radio" id="radio2" name="radioGroup">
+                                        <label for="radio2">사용안함</label>
+                                    </div>
                                 </td>
                             </tr>
-                           
+
                         </tbody>
                     </table>
                 </div>
                 <div class="card-wrap">
                     <p class="table-title">
-                      <span>사용자 권한</span>
-                      <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" data-bs-toggle="modal" data-bs-target="#modal-user-authority">권한설정하기</button>
+                        <span>사용자 권한</span>
+                        <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md"
+                            data-bs-toggle="modal" data-bs-target="#modal-user-authority">권한설정하기</button>
                     </p>
                     <div class="table-wrap">
-                      <table class="table table-row">
-                        <colgroup>
-                          <col width="140px" />
-                          <col width="75px" />
-                          <col width="75px" />
-                          <col width="500px" />
-                          <col width="290px" />
-                          <col width="495px" />
-                        </colgroup>
-                        <thead>
-                          <tr>
-                            <th class="text-center" colspan="6" style="border-radius: 8px 8px 0 0;">권한 시스템 / 역할</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <td colspan="6" style="padding:0">
-                            <div>
-                              <ul class="authority-list">
-                                <li>개발자지원시스템 > 개발자</li>
-                                <li>개발자지원시스템 > 개발자</li>
-                                <li>개발자지원시스템 > 개발자</li>
-                                <li>개발자지원시스템 > 개발자</li>
-                                <li>개발자지원시스템 > 개발자</li>
-                                <li>개발자지원시스템 > 개발자</li>
-                              </ul>
-                            </div>
-                          </td>
-                        </tbody>
-                      </table>
+                        <table class="table table-row">
+                            <colgroup>
+                                <col width="140px" />
+                                <col width="75px" />
+                                <col width="75px" />
+                                <col width="500px" />
+                                <col width="290px" />
+                                <col width="495px" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="text-center" colspan="6" style="border-radius: 8px 8px 0 0;">권한 시스템 / 역할
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <td colspan="6" style="padding:0">
+                                    <div>
+                                        <ul class="authority-list">
+                                            <li>개발자지원시스템 > 개발자</li>
+                                            <li>개발자지원시스템 > 개발자</li>
+                                            <li>개발자지원시스템 > 개발자</li>
+                                            <li>개발자지원시스템 > 개발자</li>
+                                            <li>개발자지원시스템 > 개발자</li>
+                                            <li>개발자지원시스템 > 개발자</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tbody>
+                        </table>
                     </div>
-                  </div>
+                </div>
                 <div class="btn-group justify-content-center">
                     <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
                     <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
@@ -213,5 +214,6 @@
         </div>
     </div>
     @@include('@@webRoot/_include/_modal.html')
-  </body>
+</body>
+
 </html>

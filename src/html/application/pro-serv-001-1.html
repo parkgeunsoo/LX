@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
@@ -14,7 +16,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">신청관리</a></li>
                             <li class="breadcrumb-item"><a href="#">서비스신청관리</a></li>
@@ -23,7 +25,8 @@
                     </nav>
                 </div>
                 <div class="d-flex justify-content-end mt-40">
-                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active"></i> 신청서 다운로드</button>
+                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i
+                            class="icon-download-active"></i> 신청서 다운로드</button>
                 </div>
                 <div class="table-wrap mt-10">
                     <table class="table table-row">
@@ -35,18 +38,27 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">*시스템 선택</th>
-                                <td colspan="3">
+                                <th scope="row">*시스템</th>
+                                <td>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">시스템 선택</option>
+                                            <option value="">분류</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th scope="row">*지자체구분</th>
+                                <td>
                                     <div class="d-flex align-items-center gap-10">
                                         <div class="custom-select" style="width: 160px">
                                             <select name="" id="" class="form-select">
-                                                <option value="">시스템 선택</option>
+                                                <option value="">전체</option>
                                                 <option value="">분류</option>
                                             </select>
                                         </div>
                                         <div class="custom-select" style="width: 160px">
                                             <select name="" id="" class="form-select">
-                                                <option value="">하위시스템</option>
+                                                <option value="">전체</option>
                                                 <option value="">분류</option>
                                             </select>
                                         </div>
@@ -54,42 +66,25 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">신청일</th>
-                                <td>
-                                    2023.11.23
-                                </td>
-                                <th scope="row">신청자명</th>
-                                <td>
-                                    강효두
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">기관명</th>
-                                <td>
-                                   충북 경제자유구역청
-                                </td>
-                                <th scope="row">소속부서</th>
-                                <td>
-                                   기획총무부
-                                </td>
-                            </tr>
-                            <tr>
                                 <th scope="row">*서비스명</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control" placeholder="서비스명을 한글로 입력하세요 (한글 100자 이하)" />
+                                    <input type="text" class="form-control"
+                                        placeholder="서비스명을 한글로 입력하세요 (한글 100자 이하)" />
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">*서비스명(영문)</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control" value="" placeholder="서비스명을 영문으로 입력하세요 (영문 100자 이하)" />
+                                    <input type="text" class="form-control" value=""
+                                        placeholder="서비스명을 영문으로 입력하세요 (영문 100자 이하)" />
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">*시나리오파일</th>
                                 <td colspan="3">
                                     <div class="form-file-custom">
-                                        <p id="selectedFile" class="file-name" style="width: 440px">서비스명을 영문으로 입력하세요 (영문 100자 이하)</p>
+                                        <p id="selectedFile" class="file-name" style="width: 440px">서비스명을 영문으로 입력하세요 (영문
+                                            100자 이하)</p>
                                         <label for="fileInput" id="fileLabel">파일찾기</label>
                                         <input type="file" id="fileInput" style="display: none">
                                     </div>
@@ -98,13 +93,14 @@
                             <tr>
                                 <th scope="row">기능설명</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control" value="" placeholder="기능설명을 간단히 입력하세요 (한글 200자 이하)" />
+                                    <input type="text" class="form-control" value=""
+                                        placeholder="기능설명을 간단히 입력하세요 (한글 200자 이하)" />
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-         
+
                 <div class="btn-group justify-content-center">
                     <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
                     <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
@@ -114,5 +110,6 @@
         </div>
     </div>
     @@include('@@webRoot/_include/_modal.html')
-  </body>
+</body>
+
 </html>

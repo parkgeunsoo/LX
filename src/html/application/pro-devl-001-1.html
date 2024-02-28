@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
@@ -14,7 +16,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">신청관리</a></li>
                             <li class="breadcrumb-item"><a href="#">서비스신청관리</a></li>
@@ -22,7 +24,7 @@
                         </ol>
                     </nav>
                 </div>
-                <p class="table-title mt-60">등록자 정보</p>
+                <p class="table-title mt-60">사용자 정보</p>
                 <div class="table-wrap mt-3">
                     <table class="table table-row">
                         <colgroup>
@@ -33,25 +35,28 @@
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">사용자ID</th>
+                                <th scope="row">*사용자ID</th>
                                 <td>
                                     <div class="input-grid">
-                                        <input type="text" class="form-control" placeholder="영문+숫자,5~20자 이하" value="" style="width: 340px">
+                                        <input type="text" class="form-control" placeholder="영문+숫자,5~20자 이하" value=""
+                                            style="width: 340px">
                                         <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md">중복확인
                                         </button>
-                                      </div>
+                                    </div>
                                 </td>
-                                <th scope="row">비밀번호</th>
+                                <th scope="row">*비밀번호</th>
                                 <td>
-                                    <input type="password" class="form-control" placeholder="영문대/소문자+숫자+특수기호 포함 ~10자이하" value="" style="width: 340px">
+                                    <input type="password" class="form-control" placeholder="영문대/소문자+숫자+특수기호 포함 ~10자이하"
+                                        value="" style="width: 340px">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">사용자명</th>
+                                <th scope="row">*사용자명</th>
                                 <td>
-                                    <input type="text" class="form-control" placeholder="이름을 입력하세요" value="" style="width: 340px">
+                                    <input type="text" class="form-control" placeholder="이름을 입력하세요" value=""
+                                        style="width: 340px">
                                 </td>
-                                <th scope="row">사용자구분</th>
+                                <th scope="row">*사용자구분</th>
                                 <td>
                                     <div class="custom-select" style="width: 160px">
                                         <select name="" id="" class="form-select">
@@ -62,46 +67,50 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">휴대폰번호</th>
+                                <th scope="row">*휴대폰번호</th>
                                 <td>
                                     <div class="input-grid">
                                         <div class="custom-select" style="width: 80px">
-                                          <select name="" id="" class="form-select">
-                                            <option value="">선택</option>
-                                            <option value="">010</option>
-                                          </select>
+                                            <select name="" id="" class="form-select">
+                                                <option value="">선택</option>
+                                                <option value="">010</option>
+                                            </select>
                                         </div>
-                                        <input type="text" class="form-control" placeholder="0000" value="" style="width: 80px" />
-                                        <input type="text" class="form-control" placeholder="0000" value="" style="width: 80px" />
+                                        <input type="text" class="form-control" placeholder="0000" value=""
+                                            style="width: 80px" />
+                                        <input type="text" class="form-control" placeholder="0000" value=""
+                                            style="width: 80px" />
                                     </div>
                                 </td>
                                 <th scope="row">이메일</th>
                                 <td>
                                     <div class="input-grid">
                                         <div class="email-wrap">
-                                          <input type="text" class="form-control" placeholder="이메일아이디" value="" style="width: 135px" />
-                                          <span>@</span>
-                                          <input type="text" class="form-control" placeholder="" value="" style="width: 135px" />
+                                            <input type="text" class="form-control" placeholder="이메일아이디" value=""
+                                                style="width: 135px" />
+                                            <span>@</span>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                style="width: 135px" />
                                         </div>
                                         <div class="custom-select" style="width: 135px">
-                                          <select name="" id="" class="form-select">
-                                            <option value="">직접입력</option>
-                                            <option value="">naver.com</option>
-                                            <option value="">gmail.com</option>
-                                          </select>
+                                            <select name="" id="" class="form-select">
+                                                <option value="">직접입력</option>
+                                                <option value="">naver.com</option>
+                                                <option value="">gmail.com</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">SMS수신여부</th>
+                                <th scope="row">*SMS수신여부</th>
                                 <td class="3">
                                     <div class="custom-select" style="width: 160px">
                                         <select name="" id="" class="form-select">
-                                          <option value="">비활성</option>
-                                          <option value="">활성</option>
+                                            <option value="">비활성</option>
+                                            <option value="">활성</option>
                                         </select>
-                                      </div>
+                                    </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -110,7 +119,8 @@
                 <div class="card-wrap">
                     <p class="table-title">
                         <span>사용자 권한</span>
-                        <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md" data-bs-toggle="modal" data-bs-target="#modal-user-authority">권한설정하기</button>
+                        <button type="button" class="btn btn-min btn-auto btn-outline-dark btn-md"
+                            data-bs-toggle="modal" data-bs-target="#modal-user-authority">권한설정하기</button>
                     </p>
                     <div class="table-wrap">
                         <table class="table table-row">
@@ -124,7 +134,8 @@
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th class="text-center" colspan="6" style="border-radius: 8px 8px 0 0;">권한 시스템 / 역할</th>
+                                    <th class="text-center" colspan="6" style="border-radius: 8px 8px 0 0;">권한 시스템 / 역할
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -142,12 +153,13 @@
                 </div>
                 <div class="btn-group justify-content-center">
                     <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
-                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">취소</button>
                 </div>
                 @@include('@@webRoot/_include/_footer.html')
             </div>
         </div>
     </div>
     @@include('@@webRoot/_include/_modal.html')
-  </body>
+</body>
+
 </html>

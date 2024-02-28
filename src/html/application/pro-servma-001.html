@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
         @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
                 <div class="head-content">
-                    <p class="main-title">서비스신청</p>
+                    <p class="main-title">서비스 신청관리</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">신청관리</a></li>
                             <li class="breadcrumb-item"><a href="#">서비스신청관리</a></li>
@@ -27,9 +29,9 @@
                         <div class="row">
                             <div class="col-11">
                                 <div class="row mb-10">
-                                    <div class="col-5">
+                                    <div class="col-4">
                                         <div class="input-form">
-                                            <p class="input-form-label">시스템구분</p>
+                                            <p class="input-form-label">시스템</p>
                                             <div class="d-flex align-items-center gap-10">
                                                 <div class="custom-select" style="width: 160px">
                                                     <select name="" id="" class="form-select">
@@ -46,7 +48,26 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-5">
+                                        <div class="input-form">
+                                            <p class="input-form-label">지자체구분</p>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <div class="custom-select" style="width: 120px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">서울특별시</option>
+                                                        <option value="">분류</option>
+                                                    </select>
+                                                </div>
+                                                <div class="custom-select" style="width: 220px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">종로구 종로도서관</option>
+                                                        <option value="">분류</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
                                         <div class="input-form">
                                             <p class="input-form-label">상태</p>
                                             <div class="form">
@@ -71,8 +92,10 @@
                                                         <option value=""></option>
                                                     </select>
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" value="2024-01-01" />
-                                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" value="2024-01-23" />
+                                                <input type="text" class="form-control" placeholder=""
+                                                    data-picker="date" style="width: 160px" value="2024-01-01" />
+                                                <input type="text" class="form-control" placeholder=""
+                                                    data-picker="date" style="width: 160px" value="2024-01-23" />
                                             </div>
                                         </div>
                                     </div>
@@ -81,12 +104,13 @@
                                             <p class="input-form-label">검색어</p>
                                             <div class="form">
                                                 <div class="custom-select" style="width: 160px">
-                                                <select name="" id="" class="form-select">
-                                                    <option value="">서비스명</option>
-                                                    <option value="">분류</option>
-                                                </select>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">서비스명</option>
+                                                        <option value="">분류</option>
+                                                    </select>
                                                 </div>
-                                                <input type="text" class="form-control" value="" placeholder="" style="width: 320px" />
+                                                <input type="text" class="form-control" value="" placeholder=""
+                                                    style="width: 320px" />
                                             </div>
                                         </div>
                                     </div>
@@ -94,7 +118,8 @@
                             </div>
                             <div class="col-1 d-flex justify-content-end">
                                 <div class="filter-flex justify-content-center">
-                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i
+                                            class="icon-search"></i> 검색</button>
                                 </div>
                             </div>
                         </div>
@@ -114,9 +139,9 @@
                                 <div class="form">
                                     <div class="custom-select" style="width: 80px">
                                         <select name="" id="" class="form-select">
-                                        <option value="">100</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
+                                            <option value="">100</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
                                         </select>
                                     </div>
                                 </div>
@@ -128,51 +153,91 @@
                     <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
                     @@include('@@webRoot/_include/_pagination.html')
                 </div>
-            @@include('@@webRoot/_include/_footer.html')
+                @@include('@@webRoot/_include/_footer.html')
             </div>
         </div>
     </div>
     <script>
-        const cellVertical = { "vertical-align": "middle" };
-        const rowData = [{ 
-            check: "",
-            number: "10", 
-            system:"2D사용자포탈 시흥시",  
-            applicationNumber: "20231212-114", 
-            serviceName: "건물의 윤곽 표시 및 상세 설명 표시", 
-            applicantName: "강효두", 
-            applicationDate: "2023-10-28", 
-            approvalDate: "2023-10-30", 
-            situation: "승인", 
-            cellStyle: cellVertical 
-        }];
-  
-        const columnDefs = [
-          { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
-          { field: "number", headerName: "번호", cellStyle: cellVertical },
-          { field: "system", headerName: "시스템" },
-          { field: "applicationNumber", headerName: "신청번호" },
-          { field: "serviceName", headerName: "서비스명" },
-          { field: "applicantName", headerName: "신청자명" },
-          { field: "applicationDate", headerName: "신청일" },
-          { field: "approvalDate", headerName: "승인일" },
-          { field: "situation", headerName: "상태" },
-        ];
-  
-        const gridOptions = {
-          domLayout: "autoHeight",
-          rowData: rowData,
-          columnDefs: columnDefs,
-          autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
-          rowSelection: "multiple",
-          defaultColDef: {
-            editable: false,
-            filter: true,
-          },
+        const cellVertical = {
+            "vertical-align": "middle"
         };
-  
+        const rowData = [{
+            check: "",
+            number: "10",
+            system: "2D사용자포탈 시흥시",
+            localGovernmentClassification: "서울특별시 종로구 종로도서관",
+            applicationNumber: "20231212-114",
+            serviceName: "건물의 윤곽 표시 및 상세 설명 표시",
+            applicantName: "강효두",
+            applicationDate: "2023-10-28",
+            approvalDate: "2023-10-30",
+            situation: "승인",
+            cellStyle: cellVertical
+        }];
+
+        const columnDefs = [{
+                field: "athlete",
+                checkboxSelection: true,
+                headerCheckboxSelection: true,
+                headerName: ""
+            },
+            {
+                field: "number",
+                headerName: "번호",
+                cellStyle: cellVertical
+            },
+            {
+                field: "system",
+                headerName: "시스템"
+            },
+            {
+                field: "localGovernmentClassification",
+                headerName: "지자체구분"
+            },
+            {
+                field: "applicationNumber",
+                headerName: "신청번호"
+            },
+            {
+                field: "serviceName",
+                headerName: "서비스명"
+            },
+            {
+                field: "applicantName",
+                headerName: "신청자명"
+            },
+            {
+                field: "applicationDate",
+                headerName: "신청일"
+            },
+            {
+                field: "approvalDate",
+                headerName: "승인일"
+            },
+            {
+                field: "situation",
+                headerName: "상태"
+            },
+        ];
+
+        const gridOptions = {
+            domLayout: "autoHeight",
+            rowData: rowData,
+            columnDefs: columnDefs,
+            autoSizeStrategy: {
+                type: "fitGridWidth",
+                defaultMinWidth: 150
+            },
+            rowSelection: "multiple",
+            defaultColDef: {
+                editable: false,
+                filter: true,
+            },
+        };
+
         const gridDiv = document.querySelector("#myGrid");
         const gridApi = agGrid.createGrid(gridDiv, gridOptions);
-      </script>
-  </body>
+    </script>
+</body>
+
 </html>
