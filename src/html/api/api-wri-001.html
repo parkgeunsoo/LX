@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
         @@include('@@webRoot/_include/_header.html')
         <div class="content">
@@ -14,7 +16,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">API관리</a></li>
                             <li class="breadcrumb-item active" aria-current="page">API현황</li>
@@ -87,10 +89,10 @@
                                             <p class="input-form-label">검색어</p>
                                             <div class="form">
                                                 <div class="custom-select" style="width: 160px">
-                                                <select name="" id="" class="form-select">
-                                                    <option value="">이름</option>
-                                                    <option value="">분류</option>
-                                                </select>
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">이름</option>
+                                                        <option value="">분류</option>
+                                                    </select>
                                                 </div>
                                                 <input type="text" class="form-control" value="" placeholder="" style="width: 200px" />
                                             </div>
@@ -115,56 +117,111 @@
                                 <div class="form">
                                     <div class="custom-select" style="width: 80px">
                                         <select name="" id="" class="form-select">
-                                        <option value="">100</option>
-                                        <option value="">20</option>
-                                        <option value="">30</option>
+                                            <option value="">100</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
                             <button type="button" class="btn btn-min btn-auto btn-green btn-md">등록</button>
+                            <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active mr-10"></i> 엑셀다운로드</button>
                         </div>
                     </div>
                     <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
                     @@include('@@webRoot/_include/_pagination.html')
                 </div>
-            @@include('@@webRoot/_include/_footer.html')
+                @@include('@@webRoot/_include/_footer.html')
             </div>
         </div>
     </div>
     <script>
-      const cellVertical = { "vertical-align": "middle" };
-      const rowData = [{ check: "", number: "10", division: "2D", classification: "기능", group: "분석", functionName: "위치찾기", apiCode: "A100011", apiName: "출발점과 목적지 연결분석", category: "REST", format: "XML", url: "https://www.eshare.go.kr/OpenApi/Info/detail.do?svcNo=15", cellStyle: cellVertical }];
+        const cellVertical = {
+            "vertical-align": "middle"
+        };
+        const rowData = [{
+            check: "",
+            number: "10",
+            division: "2D",
+            classification: "기능",
+            group: "분석",
+            functionName: "위치찾기",
+            apiCode: "A100011",
+            apiName: "출발점과 목적지 연결분석",
+            category: "REST",
+            format: "XML",
+            url: "https://www.eshare.go.kr/OpenApi/Info/detail.do?svcNo=15",
+            cellStyle: cellVertical
+        }];
 
-      const columnDefs = [
-        { field: "athlete", checkboxSelection: true, headerCheckboxSelection: true, headerName: "" },
-        { field: "number", headerName: "번호", cellStyle: cellVertical },
-        { field: "division", headerName: "구분" },
-        { field: "classification", headerName: "분류" },
-        { field: "group", headerName: "그룹명" },
-        { field: "functionName", headerName: "기능명"},
-        { field: "apiCode", headerName: "API코드" },
-        { field: "apiName", headerName: "API명" },
-        { field: "category", headerName: "유형" },
-        { field: "format", headerName: "포맷" },
-        { field: "url", headerName: "URL" },
-      ];
+        const columnDefs = [{
+                field: "athlete",
+                checkboxSelection: true,
+                headerCheckboxSelection: true,
+                headerName: ""
+            },
+            {
+                field: "number",
+                headerName: "번호",
+                cellStyle: cellVertical
+            },
+            {
+                field: "division",
+                headerName: "구분"
+            },
+            {
+                field: "classification",
+                headerName: "분류"
+            },
+            {
+                field: "group",
+                headerName: "그룹명"
+            },
+            {
+                field: "functionName",
+                headerName: "기능명"
+            },
+            {
+                field: "apiCode",
+                headerName: "API코드"
+            },
+            {
+                field: "apiName",
+                headerName: "API명"
+            },
+            {
+                field: "category",
+                headerName: "유형"
+            },
+            {
+                field: "format",
+                headerName: "포맷"
+            },
+            {
+                field: "url",
+                headerName: "URL"
+            },
+        ];
 
-      const gridOptions = {
-        domLayout: "autoHeight",
-        rowData: rowData,
-        columnDefs: columnDefs,
-        autoSizeStrategy: { type: "fitGridWidth", defaultMinWidth: 150 },
-        rowSelection: "multiple",
-        defaultColDef: {
-          editable: false,
-          filter: true,
-        },
-      };
+        const gridOptions = {
+            domLayout: "autoHeight",
+            rowData: rowData,
+            columnDefs: columnDefs,
+            autoSizeStrategy: {
+                type: "fitGridWidth",
+                defaultMinWidth: 150
+            },
+            rowSelection: "multiple",
+            defaultColDef: {
+                editable: false,
+                filter: true,
+            },
+        };
 
-      const gridDiv = document.querySelector("#myGrid");
-      const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+        const gridDiv = document.querySelector("#myGrid");
+        const gridApi = agGrid.createGrid(gridDiv, gridOptions);
     </script>
-  </body>
+</body>
+
 </html>

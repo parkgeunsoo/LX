@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
                 <div class="head-content">
-                    <p class="main-title">지자체 인프라관리</p>
+                    <p class="main-title">인프라 현황관리 - 상세​</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">인프라관리</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">지자체인프라관리</li>
+                            <li class="breadcrumb-item active" aria-current="page">인프라 현황관리</li>
                         </ol>
                     </nav>
                 </div>
-                <p class="table-title">신청번호</p>
+                <p class="table-title">신청 정보</p>
                 <div class="table-wrap mt-20">
                     <table class="table table-row">
                         <colgroup>
@@ -35,7 +37,7 @@
                                 <th scope="row">신청번호</th>
                                 <td>20231212-114</td>
                                 <th scope="row">시스템</th>
-                                <td>2D사용자포탈  |  시흥시</td>
+                                <td>강효두​</td>
                             </tr>
                             <tr>
                                 <th scope="row">신청일</th>
@@ -44,14 +46,10 @@
                                 <td>2023.12.02</td>
                             </tr>
                             <tr>
-                                <th scope="row">신청자명</th>
-                                <td>강효두</td>
-                                <th scope="row">소속부서</th>
-                                <td>기획총무부</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">기관명</th>
-                                <td colspan="3">충북 경제자유구역청</td>
+                                <th scope="row">시스템</th>
+                                <td>2D사용자포탈​</td>
+                                <th scope="row">지자체구분​</th>
+                                <td>서울특별시 종로구 종로도서관​</td>
                             </tr>
                             <tr>
                                 <th scope="row">서비스명</th>
@@ -70,7 +68,8 @@
             </div>
         </div>
     </div>
-@@include('@@webRoot/_include/_modal.html')
+    @@include('@@webRoot/_include/_modal.html')
 
-  </body>
+</body>
+
 </html>

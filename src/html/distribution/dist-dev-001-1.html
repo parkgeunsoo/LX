@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
+
+<head>
     @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
+        @@include('@@webRoot/_include/_header.html')
         <div class="content">
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
@@ -14,14 +16,14 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                            <a href="#"><i class="icon-home"></i></a>
+                                <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">배포관리</a></li>
                             <li class="breadcrumb-item active" aria-current="page">배포현황</li>
                         </ol>
                     </nav>
                 </div>
-                <p class="table-title">서비스 신청번호</p>
+                <p class="table-title">서비스 신청정보</p>
                 <div class="table-wrap mt-3">
                     <table class="table table-row">
                         <colgroup>
@@ -41,18 +43,16 @@
                                         <span class="after">시흥시</span>
                                     </div>
                                 </td>
+                                <th scope="row">지자체구분</th>
+                                <td>서울특별시 종로구 종로도서관​</td>
                                 <th scope="row">신청번호</th>
                                 <td>20231212-114</td>
-                                <th scope="row">신청일</th>
-                                <td>2023.11.23</td>
                             </tr>
                             <tr>
                                 <th scope="row">신청자</th>
                                 <td>강효두</td>
-                                <th scope="row">소속부서</th>
-                                <td>기획총무부</td>
-                                <th scope="row">기관명</th>
-                                <td>충북 경제자유구역청</td>
+                                <th scope="row">신청일</th>
+                                <td colspan="3">2023.11.23</td>
                             </tr>
                             <tr>
                                 <th scope="row">서비스명</th>
@@ -103,8 +103,8 @@
             </div>
         </div>
     </div>
-@@include('@@webRoot/_include/_modal.html')
+    @@include('@@webRoot/_include/_modal.html')
 
-  </body>
+</body>
+
 </html>
-

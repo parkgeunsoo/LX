@@ -12,14 +12,14 @@
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
                 <div class="head-content">
-                    <p class="main-title">영상타일 관리체계</p>
+                    <p class="main-title">베이스 맵​</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">지도관리</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">영상타일관리체계</li>
+                            <li class="breadcrumb-item active" aria-current="page">베이스 맵​</li>
                         </ol>
                     </nav>
                 </div>
@@ -58,10 +58,8 @@
                                         <div class="input-form">
                                             <p class="input-form-label">등록일자</p>
                                             <div class="d-flex align-items-center gap-10">
-                                                <input type="text" class="form-control" placeholder=""
-                                                    data-picker="date" value="2024-01-01" style="width: 160px" />
-                                                <input type="text" class="form-control" placeholder=""
-                                                    data-picker="date" value="2024-01-21" style="width: 160px" />
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" value="2024-01-01" style="width: 160px" />
+                                                <input type="text" class="form-control" placeholder="" data-picker="date" value="2024-01-21" style="width: 160px" />
                                             </div>
                                         </div>
                                     </div>
@@ -69,7 +67,7 @@
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="input-form">
-                                            <p class="input-form-label">등록일자</p>
+                                            <p class="input-form-label">지역</p>
                                             <div class="form">
                                                 <div class="d-flex align-items-center gap-10">
                                                     <div class="custom-select" style="width: 160px">
@@ -98,8 +96,7 @@
                                                         <option value="">분류</option>
                                                     </select>
                                                 </div>
-                                                <input type="text" class="form-control" value="" placeholder=""
-                                                    style="width: 220px" />
+                                                <input type="text" class="form-control" value="" placeholder="" style="width: 220px" />
                                             </div>
                                         </div>
                                     </div>
@@ -107,8 +104,7 @@
                             </div>
                             <div class="col-1 d-flex justify-content-end">
                                 <div class="filter-flex justify-content-center">
-                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i
-                                            class="icon-search"></i> 검색</button>
+                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
                                 </div>
                             </div>
                         </div>
@@ -151,8 +147,9 @@
             name: "남해군 기타 영상 및 항공영상…",
             classification: "기타",
             form: "WMTS",
-            used: "미등록",
-            region: "사용",
+            registrationStatus: "등록",
+            used: "사용",
+            region: "남해군​",
             writer: "강효두",
             registrationDate: "2023-10-23",
             cellStyle: cellVertical
@@ -180,6 +177,10 @@
             {
                 field: "form",
                 headerName: "형태"
+            },
+            {
+                field: "registrationStatus",
+                headerName: "베이스맵 등록여부"
             },
             {
                 field: "used",

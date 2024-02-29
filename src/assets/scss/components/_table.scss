@@ -1,75 +1,119 @@
-.table-wrap{
-  border: solid 1px #ebebeb; border-radius: 8px; margin-top: 45px;
+.table-wrap {
+  border: solid 1px #ebebeb;
+  border-radius: 8px;
+  margin-top: 45px;
 }
-.table-title{
-  font-size: 20px; font-weight: 500; line-height: 1.25; color: #111; margin-top: 33px;
+.table-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #111;
+  margin-top: 33px;
 }
 .table {
-  width: 100%; table-layout: fixed;
-  .table-scroll {overflow: auto;}
+  width: 100%;
+  table-layout: fixed;
+  .table-scroll {
+    overflow: auto;
+  }
   thead {
-    th {font-size: 16px; line-height: normal; padding: 23px 0 22px 0; font-weight: 500;}
+    th {
+      font-size: 16px;
+      line-height: normal;
+      padding: 23px 0 22px 0;
+      font-weight: 500;
+    }
   }
   tbody {
     tr {
       td {
-        padding: 20px 5px; line-height: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; word-break: break-all; border-top: 1px solid #ccc;
+        padding: 20px 5px;
+        line-height: normal;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        border-top: 1px solid #ccc;
       }
     }
   }
 
   &.table-row {
     th {
-      padding: 22px 30px 22px; border: 0; background-color: #fafafa; font-weight: 500; line-height: 1; font-size: 15px;
-      &.row-col{ padding: 0 10px; text-align: center;  border-left: 1px solid #ebebeb;}
+      padding: 22px 30px 22px;
+      border: 0;
+      background-color: #fafafa;
+      font-weight: 500;
+      line-height: 1;
+      font-size: 15px;
+      &.row-col {
+        padding: 0 10px;
+        text-align: center;
+        border-left: 1px solid #ebebeb;
+      }
     }
     td {
-      height: 60px; padding: 10px 30px; border: 0; font-weight: 400; white-space: wrap; line-height: 1; color: #777; font-size: 14.5px;
+      height: 60px;
+      padding: 10px 30px;
+      border: 0;
+      font-weight: 400;
+      white-space: wrap;
+      line-height: 1;
+      color: #777;
+      font-size: 14.5px;
     }
     tr {
       border-bottom: 1px solid #ebebeb;
-      &:first-child{
-        th{ border-radius: 8px 0 0 0;}
+      &:first-child {
+        th {
+          border-radius: 8px 0 0 0;
+        }
       }
-      &:last-child{
+      &:last-child {
         border-bottom: 0;
-        th{ border-radius: 0 0 0 8px;}
+        th {
+          border-radius: 0 0 0 8px;
+        }
       }
     }
-    .th-txt{
-      display: flex; align-items: center; gap: 10px;
-      &.flex-column{
-        align-items: flex-start; flex-direction: column; gap: 5px;
+    .th-txt {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &.flex-column {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
       }
-      .exe-txt{
-        color: #999; font-size:13px; line-height: 1;
-      }
-    }
-  }
-  &.th-table{
-    th{
-      font-size: 14.5px; background-color: #fafafa; padding: 13px 10px;
-    }
-    td{
-      font-size: 14.5px; color: #777; padding: 13px 10px;
-    }
-    tbody{
-      td{
-        border-top: 0; border-bottom: 1px solid #ebebeb;
+      .exe-txt {
+        color: #999;
+        font-size: 13px;
+        line-height: 1;
       }
     }
   }
-
+  &.th-table {
+    th {
+      font-size: 14.5px;
+      background-color: #fafafa;
+      padding: 13px 10px;
+    }
+    td {
+      font-size: 14.5px;
+      color: #777;
+      padding: 13px 10px;
+    }
+    tbody {
+      td {
+        border-top: 0;
+        border-bottom: 1px solid #ebebeb;
+      }
+    }
+  }
 }
-.table-scroll{
-  height: 250px; overflow: auto; border: 1px solid #ebebeb; border-radius: 8px;
-}
-
-.ag-theme-quartz {
-  --ag-foreground-color: rgb(126, 46, 132);
-  --ag-background-color: rgb(249, 245, 227);
-  --ag-header-foreground-color: red;
-  --ag-header-background-color: #fff;
-  --ag-header-column-resize-handle-color: red;
-  --ag-font-size: 14.5px;
+.table-scroll {
+  height: 250px;
+  overflow: auto;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
 }

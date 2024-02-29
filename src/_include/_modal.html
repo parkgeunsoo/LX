@@ -545,7 +545,7 @@
           <input type="text" class="form-control" />
           <button type="button" class="btn btn-outline-green btn-min search-btn"><i class="icon-search"></i> 검색</button>
         </div>
-        <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+        <div id="myGrids" class="ag-grid ag-theme-quartz"></div>
 
         <div class="btn-md-box">
           <button type="button" class="btn btn-md btn-min btn-green">추가</button>
@@ -554,71 +554,71 @@
       </div>
     </div>
   </div>
+  <script>
+    const cellVertical = {
+      "vertical-align": "middle"
+    };
+    const rowData = [{
+      check: "",
+      name: "공지사항관리-조회",
+      division: "조회",
+      type: "LINK",
+      format: "JSON",
+      url: "/api/openApiInfo.do?menu_grp=MENU_GRP",
+      keyword: "공지사항,조회,목록",
+      cellStyle: cellVertical
+    }];
+
+    const columnDefs = [{
+        field: "check",
+        checkboxSelection: true,
+        headerCheckboxSelection: true,
+        headerName: ""
+      },
+      {
+        field: "name",
+        headerName: "이름"
+      },
+      {
+        field: "division",
+        headerName: "구분"
+      },
+      {
+        field: "type",
+        headerName: "유형"
+      },
+      {
+        field: "format",
+        headerName: "포맷"
+      },
+      {
+        field: "url",
+        headerName: "URL"
+      },
+      {
+        field: "keyword",
+        headerName: "키워드"
+      },
+    ];
+
+    const gridOptions = {
+      rowData: rowData,
+      columnDefs: columnDefs,
+      autoSizeStrategy: {
+        type: "fitGridWidth",
+        defaultMinWidth: 150
+      },
+      rowSelection: "multiple",
+      defaultColDef: {
+        editable: false,
+        filter: true,
+      },
+    };
+
+    const gridDiv = document.querySelector("#myGrids");
+    const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+  </script>
 </div>
-<script>
-  const cellVertical = {
-    "vertical-align": "middle"
-  };
-  const rowData = [{
-    check: "",
-    name: "공지사항관리-조회",
-    division: "조회",
-    type: "LINK",
-    format: "JSON",
-    url: "/api/openApiInfo.do?menu_grp=MENU_GRP",
-    keyword: "공지사항,조회,목록",
-    cellStyle: cellVertical
-  }];
-
-  const columnDefs = [{
-      field: "check",
-      checkboxSelection: true,
-      headerCheckboxSelection: true,
-      headerName: ""
-    },
-    {
-      field: "name",
-      headerName: "이름"
-    },
-    {
-      field: "division",
-      headerName: "구분"
-    },
-    {
-      field: "type",
-      headerName: "유형"
-    },
-    {
-      field: "format",
-      headerName: "포맷"
-    },
-    {
-      field: "url",
-      headerName: "URL"
-    },
-    {
-      field: "keyword",
-      headerName: "키워드"
-    },
-  ];
-
-  const gridOptions = {
-    rowData: rowData,
-    columnDefs: columnDefs,
-    autoSizeStrategy: {
-      type: "fitGridWidth",
-      defaultMinWidth: 150
-    },
-    rowSelection: "multiple",
-    defaultColDef: {
-      editable: false,
-      filter: true,
-    },
-  };
-
-  const gridDiv = document.querySelector("#myGrid");
-  const gridApi = agGrid.createGrid(gridDiv, gridOptions);
-</script>
 <!-- //modal:  API 추가 -->
 
 <!-- modal: 역할 등록 -->

@@ -1,146 +1,149 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    @@include('@@webRoot/_include/_head.html')
-  </head>
-  <body>
-    <div id="wrap">
-      @@include('@@webRoot/_include/_header.html')
-      <div class="content">
-        @@include('@@webRoot/_include/_aside.html')
-        <div class="sub-content">
-          <div class="head-content">
-            <p class="main-title">맵갤러리 등록신청관리 상세/수정</p>
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="#"><i class="icon-home"></i></a>
-                </li>
-                <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
-                <li class="breadcrumb-item"><a href="#">맵갤러리관리</a></li>
-                <li class="breadcrumb-item active" aria-current="page">맵갤러리 등록신청관리</li>
-              </ol>
-            </nav>
-          </div>
-          <div class="table-wrap">
-            <table class="table table-row">
-              <colgroup>
-                <col width="150px" />
-                <col />
-                <col width="150px" />
-                <col />
-                <col width="150px" />
-                <col />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row" style="border-radius: 8px 0 0 8px;">제목</th>
-                  <td colspan="5">
-                    <input type="text" class="form-control title w-100" placeholder="제목을 입력하세요 (한글 100자 이하)" value="0207 표준템플릿 테스트" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="table-wrap mt-20">
-            <table class="table table-row">
-              <colgroup>
-                <col width="150px" />
-                <col />
-                <col width="150px" />
-                <col />
-                <col width="150px" />
-                <col />
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th scope="row">시스템</th>
-                  <td>2D 사용자포탈</td>
-                  <th scope="row">시스템 하위</th>
-                  <td>시흥시</td>
-                  <th scope="row">부서</th>
-                  <td>서울 강남 지자체</td>
-                </tr>
-                <tr>
-                  <th scope="row">신청자</th>
-                  <td>강효두</td>
-                  <th scope="row">신청자ID</th>
-                  <td>B60177</td>
-                  <th scope="row">신청일자</th>
-                  <td>2023-10-30</td>
-                </tr>
-                <tr>
-                  <th scope="row">처리자</th>
-                  <td>강효두</td>
-                  <th scope="row">처리자ID</th>
-                  <td>B60177</td>
-                  <th scope="row">처리일자</th>
-                  <td>2023-10-30</td>
-                </tr>
-                <tr>
-                  <th scope="row">처리상태</th>
-                  <td>
-                    <div class="d-flex align-items-center gap-30">
-                      <p>신청</p>
-                      <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">승인</button>
-                      <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">반려</button>
-                    </div>
-                  </td>
-                  <th scope="row">분류</th>
-                  <td>
-                    <div class="custom-select" style="width: 160px">
-                      <select name="" id="" class="form-select">
-                        <option value="">웹맵(webMap)</option>
-                        <option value=""></option>
-                      </select>
-                    </div>
-                  </td>
-                  <th scope="row">사용여부</th>
-                  <td>
-                    <div class="custom-select" style="width: 160px">
-                      <select name="" id="" class="form-select">
-                        <option value="">사용</option>
-                        <option value="">미사용</option>
-                      </select>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">썸네일</th>
-                  <td colspan="5">
-                    <div class="form-file-custom">
-                      <p id="selectedFile" class="file-name" style="width: 440px">파일을 첨부해주세요.</p>
-                      <label for="fileInput" id="fileLabel">파일찾기</label>
-                      <input type="file" id="fileInput" style="display: none">
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">미리보기</th>
-                  <td colspan="5">
-                    <div class="img-wrap">
-                      <div class="preveiw-img">
-                        <img src="@@webRoot/assets/images/map-img.png" alt="">
-                      </div>
-                      
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="editor-wrap mt-50">
-            에디터 영역
-          </div>
-          <div class="btn-group justify-content-center">
-            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
-            <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
-          </div>
-          @@include('@@webRoot/_include/_footer.html')
-        </div>
-      </div>
-    </div>
-@@include('@@webRoot/_include/_modal.html')
 
-  </body>
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">맵갤러리 등록신청관리 상세/수정</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">포탈관리</a></li>
+                            <li class="breadcrumb-item"><a href="#">맵갤러리관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">맵갤러리 등록신청관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="table-wrap">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="150px" />
+                            <col />
+                            <col width="150px" />
+                            <col />
+                            <col width="150px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row" style="border-radius: 8px 0 0 8px;">제목</th>
+                                <td colspan="5">
+                                    <input type="text" class="form-control title w-100" placeholder="제목을 입력하세요 (한글 100자 이하)" value="0207 표준템플릿 테스트" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-wrap mt-20">
+                    <table class="table table-row">
+                        <colgroup>
+                            <col width="150px" />
+                            <col />
+                            <col width="150px" />
+                            <col />
+                            <col width="150px" />
+                            <col />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">시스템</th>
+                                <td>2D 사용자포탈</td>
+                                <th scope="row">시스템 하위</th>
+                                <td>시흥시</td>
+                                <th scope="row">부서</th>
+                                <td>서울 강남 지자체</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">신청자</th>
+                                <td>강효두</td>
+                                <th scope="row">신청자ID</th>
+                                <td>B60177</td>
+                                <th scope="row">신청일자</th>
+                                <td>2023-10-30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">처리자</th>
+                                <td>강효두</td>
+                                <th scope="row">처리자ID</th>
+                                <td>B60177</td>
+                                <th scope="row">처리일자</th>
+                                <td>2023-10-30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">처리상태</th>
+                                <td>
+                                    <div class="d-flex align-items-center gap-10">
+                                        <p>신청</p>
+                                        <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">승인</button>
+                                        <button type="button" class="btn btn-auto btn-min btn-blue" style="min-width: 56px;">반려</button>
+                                    </div>
+                                </td>
+                                <th scope="row">분류</th>
+                                <td>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">웹맵(webMap)</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th scope="row">사용여부</th>
+                                <td>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">사용</option>
+                                            <option value="">미사용</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">썸네일</th>
+                                <td colspan="5">
+                                    <div class="form-file-custom">
+                                        <p id="selectedFile" class="file-name" style="width: 440px">파일을 첨부해주세요.</p>
+                                        <label for="fileInput" id="fileLabel">파일찾기</label>
+                                        <input type="file" id="fileInput" style="display: none">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">미리보기</th>
+                                <td colspan="5">
+                                    <div class="img-wrap">
+                                        <div class="preveiw-img">
+                                            <img src="@@webRoot/assets/images/map-img.png" alt="">
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="editor-wrap mt-50">
+                    에디터 영역
+                </div>
+                <div class="btn-group justify-content-center">
+                    <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                    <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">목록</button>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    @@include('@@webRoot/_include/_modal.html')
+
+</body>
+
 </html>
