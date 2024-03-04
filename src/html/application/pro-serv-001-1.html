@@ -25,8 +25,7 @@
                     </nav>
                 </div>
                 <div class="d-flex justify-content-end mt-40">
-                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i
-                            class="icon-download-active"></i> 신청서 다운로드</button>
+                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active"></i> 신청서 다운로드</button>
                 </div>
                 <div class="table-wrap mt-10">
                     <table class="table table-row">
@@ -68,15 +67,13 @@
                             <tr>
                                 <th scope="row">*서비스명</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control"
-                                        placeholder="서비스명을 한글로 입력하세요 (한글 100자 이하)" />
+                                    <input type="text" class="form-control" placeholder="서비스명을 한글로 입력하세요 (한글 100자 이하)" />
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">*서비스명(영문)</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control" value=""
-                                        placeholder="서비스명을 영문으로 입력하세요 (영문 100자 이하)" />
+                                    <input type="text" class="form-control" value="" placeholder="서비스명을 영문으로 입력하세요 (영문 100자 이하)" />
                                 </td>
                             </tr>
                             <tr>
@@ -93,8 +90,7 @@
                             <tr>
                                 <th scope="row">기능설명</th>
                                 <td colspan="3">
-                                    <input type="text" class="form-control" value=""
-                                        placeholder="기능설명을 간단히 입력하세요 (한글 200자 이하)" />
+                                    <input type="text" class="form-control" value="" placeholder="기능설명을 간단히 입력하세요 (한글 200자 이하)" />
                                 </td>
                             </tr>
                         </tbody>
@@ -109,6 +105,43 @@
             </div>
         </div>
     </div>
+    <div class="progress-wrap">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <span class="progress-text">0%</span>
+    </div>
+    <script>
+        let currentProgress = 0;
+        const targetProgress = 100;
+        const increment = 1; // 증가할 값 (1%)
+
+        function updateProgressBar() {
+            const progressBar = document.querySelector(".progress");
+            const progressText = document.querySelector(".progress-text");
+
+            if (currentProgress < targetProgress) {
+                currentProgress += increment;
+                progressBar.style.width = currentProgress + "%";
+                progressText.textContent = Math.floor(currentProgress) + "%";
+                requestAnimationFrame(updateProgressBar);
+            }
+        }
+        // 초기 호출
+        requestAnimationFrame(updateProgressBar);
+
+        const image = document.querySelector(".loading-image");
+
+        function rotateImage() {
+            image.style.transform = `rotate(${currentAngle}deg)`;
+            currentAngle += 1; // 회전 각도 증가
+            if (currentAngle >= 360) {
+                currentAngle = 0;
+            }
+            requestAnimationFrame(rotateImage);
+        }
+        rotateImage();
+    </script>
     @@include('@@webRoot/_include/_modal.html')
 </body>
 

@@ -65,9 +65,9 @@ var Common = {
     });
 
     // 메뉴관리 메뉴
-    $(".menu-depth1 > li > div").click(function () {
-      $(this).siblings(".menu-depth2").slideToggle("active");
-      $(this).toggleClass("open");
+    $(".menu-depth1 > li  .icon-plus").click(function () {
+      $(this).closest("div").siblings(".menu-depth2").slideToggle("active");
+      $(this).closest("div").toggleClass("open");
     });
     $(".menu-depth2 > li > .dep2-desc").click(function () {
       $(this).siblings(".menu-depth3").slideToggle("active");
@@ -98,36 +98,6 @@ var Common = {
         }
       });
     });
-    let currentProgress = 0;
-    const targetProgress = 100;
-    const increment = 1; // 증가할 값 (1%)
-
-    function updateProgressBar() {
-      const progressBar = document.querySelector(".progress");
-      const progressText = document.querySelector(".progress-text");
-
-      if (currentProgress < targetProgress) {
-        currentProgress += increment;
-        progressBar.style.width = currentProgress + "%";
-        progressText.textContent = Math.floor(currentProgress) + "%";
-        requestAnimationFrame(updateProgressBar);
-      }
-    }
-
-    // 초기 호출
-    requestAnimationFrame(updateProgressBar);
-
-    const image = document.querySelector('.loading-image');
-
-    function rotateImage() {
-      image.style.transform = `rotate(${currentAngle}deg)`;
-      currentAngle += 1; // 회전 각도 증가
-      if (currentAngle >= 360) {
-        currentAngle = 0;
-      }
-      requestAnimationFrame(rotateImage);
-    }
-    rotateImage();
   },
 };
 
