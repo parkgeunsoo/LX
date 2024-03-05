@@ -65,6 +65,11 @@ var Common = {
     });
 
     // 메뉴관리 메뉴
+    $(".menu-list span").click(function () {
+      $(this).addClass("active");
+      // 이외의 모든 span에서 active 클래스 제거
+      $(".menu-list span").not(this).removeClass("active");
+    });
     $(".menu-depth1 > li  .icon-plus").click(function () {
       $(this).closest("div").siblings(".menu-depth2").slideToggle("active");
       $(this).closest("div").toggleClass("open");
