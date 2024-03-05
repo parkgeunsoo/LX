@@ -70,16 +70,18 @@ var Common = {
       // 이외의 모든 span에서 active 클래스 제거
       $(".menu-list span").not(this).removeClass("active");
     });
+
     $(".menu-depth1 > li  .icon-plus").click(function () {
       $(this).closest("div").siblings(".menu-depth2").slideToggle("active");
       $(this).closest("div").toggleClass("open");
     });
-    $(".menu-depth2 > li > .dep2-desc").click(function () {
-      $(this).siblings(".menu-depth3").slideToggle("active");
+    
+    $(".menu-depth2 > li  .icon-plus").click(function () {
+      $(this).closest("div").siblings(".menu-depth3").slideToggle("active");
       $(this).toggleClass("open");
     });
+
     $(".open-tool").click(function () {
-      $(this).parent("li").addClass("active").siblings().removeClass("active");
       $(".tool-wrap").css("display", "flex");
     });
 

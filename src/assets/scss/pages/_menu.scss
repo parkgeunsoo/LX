@@ -85,6 +85,16 @@
         color: $green;
       }
     }
+    label{ cursor: pointer; }
+    .large-menu{
+      display: flex;
+      align-items: center; 
+      gap: 10px;
+      margin-bottom: 25px;
+      span{
+        font-size: 18px; font-weight: 500; color: #111;
+      }
+    }
   }
   .menu-depth1 {
     display: flex;
@@ -111,11 +121,7 @@
           font-weight: 500;
         }
       }
-      &.active {
-        .menu-depth2 {
-          display: block;
-        }
-      }
+    
     }
   }
   .menu-depth2 {
@@ -127,6 +133,12 @@
       padding-bottom: 15px;
       &:last-child {
         padding-bottom: 0;
+      }
+      > div{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
       }
       .dep2-desc {
         display: flex;
@@ -182,7 +194,6 @@
       }
       &.active {
         .dep3-desc {
-          color: $green;
           position: relative;
           &::before {
             content: "";

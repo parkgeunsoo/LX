@@ -40,25 +40,54 @@
                                                 <option value="">하위 시스템</option>
                                             </select>
                                         </div>
-                                        <button type="button" class="btn btn-md btn-min btn-outline-dark" style="width: 80px;">조회</button>
+                                        <button type="button" class="btn btn-md btn-min btn-outline-dark"
+                                            style="width: 80px;">조회</button>
                                     </div>
-                                    <button type="button" class="btn btn-md btn-min btn-green" data-bs-toggle="modal" data-bs-target="#modal-role-reg" style="width: 80px;">등록</button>
+                                </div>
+                                <div class="table-head mt-10">
+                                    <p>전체 <span class="text-green">6384</span> 건</p>
+                                    <div class="btn-group justify-content-center">
+                                        <div class="input-form">
+                                            <p class="input-form-label" style="width: 37px">보기</p>
+                                            <div class="form">
+                                                <div class="custom-select" style="width: 80px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">100</option>
+                                                        <option value="">20</option>
+                                                        <option value="">30</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="button" class="btn btn-min btn-auto btn-green btn-md"
+                                            data-bs-toggle="modal" data-bs-target="#modal-role-reg">등록</button>
+                                    </div>
                                 </div>
                             </div>
                             <div class="main-content">
                                 <div class="table-mode role">
                                     <div class="table-head">
-                                        <div class="table-head__tr">이름</div>
+                                        <div class="table-head__tr">권한시스템</div>
                                         <div class="table-head__tr">그룹명</div>
                                         <div class="table-head__tr">역할명</div>
+                                        <div class="table-head__tr">인원</div>
+                                        <div class="table-head__tr">메뉴매핑</div>
                                         <div class="table-head__tr">사용</div>
+                                        <div class="table-head__tr">상세</div>
                                     </div>
                                     <div class="table-body">
                                         @@for( i=1; i < 15; i++){ <div class="table-body__row">
                                             <div class="table-body__td">운영포탈시스템</div>
                                             <div class="table-body__td">LX국토정보-포탈</div>
-                                            <div class="table-body__td"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#modal-role-modifty">포탈총괄관리자</a></div>
+                                            <div class="table-body__td"><a href="javascript:void(0)"
+                                                    class="text-underline" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-role-modifty">포탈총괄관리자</a></div>
+                                            <div class="table-body__td">8</div>
+                                            <div class="table-body__td">O</div>
                                             <div class="table-body__td">사용</div>
+                                            <div class="table-body__td"><a href="javascript:void(0)"
+                                                    class="text-green text-underline" data-bs-toggle="modal"
+                                                    data-bs-target="#modal-role-reg">보기</a></div>
                                     </div>
                                     }
                                 </div>
@@ -67,135 +96,162 @@
                     </div>
                     <div class="menu-wrap">
                         <div class="list-title">
-                            <p>메뉴</p>
-                            <button type="button" class="list-btn menu-btn"><i class="icon-plus"></i></button>
+                            <p>메뉴 매핑</p>
+                        </div>
+                        <div class="table-head mt-20">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="chx2" autocomplete="off" />
+                                <label class="form-check-label" for="chx2">전체선택</label>
+                            </div>
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
                         </div>
                         <div class="menu-list">
+                            <div class="large-menu">
+                                <i class="icon-monitor"></i>
+                                <span>운영포털시스템</span>
+                            </div>
                             <ul class="menu-depth1">
                                 <li>
                                     <div>
                                         <i class="icon-plus"></i>
-                                        <p class="dep1-desc">
+                                        <div class="dep1-desc">
+                                            <div class="form-check p-0">
+                                                <input type="checkbox" class="form-check-input" name=""
+                                                    autocomplete="off" id="chk1" />
+                                            </div>
                                             <i class="icon-exist-depth"></i>
-                                            <span>권한 관리</span>
-                                        </p>
+                                            <label for="chk1">권한 관리</label>
+                                        </div>
                                     </div>
                                     <ul class="menu-depth2">
                                         <!-- 3뎁스가 있는 경우 -->
                                         <li class="">
                                             <div class="dep2-desc">
-                                                <div class="form-check p-0">
-                                                    <input type="checkbox" class="form-check-input" name="" autocomplete="off" />
-                                                </div>
                                                 <i class="icon-plus"></i>
+                                                <div class="form-check p-0">
+                                                    <input type="checkbox" class="form-check-input" name=""
+                                                        autocomplete="off" id="chk2" />
+                                                </div>
                                                 <i class="icon-exist-depth"></i>
-                                                <span>역할 관리</span>
+                                                <label for="chk2">역할 관리</label>
                                             </div>
                                             <ul class="menu-depth3">
                                                 <li class="">
-                                                    <a href="javascript:void(0)" class="open-tool">
-                                                        <p class="dep3-desc">
-                                                            <i class="icon-none-depth"></i>
-                                                            <span>공지사항관리</span>
-                                                        </p>
-                                                    </a>
+                                                    <div class="dep3-desc">
+                                                        <div class="form-check p-0">
+                                                            <input type="checkbox" class="form-check-input" name=""
+                                                                autocomplete="off" id="chk3" />
+                                                        </div>
+                                                        <label for="chk3">공지사항관리</label>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </li>
                                         <!-- 3뎁스가 없는 경우 -->
                                         <li class="">
-                                            <a href="javascript:void(0)" class="open-tool">
-                                                <p class="dep2-desc">
-                                                    <i class="icon-none-depth"></i>
-                                                    <span>메뉴 관리</span>
-                                                </p>
-                                            </a>
+                                            <div class="dep2-desc">
+                                                <div class="form-check p-0">
+                                                    <input type="checkbox" class="form-check-input" name=""
+                                                        autocomplete="off" id="chk4" />
+                                                </div>
+                                                <i class="icon-none-depth"></i>
+                                                <label for="chk4">메뉴 관리</label>
+                                            </div>
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="active">
-                                    <div class="open">
+                                <li class="">
+                                    <div>
                                         <i class="icon-plus"></i>
-                                        <p class="dep1-desc">
+                                        <div class="dep1-desc">
+                                            <div class="form-check p-0">
+                                                <input type="checkbox" class="form-check-input" name=""
+                                                    autocomplete="off" id="chk5" />
+                                            </div>
                                             <i class="icon-exist-depth"></i>
-                                            <span>포탈관리</span>
-                                        </p>
+                                            <label for="chk5">포탈관리</label>
+                                        </div>
                                     </div>
                                     <ul class="menu-depth2">
                                         <li>
-                                            <a href="javascript:void(0)" class="open-tool">
-                                                <p class="dep2-desc">
-                                                    <i class="icon-none-depth"></i>
-                                                    <span>사용자포털 메인페이지</span>
-                                                </p>
-                                            </a>
+                                            <div class="dep2-desc">
+                                                <div class="form-check p-0">
+                                                    <input type="checkbox" class="form-check-input" name=""
+                                                        autocomplete="off" id="chk7" />
+                                                </div>
+                                                <i class="icon-none-depth"></i>
+                                                <label for="chk7">사용자포털 메인페이지</label>
+                                            </div>
                                         </li>
-                                        <li class="active">
-                                            <p class="dep2-desc open">
+                                        <li class="">
+                                            <div class="dep2-desc">
                                                 <i class="icon-plus"></i>
+                                                <div class="form-check p-0">
+                                                    <input type="checkbox" class="form-check-input" name=""
+                                                        autocomplete="off" id="chk8" />
+                                                </div>
                                                 <i class="icon-exist-depth"></i>
-                                                <span>게시판관리</span>
-                                            </p>
+                                                <label for="chk8">게시판관리</label>
+                                            </div>
                                             <ul class="menu-depth3">
                                                 <li class="">
-                                                    <a href="javascript:void(0)" class="open-tool">
-                                                        <p class="dep3-desc">
-                                                            <span>공지사항관리</span>
-                                                        </p>
-                                                    </a>
+                                                    <div class="dep3-desc">
+                                                        <div class="form-check p-0">
+                                                            <input type="checkbox" class="form-check-input" name=""
+                                                                autocomplete="off" id="chk9" />
+                                                        </div>
+                                                        <label for="chk9">공지사항관리</label>
+                                                    </div>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="open-tool">
-                                                        <p class="dep3-desc">
-                                                            <span>자료실관리</span>
-                                                        </p>
-                                                    </a>
+                                                    <div class="dep3-desc">
+                                                        <div class="form-check p-0">
+                                                            <input type="checkbox" class="form-check-input" name=""
+                                                                autocomplete="off" id="chk10" />
+                                                        </div>
+                                                        <label for="chk10">자료실관리</label>
+                                                    </div>
                                                 </li>
                                                 <li class="">
-                                                    <a href="javascript:void(0)" class="open-tool">
-                                                        <p class="dep3-desc">
-                                                            <span>FAQ관리</span>
-                                                        </p>
-                                                    </a>
+                                                    <div class="dep3-desc">
+                                                        <div class="form-check p-0">
+                                                            <input type="checkbox" class="form-check-input" name=""
+                                                                autocomplete="off" id="chk11" />
+                                                        </div>
+                                                        <label for="chk11">FAQ관리</label>
+                                                    </div>
                                                 </li>
                                                 <li>
-                                                    <a href="javascript:void(0)" class="open-tool">
-                                                        <p class="dep3-desc">
-                                                            <span>자료실관리</span>
-                                                        </p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="open-tool">
-                                                        <p class="dep3-desc">
-                                                            <span>자료실관리</span>
-                                                        </p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0)" class="open-tool">
-                                                        <p class="dep3-desc">
-                                                            <span>자료실관리</span>
-                                                        </p>
-                                                    </a>
+                                                    <div class="dep3-desc">
+                                                        <div class="form-check p-0">
+                                                            <input type="checkbox" class="form-check-input" name=""
+                                                                autocomplete="off" id="chk12" />
+                                                        </div>
+                                                        <label for="chk12">자료실관리</label>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0)" class="open-tool">
-                                                <p class="dep2-desc">
-                                                    <i class="icon-none-depth"></i>
-                                                    <span>맵갤러리관리</span>
-                                                </p>
-                                            </a>
+                                            <div class="dep2-desc">
+                                                <div class="form-check p-0">
+                                                    <input type="checkbox" class="form-check-input" name=""
+                                                        autocomplete="off" id="chk13" />
+                                                </div>
+                                                <i class="icon-none-depth"></i>
+                                                <label for="chk13">맵갤러리관리</label>
+                                            </div>
+
                                         </li>
                                         <li>
-                                            <a href="javascript:void(0)" class="open-tool">
-                                                <p class="dep2-desc">
-                                                    <i class="icon-none-depth"></i>
-                                                    <span>가이드관리</span>
-                                                </p>
-                                            </a>
+                                            <div class="dep2-desc">
+                                                <div class="form-check p-0">
+                                                    <input type="checkbox" class="form-check-input" name=""
+                                                        autocomplete="off" id="chk14" />
+                                                </div>
+                                                <i class="icon-none-depth"></i>
+                                                <label for="chk14">가이드관리</label>
+                                            </div>
                                         </li>
                                     </ul>
                                 </li>
