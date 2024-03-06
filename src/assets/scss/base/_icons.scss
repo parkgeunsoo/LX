@@ -1,95 +1,171 @@
 // icons
-[class^=icon-]{display: inline-block;vertical-align: middle;background-repeat: no-repeat;background-position: 50% 50%;background-size: contain;flex-shrink: 0;}
-
-.icon-aside-arrow{
-  width: 10px; height: 5px; background-image: url('../images/icon-arrow.svg');
+[class^="icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  flex-shrink: 0;
 }
 
-.icon-intro-01{
-  width: 81px; height: 82px; background-image: url('../images/icon-intro-01.png');
-}
-.icon-intro-02{
-  width: 69px; height: 69px; background-image: url('../images/icon-intro-02.png');
-}
-.icon-intro-03{
-  width: 75px; height: 76px; background-image: url('../images/icon-intro-03.png');
-}
-.icon-intro-04{
-  width: 75px; height: 77px; background-image: url('../images/icon-intro-04.png');
-}
-.icon-intro-link{
-  width: 18px; height:18px; background-image: url('../images/icon-intro-link.png');
-}
-.icon-select-arrow{
-  width: 8px; height:5px; background-image: url('../images/icon-select-off.svg');
-}
-.icon-home{
-  width: 11px; height: 13px; background-image: url('../images/icon-home.svg');
-}
-.icon-search{
-  width: 13px; height: 12px; background-image: url('../images/icon-search.svg');
-}
-.icon-plus{
-  width: 12px; height: 12px; background-image: url('../images/icon-plus.png');
-}
-.icon-minus{
-  width: 12px; height: 2px; background-image: url('../images/icon-minus.png');
-}
-.icon-file{
-  width: 16px; height: 16px; background-image: url('../images/icon-clip.png');
+.icon-aside-arrow {
+  width: 10px;
+  height: 5px;
+  background-image: url("../images/icon-arrow.svg");
 }
 
-.icon-pagination-left-twin{
-  width: 13px; height: 12px; background-image: url('../images/icon-pagination-left-twin.png');
+.icon-intro-01 {
+  width: 81px;
+  height: 82px;
+  background-image: url("../images/icon-intro-01.png");
 }
-.icon-pagination-left{
-  width: 6px; height: 12px; background-image: url('../images/icon-pagination-left.png');
+.icon-intro-02 {
+  width: 69px;
+  height: 69px;
+  background-image: url("../images/icon-intro-02.png");
 }
-.icon-pagination-right-twin{
-  width: 13px; height: 12px; background-image: url('../images/icon-pagination-left-twin.png');transform: rotate(180deg);
+.icon-intro-03 {
+  width: 75px;
+  height: 76px;
+  background-image: url("../images/icon-intro-03.png");
 }
-.icon-pagination-right{
-  width: 6px; height: 12px; background-image: url('../images/icon-pagination-left.png');
+.icon-intro-04 {
+  width: 75px;
+  height: 77px;
+  background-image: url("../images/icon-intro-04.png");
+}
+.icon-intro-link {
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/icon-intro-link.png");
+}
+.icon-select-arrow {
+  width: 8px;
+  height: 5px;
+  background-image: url("../images/icon-select-off.svg");
+}
+.icon-home {
+  width: 11px;
+  height: 13px;
+  background-image: url("../images/icon-home.svg");
+}
+.icon-search {
+  width: 13px;
+  height: 12px;
+  background-image: url("../images/icon-search.svg");
+}
+.icon-plus {
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icon-plus.png");
+}
+.icon-minus {
+  width: 12px;
+  height: 2px;
+  background-image: url("../images/icon-minus.png");
+}
+.icon-file {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icon-clip.png");
+}
+
+.icon-pagination-left-twin {
+  width: 13px;
+  height: 12px;
+  background-image: url("../images/icon-pagination-left-twin.png");
+}
+.icon-pagination-left {
+  width: 6px;
+  height: 12px;
+  background-image: url("../images/icon-pagination-left.png");
+}
+.icon-pagination-right-twin {
+  width: 13px;
+  height: 12px;
+  background-image: url("../images/icon-pagination-left-twin.png");
   transform: rotate(180deg);
 }
-.icon-submit{
-  width: 20px; height: 20px; background-image: url('../images/icon-submit.png');
+.icon-pagination-right {
+  width: 6px;
+  height: 12px;
+  background-image: url("../images/icon-pagination-left.png");
+  transform: rotate(180deg);
 }
-.icon-recyclebin{
-  width: 16px; height: 18px; background-image: url('../images/icon-recyclebin.png');
+.icon-submit {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon-submit.png");
 }
-.icon-warning{
-  width: 22px; height: 19px; background-image: url('../images/icon-warning.png');
+.icon-recyclebin {
+  width: 16px;
+  height: 18px;
+  background-image: url("../images/icon-recyclebin.png");
 }
-.icon-close-w{
-  width: 14px; height: 14px; background-image: url('../images/icon-close-w.png');
+.icon-warning {
+  width: 22px;
+  height: 19px;
+  background-image: url("../images/icon-warning.png");
 }
-.icon-edit{
-  width: 18px; height: 18px; background-image: url('../images/icon-edit.png');
+.icon-close-w {
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/icon-close-w.png");
 }
-.icon-exist-depth{
-  width: 20px; height: 16px; background-image: url('../images/icon-menu-depth1.png');
+.icon-edit {
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/icon-edit.png");
 }
-.icon-none-depth{
-  width: 20px; height: 20px; background-image: url('../images/icon-menu-depth2-active.png');
+.icon-exist-depth {
+  width: 20px;
+  height: 16px;
+  background-image: url("../images/icon-menu-depth1.png");
 }
-.icon-download{
-  width: 16px; height: 16px; background-image: url('../images/icon-download.png');
+.icon-none-depth {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon-menu-depth2-active.png");
 }
-.icon-download-active{
-  width: 16px; height: 16px; background-image: url('../images/icon-download-active.png');
+.icon-download {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icon-download.png");
+}
+.icon-download-active {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icon-download-active.png");
 }
 
-.icon-recyclebin-bk{
-  width: 14px; height: 16px; background-image: url('../images/icon-recyclebin-bk.png');
+.icon-recyclebin-bk {
+  width: 14px;
+  height: 16px;
+  background-image: url("../images/icon-recyclebin-bk.png");
 }
 
-.icon-view{  
-  width: 85px; height: 21px; background-image: url('../images/icon-view.png');
+.icon-view {
+  width: 85px;
+  height: 21px;
+  background-image: url("../images/icon-view.png");
 }
-.icon-img-download{  
-  width: 81px; height: 16px; background-image: url('../images/icon-img-download.png');
+.icon-img-download {
+  width: 81px;
+  height: 16px;
+  background-image: url("../images/icon-img-download.png");
 }
-.icon-monitor{  
-  width: 22px; height: 18px; background-image: url('../images/icon-monitor.png');
+.icon-monitor {
+  width: 22px;
+  height: 18px;
+  background-image: url("../images/icon-monitor.png");
+}
+.icon-portal {
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/icon-portal.png");
+}
+.icon-portal-type {
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/icon-portal-type.png");
 }
