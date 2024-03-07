@@ -29,8 +29,7 @@
                         <div class="system-wrap">
                             <div class="list-title">
                                 <p>시스템 리스트</p>
-                                <button type="button" class="list-btn edit-btn" data-bs-toggle="modal"
-                                    data-bs-target="#modal-system-set"><i class="icon-edit"></i></button>
+                                <button type="button" class="list-btn edit-btn" data-bs-toggle="modal" data-bs-target="#modal-system-set"><i class="icon-edit"></i></button>
                             </div>
 
                             <ul class="system-list">
@@ -177,8 +176,7 @@
                                                             <option value=""></option>
                                                         </select>
                                                     </div>
-                                                    <input type="text" class="form-control w-100"
-                                                        value="/portal/board/request_user" placeholder="" />
+                                                    <input type="text" class="form-control w-100" value="/portal/board/request_user" placeholder="" />
                                                 </div>
                                             </div>
                                         </div>
@@ -199,15 +197,13 @@
                                         <div class="input-form">
                                             <p class="input-form-label">* 메뉴명</p>
                                             <div class="form">
-                                                <input type="text" class="form-control w-100" value="사용자요청관리"
-                                                    placeholder="한글 10자 이내" />
+                                                <input type="text" class="form-control w-100" value="사용자요청관리" placeholder="한글 10자 이내" />
                                             </div>
                                         </div>
                                         <div class="input-form">
                                             <p class="input-form-label">순서</p>
                                             <div class="form">
-                                                <input type="number" class="form-control w-100" value="5"
-                                                    placeholder="순서" />
+                                                <input type="number" class="form-control w-100" value="5" placeholder="순서" />
                                             </div>
                                         </div>
                                     </div>
@@ -247,8 +243,8 @@
                                         </div>
                                     </div>
                                     <div class="btn-group justify-content-center">
-                                        <button type="button" class="btn btn-min btn-auto btn-green btn-md">수정</button>
-                                        <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                                        <button type="button" class="btn btn-min btn-auto btn-green btn-sm">수정</button>
+                                        <button type="button" class="btn btn-min btn-auto btn-dark btn-sm">삭제</button>
                                     </div>
                                 </div>
                             </div>
@@ -256,34 +252,31 @@
                                 <div class="list-title">
                                     <p>API 목록</p>
                                     <div class="d-flex align-items-center gap-10">
-                                        <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
-                                        <button type="button" class="list-btn menu-btn" data-bs-toggle="modal"
-                                            data-bs-target="#modal-api-add"><i class="icon-plus"></i></button>
+                                        <button type="button" class="btn btn-min btn-auto btn-dark btn-sm">삭제</button>
+                                        <button type="button" class="list-btn menu-btn" data-bs-toggle="modal" data-bs-target="#modal-api-add"><i class="icon-plus"></i></button>
                                     </div>
                                 </div>
                                 <div class="table-mode api">
                                     <div class="table-head">
-                                        <div class="table-head__tr">
+                                        <div class="table-head__tr width-10">
                                             <div class="form-check justify-content-center p-0">
-                                                <input type="checkbox" class="form-check-input" name="capacity"
-                                                    id="btncheck1" autocomplete="off" />
+                                                <input type="checkbox" class="form-check-input" name="capacity" id="btncheck1" autocomplete="off" />
                                             </div>
                                         </div>
-                                        <div class="table-head__tr">이름</div>
-                                        <div class="table-head__tr">구분</div>
-                                        <div class="table-head__tr">키워드</div>
+                                        <div class="table-head__tr width-30">이름</div>
+                                        <div class="table-head__tr width-30">구분</div>
+                                        <div class="table-head__tr width-30">키워드</div>
                                     </div>
                                     <div class="table-body">
                                         @@for( i=1; i < 15; i++){ <div class="table-body__row">
-                                            <div class="table-body__td">
+                                            <div class="table-body__td width-10">
                                                 <div class="form-check justify-content-center p-0">
-                                                    <input type="checkbox" class="form-check-input" name="capacity"
-                                                        id="btncheck1" autocomplete="off" />
+                                                    <input type="checkbox" class="form-check-input" name="capacity" id="btncheck1" autocomplete="off" />
                                                 </div>
                                             </div>
-                                            <div class="table-body__td">사용자 요청관리_R</div>
-                                            <div class="table-body__td">조회</div>
-                                            <div class="table-body__td">공지사항,조회,목록</div>
+                                            <div class="table-body__td width-30">사용자 요청관리_R</div>
+                                            <div class="table-body__td width-30">조회</div>
+                                            <div class="table-body__td width-30">공지사항,조회,목록</div>
                                     </div>
                                     }
                                 </div>
