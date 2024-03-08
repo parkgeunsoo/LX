@@ -1,4 +1,5 @@
 <!-- data-overlap="true"  << 모달 최상위에 입력하면 2중으로 최상단에 배치 -->
+<!-- data-bs-backdrop="static"  << 여백 클릭시 안사라지는 팝업 처리 -->
 
 <!-- Alert: 중복된 아이디가 존재합니다 -->
 <div class="modal fade alert" tabindex="-1" data-bs-backdrop="static" id="alert-duplicate-id" data-overlap="true">
@@ -691,7 +692,7 @@
         </div>
 
         <div class="btn-md-box">
-          <button type="button" class="btn btn-md btn-min btn-green">적용</button>
+          <button type="button" class="btn btn-md btn-min btn-green" data-bs-toggle="modal" data-bs-target="#alert-save">적용</button>
           <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
         </div>
       </div>

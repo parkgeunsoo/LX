@@ -1,13 +1,33 @@
-footer{
-  width: 100%; position: absolute; left: 0; bottom: 0; background-color: #fff; padding: 30px 80px;
-  .img{
+footer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 30px 80px;
+  .img {
     margin-bottom: 12px;
   }
-  .company-info{
-    display: flex; align-items: center; gap: 5px;
-    p{font-size: 12px; color: #666; line-height: 18px;}
+  .company-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    p {
+      font-size: 12px;
+      color: #666;
+      line-height: 18px;
+    }
   }
-  .copyright{
-    font-size: 12px; color: #666; line-height: 18px;
+  .copyright {
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+  }
+}
+
+.intro {
+  .footer {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }

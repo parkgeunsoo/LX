@@ -74,15 +74,6 @@ var Common = {
     $(".open-tool").click(function () {
       $(".tool-wrap").css("display", "flex");
     });
-
-    $(".form-check-input.authority").change(function () {
-      // 체크박스가 체크되었는지 확인
-      if ($(this).is(":checked")) {
-        $(".role .role-sub-wrap").show();
-      } else {
-        $(".role .role-sub-wrap").hide();
-      }
-    });
     $(document).ready(function () {
       $("#fileInput").on("change", function () {
         var selectedFiles = this.files;
