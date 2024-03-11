@@ -85,14 +85,18 @@
         color: $green;
       }
     }
-    label{ cursor: pointer; }
-    .large-menu{
+    label {
+      cursor: pointer;
+    }
+    .large-menu {
       display: flex;
-      align-items: center; 
+      align-items: center;
       gap: 10px;
       margin-bottom: 25px;
-      span{
-        font-size: 18px; font-weight: 500; color: #111;
+      span {
+        font-size: 18px;
+        font-weight: 500;
+        color: #111;
       }
     }
   }
@@ -121,7 +125,6 @@
           font-weight: 500;
         }
       }
-    
     }
   }
   .menu-depth2 {
@@ -134,7 +137,7 @@
       &:last-child {
         padding-bottom: 0;
       }
-      > div{
+      > div {
         display: flex;
         align-items: center;
         gap: 15px;
@@ -204,7 +207,56 @@
             background-color: $green;
           }
         }
+        .menu-depth4 {
+          display: block;
+        }
       }
+    }
+    .depth-input {
+      .form-control {
+        background-color: #f1f3f4;
+        height: 36px;
+      }
+    }
+  }
+  .menu-depth4 {
+    display: none;
+    flex-direction: column;
+    padding: 15px 0 0 37px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 25px;
+      width: 1px;
+      height: calc(100% - 15px);
+      background-color: #e0e0e0;
+    }
+    > li {
+      padding-bottom: 18px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+      &.active {
+        .dep4-desc {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: -12px;
+            width: 1px;
+            height: 16px;
+            background-color: #009881;
+          }
+        }
+      }
+    }
+    .dep4-desc {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     .depth-input {
       .form-control {
