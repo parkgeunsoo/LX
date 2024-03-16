@@ -12,14 +12,14 @@
             @@include('@@webRoot/_include/_aside.html')
             <div class="sub-content">
                 <div class="head-content">
-                    <p class="main-title">인프라 현황관리​</p>
+                    <p class="main-title">인프라 상품관리 - 목록</p>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="#"><i class="icon-home"></i></a>
                             </li>
                             <li class="breadcrumb-item"><a href="#">인프라관리</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">인프라 현황관리​</li>
+                            <li class="breadcrumb-item active" aria-current="page">인프라 상품관리​</li>
                         </ol>
                     </nav>
                 </div>
@@ -30,50 +30,22 @@
                                 <div class="row mb-10">
                                     <div class="col-4">
                                         <div class="input-form">
-                                            <p class="input-form-label">시스템</p>
+                                            <p class="input-form-label">상태</p>
                                             <div class="form">
-                                                <div class="d-flex align-items-center gap-10">
-                                                    <div class="custom-select" style="width: 160px">
-                                                        <select name="" id="" class="form-select">
-                                                            <option value="">2D</option>
-                                                            <option value="">분류</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="custom-select" style="width: 160px">
-                                                        <select name="" id="" class="form-select">
-                                                            <option value="">2D</option>
-                                                            <option value="">분류</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="input-form">
-                                            <p class="input-form-label">지자체구분</p>
-                                            <div class="d-flex align-items-center gap-10">
-                                                <div class="custom-select" style="width: 120px">
+                                                <div class="custom-select" style="width: 160px">
                                                     <select name="" id="" class="form-select">
-                                                        <option value="">서울특별시</option>
-                                                        <option value="">분류</option>
-                                                    </select>
-                                                </div>
-                                                <div class="custom-select" style="width: 220px">
-                                                    <select name="" id="" class="form-select">
-                                                        <option value="">종로구 종로도서관</option>
+                                                        <option value="">전체</option>
                                                         <option value="">분류</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <div class="row">
                                     <div class="col-4">
                                         <div class="input-form">
-                                            <p class="input-form-label">등록일</p>
+                                            <p class="input-form-label">일자</p>
                                             <div class="d-flex align-items-center gap-10">
                                                 <input type="text" class="form-control" placeholder=""
                                                     data-picker="date" style="width: 160px" />
@@ -93,8 +65,8 @@
                                                         <option value="">서비스명</option>
                                                     </select>
                                                 </div>
-                                                <input type="text" class="form-control" value="" placeholder=""
-                                                    style="width: 220px" />
+                                                <input type="text" class="form-control" value=""
+                                                    placeholder="상품명으로 검색하세요" style="width: 400px" />
                                             </div>
                                         </div>
                                     </div>
@@ -143,13 +115,12 @@
         const rowData = [{
             check: "",
             number: "10",
-            system: "2D사용자포탈",
-            localGovernmentClassification: "서울특별시 종로구 종로도서관",
-            serviceName: "지도상 주요시 길 검색 기능​",
-            applicationNumber: "20231212-114",
-            division: "지자체",
+            productName: "기본 인프라",
+            expense: "635,000",
             situation: "사용​",
-            registrationDate: "2023-10-30​",
+            writer: "강효두",
+            registrationDate: "2023-10-30",
+            modificationDate: "2023-10-30",
             cellStyle: cellVertical
         }];
 
@@ -165,33 +136,28 @@
                 cellStyle: cellVertical
             },
             {
-                field: "system",
-                headerName: "시스템"
+                field: "productName",
+                headerName: "상품명"
             },
             {
-                field: "localGovernmentClassification",
-                headerName: "지자체구분"
-            },
-            {
-                field: "serviceName",
-                headerName: "서비스명"
-            },
-            {
-                field: "applicationNumber",
-                headerName: "신청번호"
-            },
-
-            {
-                field: "division",
-                headerName: "구분"
+                field: "expense",
+                headerName: "비용"
             },
             {
                 field: "situation",
                 headerName: "상태"
             },
             {
+                field: "writer",
+                headerName: "작성자"
+            },
+            {
                 field: "registrationDate",
                 headerName: "등록일"
+            },
+            {
+                field: "modificationDate",
+                headerName: "수정일"
             },
         ];
 
