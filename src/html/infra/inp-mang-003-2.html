@@ -35,7 +35,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row">상품명</th>
-                                <td><input type="text" class="form-control" value="" placeholder="상품명을 입력하세요" /> </td>
+                                <td><input type="text" class="form-control" value="" placeholder="상품명을 입력하세요" /></td>
                                 <th scope="row">상태</th>
                                 <td>
                                     <div class="custom-select" style="width: 160px">
@@ -51,13 +51,13 @@
                 </div>
                 <p class="table-title">운영</p>
                 <div class="table-wrap mt-20">
-                    <table class="table table-row">
+                    <table class="table table-row" id="operationTable">
                         <tbody>
                             <tr>
                                 <td colspan="3">
                                     <div class="d-flex align-items-center gap-2">
                                         <input type="text" class="form-control" value="" placeholder="이름입력"
-                                            style="width:160px;" />
+                                            style="width: 160px" />
                                         <div class="custom-select" style="width: 160px">
                                             <select name="" id="" class="form-select">
                                                 <option value="">인프라구분선택</option>
@@ -73,32 +73,70 @@
                                                 <option value="">인프라상세선택</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="form-control" value="인프라상세 스펙 노출" style="width:450px;"
+                                        <input type="text" class="form-control" value="인프라상세 스펙 노출" style="width: 450px"
                                             readonly />
                                         <div class="custom-select" style="width: 80px">
                                             <select name="" id="" class="form-select">
                                                 <option value="">1</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="form-control" value="금액노출" style="width:200px;"
+                                        <input type="text" class="form-control" value="금액노출" style="width: 200px"
                                             readonly />
-                                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                                        <button type="button" class="btns-sign" onclick="operAdd();"><i
+                                                class="icon-plus"></i></button>
+                                        <button type="button" class="btns-sign" onclick="operDel(this);"><i
+                                                class="icon-minus"></i></button>
                                     </div>
                                 </td>
                             </tr>
-
+                            <tr>
+                                <td colspan="3">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <input type="text" class="form-control" value="" placeholder="이름입력"
+                                            style="width: 160px" />
+                                        <div class="custom-select" style="width: 160px">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">인프라구분선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="custom-select" style="width: 160px">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">인프라서비스선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="custom-select" style="width: 160px">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">인프라상세선택</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" class="form-control" value="인프라상세 스펙 노출" style="width: 450px"
+                                            readonly />
+                                        <div class="custom-select" style="width: 80px">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">1</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" class="form-control" value="금액노출" style="width: 200px"
+                                            readonly />
+                                        <button type="button" class="btns-sign" onclick="operAdd();"><i
+                                                class="icon-plus"></i></button>
+                                        <button type="button" class="btns-sign" onclick="operDel(this);"><i
+                                                class="icon-minus"></i></button>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <p class="table-title">개발</p>
                 <div class="table-wrap mt-20">
-                    <table class="table table-row">
+                    <table class="table table-row" id="developTable">
                         <tbody>
                             <tr>
                                 <td colspan="3">
                                     <div class="d-flex align-items-center gap-2">
                                         <input type="text" class="form-control" value="" placeholder="이름입력"
-                                            style="width:160px;" />
+                                            style="width: 160px" />
                                         <div class="custom-select" style="width: 160px">
                                             <select name="" id="" class="form-select">
                                                 <option value="">인프라구분선택</option>
@@ -114,16 +152,19 @@
                                                 <option value="">인프라상세선택</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="form-control" value="인프라상세 스펙 노출" style="width:450px;"
+                                        <input type="text" class="form-control" value="인프라상세 스펙 노출" style="width: 450px"
                                             readonly />
                                         <div class="custom-select" style="width: 80px">
                                             <select name="" id="" class="form-select">
                                                 <option value="">1</option>
                                             </select>
                                         </div>
-                                        <input type="text" class="form-control" value="금액노출" style="width:200px;"
+                                        <input type="text" class="form-control" value="금액노출" style="width: 200px"
                                             readonly />
-                                        <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                                        <button type="button" class="btns-sign" onclick="devAdd();"><i
+                                                class="icon-plus"></i></button>
+                                        <button type="button" class="btns-sign" onclick="devDel(this);"><i
+                                                class="icon-minus"></i></button>
                                     </div>
                                 </td>
                             </tr>
@@ -133,21 +174,19 @@
                 <div class="table-wrap mt-20">
                     <table class="table table-row">
                         <colgroup>
-                            <col width="290px">
+                            <col width="290px" />
                         </colgroup>
                         <tbody>
                             <tr>
                                 <th>합계</th>
                                 <td>
                                     <div class="d-flex align-items-center gap-2">
-                                        <input type="text" class="form-control text-end" value="0" style="width:450px;"
+                                        <input type="text" class="form-control text-end" value="0" style="width: 450px"
                                             readonly />
                                         <p>원</p>
                                     </div>
                                 </td>
-
                             </tr>
-
                         </tbody>
                     </table>
                 </div>
@@ -155,12 +194,45 @@
                     <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
                     <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md">취소</button>
                 </div>
-                @@include('@@webRoot/_include/_footer.html')
+                <footer>
+                    <div class="footer">
+                        <div class="img">
+                            <img src="../../assets/images/footer-logo.svg" alt="LX" />
+                        </div>
+                        <div class="company-info">
+                            <p>54870 전라북도 전주시 덕진구 기지로 120 (중동)</p>
+                            <p>대표전화 : 063-713-1000</p>
+                            <p>디지털트윈사업단 : 063-713-1235</p>
+                        </div>
+                        <div class="copyright">Copyright © lx.all rights reserved.</div>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
-    @@include('@@webRoot/_include/_modal.html')
+    <script>
+        function operAdd() {
+            var lastRow = $("#operationTable tr:last").clone();
+            $("#operationTable").append(lastRow);
+        }
 
+        function operDel(now) {
+            $(now).closest("tr").remove();
+        }
+
+        function devAdd() {
+            var lastRow = $("#developTable tr:last").clone();
+            $("#developTable").append(lastRow);
+        }
+
+        function devDel(now) {
+            $(now).closest("tr").remove();
+        }
+
+        $(document).ready(function () {
+
+        });
+    </script>
 </body>
 
 </html>
