@@ -16,7 +16,9 @@
   &::placeholder {
     color: #bbb;
   }
-
+  &:read-only{
+    background-color: #f5f5f5;
+  }
   // &:focus {
   //   outline: 1px solid #222;
   //   &::placeholder{ color: #222;}
