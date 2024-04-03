@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">사용자 레이어그룹관리 – 상세/수정</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">권한관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">사용자레이어그룹관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="card-wrap">
+                    <p class="table-title">레이어 그룹정보</p>
+                    <div class="table-wrap">
+                        <table class="table table-row">
+                            <colgroup>
+                                <col width="290px" />
+                                <col width="500px" />
+                                <col width="290px" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">레이어그룹명</th>
+                                    <td colspan="3"><input type="text" class="form-control" style="" placeholder="" value="시군구 경계" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">레이어그룹 설명</th>
+                                    <td colspan="3"><input type="text" class="form-control" style="" placeholder="" value="시군구 경계" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="table-head">
+                        <p>전체 <span class="text-green">6384</span> 건</p>
+                        <div class="btn-group justify-content-center">
+                            <button type="button" class="btn btn-min btn-auto btn-dark btn-md" data-bs-toggle="modal" data-bs-target="#modal-layer-list">레이어추가</button>
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                            <button type="button" class="btn btn-min btn-auto btn-outline-green btn-md">목록</button>
+                        </div>
+                    </div>
+                    <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+                    @@include('@@webRoot/_include/_pagination.html')
+                    <div class="btn-group justify-content-center">
+                        <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                        <button type="button" class="btn btn-min btn-auto btn-dark btn-md">목록</button>
+                    </div>
+                    @@include('@@webRoot/_include/_footer.html')
+                </div>
+            </div>
+        </div>
+        @@include('@@webRoot/_include/_modal.html')
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">레이어 그룹관리 - 목록</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">권한관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">레이어그룹관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="filter-wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-11">
+                                <div class="row mb-10">
+                                    <div class="col-4">
+                                        <div class="input-form">
+                                            <p class="input-form-label">공개여부</p>
+                                            <div class="d-flex align-items-center gap-10">
+                                                <div class="custom-select" style="width: 160px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">전체</option>
+                                                        <option value="">분류</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="input-form">
+                                            <p class="input-form-label">구분</p>
+                                            <div class="form">
+                                                <div class="custom-select" style="width: 160px">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="">전체</option>
+                                                        <option value="">분류</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="input-form">
+                                            <p class="input-form-label">등록일자</p>
+                                            <div class="form">
+                                                <div class="input-form">
+                                                    <div class="d-flex align-items-center gap-10">
+                                                        <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                                                        <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="input-form">
+                                            <p class="input-form-label">검색어</p>
+                                            <div class="form">
+                                                <input type="text" class="form-control" value="" placeholder="" style="width: 450px" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <div class="filter-flex justify-content-center">
+                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i>
+                                        검색</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="table-head">
+                        <p>전체 <span class="text-green">6384</span> 건</p>
+                        <div class="btn-group justify-content-center">
+                            <div class="input-form">
+                                <p class="input-form-label" style="width: 37px">보기</p>
+                                <div class="form">
+                                    <div class="custom-select" style="width: 80px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">100</option>
+                                            <option value="">20</option>
+                                            <option value="">30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">등록</button>
+                        </div>
+                    </div>
+                    <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+                    @@include('@@webRoot/_include/_pagination.html')
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+    <script>
+        class CompanyLogoRenderer {
+            eGui;
+
+            init(params) {
+                let companyLogo = document.createElement("img");
+                companyLogo.src =
+                    `https://www.google.com/imgres?imgurl=https%3A%2F%2Fplay-lh.googleusercontent.com%2F54F20A0lQVsJ5J21JxMjnwZLU7uvQSIIXk1p1S5kFi-7YnNh6J9YKAUW4xfExSglsxU%3Dw240-h480-rw&tbnid=_i5PJITUzAb42M&vet=12ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb..i&imgrefurl=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.vertaler.koja%26hl%3Dko&docid=VR8lMSDGhOfVDM&w=240&h=240&q=%EB%B2%88%EC%97%AD%EA%B8%B0%20%EC%9D%BC%EB%B3%B8%EC%96%B4&ved=2ahUKEwjzqYOd8IKEAxV70DQHHXOyDpIQMygDegQIARBb`;
+                companyLogo.setAttribute("style",
+                    "display: block; width: 25px; height: auto; max-height: 50%; margin-right: 12px; filter: brightness(1.1)"
+                );
+
+                let companyName = document.createElement("p");
+                companyName.textContent = params.value;
+                companyName.setAttribute("style",
+                    "text-overflow: ellipsis; overflow: hidden; white-space: nowrap;");
+
+                this.eGui = document.createElement("span");
+                this.eGui.setAttribute("style", "display: flex; height: 100%; width: 100%; align-items: center");
+                this.eGui.appendChild(companyLogo);
+                this.eGui.appendChild(companyName);
+            }
+
+            getGui() {
+                return this.eGui;
+            }
+
+            refresh(params) {
+                return false;
+            }
+        }
+
+        const cellVertical = {
+            "vertical-align": "middle"
+        };
+        const rowData = [{
+            check: "",
+            number: "10",
+            layerName: "기본공간정보_진천",
+            division: "3D",
+            disclosure: "공개",
+            layer: "3",
+            registrant: "user1",
+            date: "2023-10-30",
+            cellStyle: cellVertical
+        }];
+
+        const columnDefs = [{
+                field: "check",
+                checkboxSelection: true,
+                headerCheckboxSelection: true,
+                headerName: ""
+            },
+            {
+                field: "number",
+                headerName: "번호",
+                cellStyle: cellVertical
+            },
+            {
+                field: "layerName",
+                headerName: "레이어그룹명"
+            },
+            {
+                field: "division",
+                headerName: "구분"
+            },
+            {
+                field: "disclosure",
+                headerName: "공개여부"
+            },
+            {
+                field: "layer",
+                headerName: "레이어수"
+            },
+            {
+                field: "registrant",
+                headerName: "등록자"
+            },
+            {
+                field: "date",
+                headerName: "등록일자"
+            },
+        ];
+
+        const gridOptions = {
+            domLayout: "autoHeight",
+            rowData: rowData,
+            columnDefs: columnDefs,
+            autoSizeStrategy: {
+                type: "fitGridWidth",
+                defaultMinWidth: 150
+            },
+            rowSelection: "multiple",
+            defaultColDef: {
+                editable: false,
+                filter: true,
+            },
+            frameworkComponents: {
+                CompanyLogoRenderer: CompanyLogoRenderer,
+            },
+        };
+
+        const gridDiv = document.querySelector("#myGrid");
+        const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+    </script>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

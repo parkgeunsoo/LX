@@ -946,3 +946,125 @@
   </div>
 </div>
 <!-- //Alert: 저장 -->
+
+<!-- modal: 레이어 목록 -->
+<div class="modal fade" tabindex="-1" data-bs-backdrop="static" id="modal-layer-list">
+  <div class="modal-dialog modal-dialog-centered modal-xlg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">레이어 목록</h5>
+        <button type="button" data-bs-dismiss="modal" aria-label="Close">
+          <i class="icon-close-w"><span class="visually-hidden">닫기</span></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row-tb border-0">
+          <table>
+            <colgroup>
+              <col style="width: 100px" />
+              <col />
+              <col style="width: 100px" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr>
+                <th scope="row" style="padding-left:20px;">유형</th>
+                <td>
+                  <div class="select-line">
+                    <div class="custom-select">
+                      <select name="" id="" class="form-select">
+                        <option value="">전체</option>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+                <th scope="row" style="padding-left:20px;">형태</th>
+                <td>
+                  <div class="select-line">
+                    <div class="custom-select">
+                      <select name="" id="" class="form-select">
+                        <option value="">전체</option>
+                      </select>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" style="padding-left:20px;">검색어</th>
+                <td colspan="3">
+                  <div class="d-flex gap-2">
+                    <input type="text" class="form-control w-100" placeholder="레이어 그룹명으로 검색하세요" />
+                    <button type="button" class="btn  btn-dark" style="width: 80px;">검색</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="main-content mt-80 mb-50">
+            <div class="table-head">
+              <div class="case">
+                <p>전체 <span class="text-green">6384</span> 건</p>
+                <p>대기 <span class="text-blue">12</span> 건</p>
+                <p>승인 <span class="text-green">82</span> 건</p>
+                <p>반려 <span class="text-danger">8</span> 건</p>
+              </div>
+              <div class="btn-group justify-content-center">
+                <div class="input-form">
+                  <p class="input-form-label" style="width: 37px">보기</p>
+                  <div class="form">
+                    <div class="custom-select" style="width: 80px">
+                      <select name="" id="" class="form-select">
+                        <option value="">100</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                <button type="button" class="btn btn-min btn-auto btn-green btn-md">신청</button>
+              </div>
+            </div>
+            <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="First">
+                    <i class="icon-pagination-left-twin"></i>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <i class="icon-pagination-left"></i>
+                  </a>
+                </li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                  <a class="page-link active" href="#" aria-label="Next">
+                    <i class="icon-pagination-right"></i>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link active" href="#" aria-label="Last">
+                    <i class="icon-pagination-right-twin"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+
+        <div class="btn-md-box">
+          <button type="button" class="btn btn-md btn-min btn-green">추가</button>
+          <button type="button" class="btn btn-md btn-min btn-dark" data-bs-dismiss="modal">취소</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- //modal: 레이어 목록 -->
