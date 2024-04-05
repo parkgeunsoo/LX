@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="head-content">
+                    <p class="main-title">레이어 그룹관리 – 등록</p>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="#"><i class="icon-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item"><a href="#">권한관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">레이어그룹관리</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="card-wrap">
+                    <p class="table-title">레이어 그룹정보</p>
+                    <div class="table-wrap">
+                        <table class="table table-row">
+                            <colgroup>
+                                <col width="290px" />
+                                <col width="500px" />
+                                <col width="290px" />
+                                <col />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">공개여부</th>
+                                    <td>
+                                        <div class="custom-select" style="width: 160px">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">공개</option>
+                                                <option value="">비공개</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th scope="row">구분</th>
+                                    <td>
+                                        <div class="custom-select" style="width: 160px">
+                                            <select name="" id="" class="form-select">
+                                                <option value="">전체</option>
+                                                <option value="">2D</option>
+                                                <option value="">3D</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">레이어그룹명</th>
+                                    <td colspan="3"><input type="text" class="form-control" style="" placeholder=""
+                                            value="" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">레이어그룹 설명</th>
+                                    <td colspan="3"><input type="text" class="form-control" style="" placeholder=""
+                                            value="" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="main-content">
+                    <p class="table-title mb-20">레이어 목록</p>
+                    <div class="table-head">
+                        <p>전체 <span class="text-green">6384</span> 건</p>
+                        <div class="btn-group justify-content-center">
+                            <button type="button" class="btn btn-min btn-auto btn-outline-gray btn-md"
+                                data-bs-toggle="modal" data-bs-target="#modal-layer-list">레이어 추가</button>
+
+                        </div>
+                    </div>
+                    <div class="table-mode user">
+                        <div class="table-head">
+                            <div class="table-head__tr width-8">유형구분</div>
+                            <div class="table-head__tr width-8">형태구분</div>
+                            <div class="table-head__tr width-8">소유구분</div>
+                            <div class="table-head__tr width-35">레이어명</div>
+                            <div class="table-head__tr width-35">좌표계</div>
+                            <div class="table-head__tr width-10">삭제</div>
+                        </div>
+                        <div class="table-body">
+                            <div class="table-body__row">
+                                <div class="table-body__td width-8">면</div>
+                                <div class="table-body__td width-8">TMS (GoogleMapType)</div>
+                                <div class="table-body__td width-8">사용자</div>
+                                <div class="table-body__td width-35">(연속주제)_항만과그주변지역/항만재
+                                    개발사업구역_전체분</div>
+                                <div class="table-body__td width-35">[[GRS80] TM중부 falseY: 60만
+                                    (EPSG:5186)</div>
+                                <div class="table-body__td width-10">
+                                    <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-body__row">
+                                <div class="table-body__td width-8">면</div>
+                                <div class="table-body__td width-8">WMS</div>
+                                <div class="table-body__td width-8">사용자</div>
+                                <div class="table-body__td width-35">(연속주제)_항만과그주변지역/항만재
+                                    개발사업구역_전체분</div>
+                                <div class="table-body__td width-35">[[GRS80] TM중부 falseY: 60만
+                                    (EPSG:5186)</div>
+                                <div class="table-body__td width-10">
+                                    <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-body__row">
+                                <div class="table-body__td width-8">면</div>
+                                <div class="table-body__td width-8">WMS</div>
+                                <div class="table-body__td width-8">사용자</div>
+                                <div class="table-body__td width-35">(연속주제)_항만과그주변지역/항만재
+                                    개발사업구역_전체분</div>
+                                <div class="table-body__td width-35">[[GRS80] TM중부 falseY: 60만
+                                    (EPSG:5186)</div>
+                                <div class="table-body__td width-10">
+                                    <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-body__row">
+                                <div class="table-body__td width-8">면</div>
+                                <div class="table-body__td width-8">WMS</div>
+                                <div class="table-body__td width-8">사용자</div>
+                                <div class="table-body__td width-35">(연속주제)_항만과그주변지역/항만재
+                                    개발사업구역_전체분</div>
+                                <div class="table-body__td width-35">[[GRS80] TM중부 falseY: 60만
+                                    (EPSG:5186)</div>
+                                <div class="table-body__td width-10">
+                                    <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-body__row">
+                                <div class="table-body__td width-8">면</div>
+                                <div class="table-body__td width-8">WMS</div>
+                                <div class="table-body__td width-8">사용자</div>
+                                <div class="table-body__td width-35">(연속주제)_항만과그주변지역/항만재
+                                    개발사업구역_전체분</div>
+                                <div class="table-body__td width-35">[[GRS80] TM중부 falseY: 60만
+                                    (EPSG:5186)</div>
+                                <div class="table-body__td width-10">
+                                    <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-body__row">
+                                <div class="table-body__td width-8">면</div>
+                                <div class="table-body__td width-8">WMS</div>
+                                <div class="table-body__td width-8">사용자</div>
+                                <div class="table-body__td width-35">(연속주제)_항만과그주변지역/항만재
+                                    개발사업구역_전체분</div>
+                                <div class="table-body__td width-35">[[GRS80] TM중부 falseY: 60만
+                                    (EPSG:5186)</div>
+                                <div class="table-body__td width-10">
+                                    <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="table-body__row none-data">
+                                <div>
+                                    사용자를 추가해주세요
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-group justify-content-center">
+                        <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                        <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
+                    </div>
+                    @@include('@@webRoot/_include/_footer.html')
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        class CompanyLogoRenderer {
+            eGui;
+            getGui() {
+                return this.eGui;
+            }
+            refresh(params) {
+                return false;
+            }
+        }
+
+        const cellVertical = {
+            "vertical-align": "middle"
+        };
+        const rowData = [{
+            user: "면",
+            code: "WMS",
+            name: "사용자",
+            id: "(연속주제)_항만과그주변지역/항만재 개발사업구역_전체분",
+            region: "[[GRS80] TM중부 falseY: 60만 (EPSG:5186)",
+            status: "",
+        }];
+
+        const columnDefs = [{
+                field: "user",
+                headerName: "유형구분"
+            },
+            {
+                field: "code",
+                headerName: "형태구분"
+            },
+            {
+                field: "name",
+                headerName: "소유구분"
+            },
+            {
+                field: "id",
+                headerName: "레이어명"
+            },
+            {
+                field: "region",
+                headerName: "좌표계"
+            },
+            {
+                field: "date",
+                headerName: "삭제"
+            },
+        ];
+
+        const gridOptions = {
+            domLayout: "autoHeight",
+            rowData: rowData,
+            columnDefs: columnDefs,
+            autoSizeStrategy: {
+                type: "fitGridWidth"
+            },
+            rowSelection: "multiple",
+            defaultColDef: {
+                editable: false,
+                filter: true,
+            },
+            frameworkComponents: {
+                CompanyLogoRenderer: CompanyLogoRenderer,
+            },
+        };
+
+        const gridDiv = document.querySelector("#myGrid");
+        const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+    </script>
+    @@include('@@webRoot/_include/_modal.html')
+</body>
+
+</html>

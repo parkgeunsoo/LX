@@ -285,7 +285,7 @@
     gap: 10px;
     margin-bottom: 10px;
     label {
-      width: 50px;
+      width: 70px;
       font-size: 15px;
       font-weight: 500;
     }
@@ -396,6 +396,10 @@
       }
     }
   }
+}
+.modal-filter{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
 }
 .modal-backdrop ~ .modal-backdrop {
   z-index: 1061;
