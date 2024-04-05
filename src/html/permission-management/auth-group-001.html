@@ -32,7 +32,8 @@
                                         <div class="input-form">
                                             <p class="input-form-label">검색어</p>
                                             <div class="form">
-                                                <input type="text" class="form-control" value="" placeholder="" style="width: 450px" />
+                                                <input type="text" class="form-control" value=""
+                                                    placeholder="레이어 그룹명으로 검색하세요" style="width: 450px" />
                                             </div>
                                         </div>
                                     </div>
@@ -40,7 +41,8 @@
                             </div>
                             <div class="col-1 d-flex justify-content-end">
                                 <div class="filter-flex justify-content-center">
-                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i>
+                                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i
+                                            class="icon-search"></i>
                                         검색</button>
                                 </div>
                             </div>
@@ -108,7 +110,6 @@
             "vertical-align": "middle"
         };
         const rowData = [{
-            check: "",
             number: "10",
             layerName: "기본공간정보_진천",
             layer: "3",
@@ -118,12 +119,6 @@
         }];
 
         const columnDefs = [{
-                field: "check",
-                checkboxSelection: true,
-                headerCheckboxSelection: true,
-                headerName: ""
-            },
-            {
                 field: "number",
                 headerName: "번호",
                 cellStyle: cellVertical

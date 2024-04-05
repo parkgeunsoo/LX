@@ -31,3 +31,15 @@ footer {
     margin: 0 auto;
   }
 }
+
+.top-btn{
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  &:hover{
+    transition: .5s;
+    .icon-top{
+      background-image: url("../images/top-btn-hover.png");
+    }
+  }
+}
