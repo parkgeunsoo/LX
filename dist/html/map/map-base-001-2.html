@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <title>LX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <link rel="icon" type="image/png" href="../../assets/favicon/favicon.ico" sizes="32x32"> -->
+
+    <link rel="stylesheet" href="/assets/lib/jquery/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-utilities.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <script src="/assets/lib/jquery/jquery.min.js"></script>
+    <script src="/assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/lib/jquery/jquery.mtz.monthpicker.js"></script>
+
+    <!-- swiper -->
+    <link type="text/css" href="/assets/lib/swiper/css/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="/assets/lib/swiper/js/swiper-bundle.min.js"></script>
+
+    <!-- ag 그리드 -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    <script src="/assets/js/ui.js" defer></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="top-head">
+          <div class="left-content">
+            <div class="logo">
+              <img src="../../assets/images/logo.png" alt="LX플랫폼" />
+            </div>
+            <ul class="gnb-depth1">
+              <li class="active">
+                <a href="">운영포탈시스템</a>
+              </li>
+              <li>
+                <a href="">2D관리자</a>
+              </li>
+              <li>
+                <a href="">디지털트윈관리</a>
+              </li>
+              <li>
+                <a href="">데이터관리</a>
+              </li>
+              <li>
+                <a href="">인프라관리</a>
+              </li>
+            </ul>
+          </div>
+          <div class="user-info">
+            <a href="" class="portal-link dashboard"><i class="icon-portal"></i>포털메인 바로가기 </a>
+            <a href="" class="portal-link management">포털메인 바로가기 <i class="icon-portal-type"></i></a>
+            <div class="info">
+              <p>플랫폼 총괄 관리자</p>
+              <p class="user-id">onpoom1 <span>님</span></p>
+            </div>
+            <button class="btn btn-md btn-auto sign-btn">로그아웃</button>
+          </div>
+        </div>
+        <ul class="gnb-depth2">
+          <li>
+            <a href="">대시보드</a>
+          </li>
+          <li class="active">
+            <a href="">권한관리</a>
+          </li>
+          <li>
+            <a href="">신청관리</a>
+          </li>
+          <li>
+            <a href="">배포관리</a>
+          </li>
+          <li>
+            <a href="">API관리</a>
+          </li>
+          <li>
+            <a href="">인프라관리</a>
+          </li>
+          <li>
+            <a href="">지도관리</a>
+          </li>
+          <li>
+            <a href="">포탈관리</a>
+          </li>
+          <li>
+            <a href="">로그관리</a>
+          </li>
+          <li>
+            <a href="">통계관리</a>
+          </li>
+        </ul>
+      </header>
+
+      <div class="content">
+        <aside id="aside">
+          <ul class="menu-list">
+            <li class="">
+              <a href="javascript:void(0)" class="dep1">사용자포털 메인페이지</a>
+            </li>
+            <li>
+              <p class="dep1 more-depth active">게시판 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li class="">
+                  <a href="">공지사항관리</a>
+                </li>
+                <li class="active">
+                  <a href="">자료실관리</a>
+                </li>
+                <li>
+                  <a href="">개발문의관리</a>
+                </li>
+                <li>
+                  <a href="">질의응답관리</a>
+                </li>
+                <li>
+                  <a href="">사용자요청관리</a>
+                </li>
+                <li class="">
+                  <a href="">사용자포럼관리</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="dep1">맵갤러리 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li>
+                  <a href="">-</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="dep1 more-depth">가이드 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li>
+                  <a href="">-</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="dep1 more-depth">코드 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li>
+                  <a href="">-</a>
+                </li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="javascript:void(0)" class="dep1">플랫폼 공유관리</a>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="sub-content">
+          <div class="head-content">
+            <p class="main-title">베이스 맵 등록</p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">지도관리</a></li>
+                <li class="breadcrumb-item"><a href="#">베이스맵관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">베이스맵</li>
+              </ol>
+            </nav>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table table-row">
+              <colgroup>
+                <col width="150px" />
+                <col width="70px" />
+                <col width="70px" />
+                <col width="490px" />
+                <col width="290px" />
+                <col width="490px" />
+              </colgroup>
+              <tr>
+                <th colspan="3">
+                  <div class="th-txt">
+                    <p>베이스맵 명</p>
+                  </div>
+                </th>
+                <td colspan="5">
+                  <input type="text" class="form-control" placeholder="" value="" />
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">베이스맵 등록여부</th>
+                <td colspan="5">
+                  <div class="custom-select" style="width: 160px">
+                    <select name="" id="" class="form-select">
+                      <option value="">등록</option>
+                      <option value="">분류</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">배경지도 분류</th>
+                <td colspan="5">
+                  <div class="custom-select" style="width: 160px">
+                    <select name="" id="" class="form-select">
+                      <option value="">일반지도</option>
+                      <option value="">분류</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">레이어 타입</th>
+                <td colspan="5">
+                  <div class="custom-select" style="width: 320px">
+                    <select name="" id="" class="form-select">
+                      <option value="">WMTS</option>
+                      <option value="">분류</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">URL</th>
+                <td colspan="5">
+                  <input type="text" class="form-control" value="" />
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">
+                  <p>첨부파일</p>
+                </th>
+                <td colspan="5">
+                  <div class="form-column">
+                    <div class="form-file-custom">
+                      <p id="selectedFile" class="file-name" style="width: 440px">파일을 첨부해주세요.</p>
+                      <label for="fileInput" id="fileLabel">찾아보기</label>
+                      <input type="file" id="fileInput" style="display: none" />
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th colspan="3">매개변수</th>
+                <td colspan="5">
+                  <div class="form-column scroll">
+                    <div class="form-row">
+                      <input type="text" class="form-control" style="width: 160px" value="layer" />
+                      <input type="text" style="width: 360px" class="form-control" value="DRONE_2024_11012" />
+                      <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                      <button type="button" class="btns-sign"><i class="icon-plus"></i></button>
+                    </div>
+                    <div class="form-row">
+                      <input type="text" class="form-control" style="width: 160px" value="layer" />
+                      <input type="text" class="form-control" style="width: 360px" value="DRONE_2024_11012" />
+                      <button type="button" class="btns-sign"><i class="icon-minus"></i></button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="btn-group justify-content-center">
+            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
+          </div>
+          <footer>
+            <div class="footer">
+              <div class="img">
+                <img src="../../assets/images/footer-logo.svg" alt="LX" />
+              </div>
+              <div class="company-info">
+                <p>54870 전라북도 전주시 덕진구 기지로 120 (중동)</p>
+                <p>대표전화 : 063-713-1000</p>
+                <p>디지털트윈사업단 : 063-713-1235</p>
+              </div>
+              <div class="copyright">Copyright © lx.all rights reserved.</div>
+            </div>
+            <button type="button" class="top-btn">
+              <i class="icon-top"></i>
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $('#fileInput').on('change', function () {
+          var selectedFiles = this.files;
+
+          if (selectedFiles.length > 0) {
+            $('#selectedFile').text(selectedFiles[0].name);
+            $('#selectedFile').addClass('select');
+          } else {
+            $('#selectedFile').text('선택된 파일이 없습니다.');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

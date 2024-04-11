@@ -140,7 +140,6 @@
     &:checked + .form-check-label{
       &::after{
         content: "";
-        content: "";
         position: absolute;
         width: 100%;
         left: 0;

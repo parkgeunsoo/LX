@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-Compatible" content="IE=edge" />
+    <title>LX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no, viewport-fit=cover" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <link rel="icon" type="image/png" href="../../assets/favicon/favicon.ico" sizes="32x32"> -->
+
+    <link rel="stylesheet" href="/assets/lib/jquery/jquery-ui.min.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-grid.css" />
+    <link rel="stylesheet" href="/assets/css/bootstrap-utilities.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <script src="/assets/lib/jquery/jquery.min.js"></script>
+    <script src="/assets/lib/jquery/jquery-ui.min.js"></script>
+    <script src="/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/lib/jquery/jquery.mtz.monthpicker.js"></script>
+
+    <!-- swiper -->
+    <link type="text/css" href="/assets/lib/swiper/css/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="/assets/lib/swiper/js/swiper-bundle.min.js"></script>
+
+    <!-- ag 그리드 -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.js"></script>
+
+    <script src="/assets/js/ui.js" defer></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <header id="header">
+        <div class="top-head">
+          <div class="left-content">
+            <div class="logo">
+              <img src="../../assets/images/logo.png" alt="LX플랫폼" />
+            </div>
+            <ul class="gnb-depth1">
+              <li class="active">
+                <a href="">운영포탈시스템</a>
+              </li>
+              <li>
+                <a href="">2D관리자</a>
+              </li>
+              <li>
+                <a href="">디지털트윈관리</a>
+              </li>
+              <li>
+                <a href="">데이터관리</a>
+              </li>
+              <li>
+                <a href="">인프라관리</a>
+              </li>
+            </ul>
+          </div>
+          <div class="user-info">
+            <a href="" class="portal-link dashboard"><i class="icon-portal"></i>포털메인 바로가기 </a>
+            <a href="" class="portal-link management">포털메인 바로가기 <i class="icon-portal-type"></i></a>
+            <div class="info">
+              <p>플랫폼 총괄 관리자</p>
+              <p class="user-id">onpoom1 <span>님</span></p>
+            </div>
+            <button class="btn btn-md btn-auto sign-btn">로그아웃</button>
+          </div>
+        </div>
+        <ul class="gnb-depth2">
+          <li>
+            <a href="">대시보드</a>
+          </li>
+          <li class="active">
+            <a href="">권한관리</a>
+          </li>
+          <li>
+            <a href="">신청관리</a>
+          </li>
+          <li>
+            <a href="">배포관리</a>
+          </li>
+          <li>
+            <a href="">API관리</a>
+          </li>
+          <li>
+            <a href="">인프라관리</a>
+          </li>
+          <li>
+            <a href="">지도관리</a>
+          </li>
+          <li>
+            <a href="">포탈관리</a>
+          </li>
+          <li>
+            <a href="">로그관리</a>
+          </li>
+          <li>
+            <a href="">통계관리</a>
+          </li>
+        </ul>
+      </header>
+      <div class="content">
+        <aside id="aside">
+          <ul class="menu-list">
+            <li class="">
+              <a href="javascript:void(0)" class="dep1">사용자포털 메인페이지</a>
+            </li>
+            <li>
+              <p class="dep1 more-depth active">게시판 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li class="">
+                  <a href="">공지사항관리</a>
+                </li>
+                <li class="active">
+                  <a href="">자료실관리</a>
+                </li>
+                <li>
+                  <a href="">개발문의관리</a>
+                </li>
+                <li>
+                  <a href="">질의응답관리</a>
+                </li>
+                <li>
+                  <a href="">사용자요청관리</a>
+                </li>
+                <li class="">
+                  <a href="">사용자포럼관리</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="dep1">맵갤러리 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li>
+                  <a href="">-</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="dep1 more-depth">가이드 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li>
+                  <a href="">-</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <p class="dep1 more-depth">코드 관리 <i class="icon-aside-arrow"></i></p>
+              <ul class="dep2">
+                <li>
+                  <a href="">-</a>
+                </li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="javascript:void(0)" class="dep1">플랫폼 공유관리</a>
+            </li>
+          </ul>
+        </aside>
+
+        <div class="sub-content">
+          <div class="head-content">
+            <p class="main-title">API 현황</p>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="#"><i class="icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="#">API관리</a></li>
+                <li class="breadcrumb-item active" aria-current="page">API현황</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="filter-wrap">
+            <div class="container">
+              <div class="row">
+                <div class="col-11">
+                  <div class="row mb-10">
+                    <div class="col-5">
+                      <div class="input-form">
+                        <p class="input-form-label">구분</p>
+                        <div class="form">
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">2D</option>
+                              <option value="">분류</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="input-form">
+                        <p class="input-form-label">분류</p>
+                        <div class="form">
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">데이터</option>
+                              <option value=""></option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="input-form">
+                        <p class="input-form-label">상태</p>
+                        <div class="form">
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">개발자 공개</option>
+                              <option value=""></option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-5">
+                      <div class="input-form">
+                        <p class="input-form-label">일자</p>
+                        <div class="d-flex align-items-center gap-10">
+                          <div class="custom-select" style="width: 100px">
+                            <select name="" id="" class="form-select">
+                              <option value="">등록일</option>
+                              <option value=""></option>
+                            </select>
+                          </div>
+                          <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                          <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-5">
+                      <div class="input-form">
+                        <p class="input-form-label">검색어</p>
+                        <div class="form">
+                          <div class="custom-select" style="width: 160px">
+                            <select name="" id="" class="form-select">
+                              <option value="">이름</option>
+                              <option value="">분류</option>
+                            </select>
+                          </div>
+                          <input type="text" class="form-control" value="" placeholder="" style="width: 200px" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1 d-flex justify-content-end">
+                  <div class="filter-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-green btn-auto search-btn"><i class="icon-search"></i> 검색</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-content">
+            <div class="table-head">
+              <p>전체 <span class="text-green">6384</span> 건</p>
+              <div class="btn-group justify-content-center">
+                <div class="input-form">
+                  <p class="input-form-label" style="width: 37px">보기</p>
+                  <div class="form">
+                    <div class="custom-select" style="width: 80px">
+                      <select name="" id="" class="form-select">
+                        <option value="">100</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-min btn-auto btn-dark btn-md">삭제</button>
+                <button type="button" class="btn btn-min btn-auto btn-green btn-md">등록</button>
+                <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active mr-10"></i> 엑셀다운로드</button>
+              </div>
+            </div>
+            <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
+            <nav>
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="First">
+                    <i class="icon-pagination-left-twin"></i>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <i class="icon-pagination-left"></i>
+                  </a>
+                </li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                  <a class="page-link active" href="#" aria-label="Next">
+                    <i class="icon-pagination-right"></i>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link active" href="#" aria-label="Last">
+                    <i class="icon-pagination-right-twin"></i>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <footer>
+            <div class="footer">
+              <div class="img">
+                <img src="../../assets/images/footer-logo.svg" alt="LX" />
+              </div>
+              <div class="company-info">
+                <p>54870 전라북도 전주시 덕진구 기지로 120 (중동)</p>
+                <p>대표전화 : 063-713-1000</p>
+                <p>디지털트윈사업단 : 063-713-1235</p>
+              </div>
+              <div class="copyright">Copyright © lx.all rights reserved.</div>
+            </div>
+            <button type="button" class="top-btn">
+              <i class="icon-top"></i>
+            </button>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script>
+      const cellVertical = {
+        'vertical-align': 'middle',
+      };
+      const rowData = [
+        {
+          check: '',
+          number: '10',
+          division: '2D',
+          classification: '기능',
+          group: '분석',
+          functionName: '위치찾기',
+          apiCode: 'A100011',
+          apiName: '출발점과 목적지 연결분석',
+          category: 'REST',
+          format: 'XML',
+          url: 'https://www.eshare.go.kr/OpenApi/Info/detail.do?svcNo=15',
+          cellStyle: cellVertical,
+        },
+      ];
+
+      const columnDefs = [
+        {
+          field: 'athlete',
+          checkboxSelection: true,
+          headerCheckboxSelection: true,
+          headerName: '',
+        },
+        {
+          field: 'number',
+          headerName: '번호',
+          cellStyle: cellVertical,
+        },
+        {
+          field: 'division',
+          headerName: '구분',
+        },
+        {
+          field: 'classification',
+          headerName: '분류',
+        },
+        {
+          field: 'group',
+          headerName: '그룹명',
+        },
+        {
+          field: 'functionName',
+          headerName: '기능명',
+        },
+        {
+          field: 'apiCode',
+          headerName: 'API코드',
+        },
+        {
+          field: 'apiName',
+          headerName: 'API명',
+        },
+        {
+          field: 'category',
+          headerName: '유형',
+        },
+        {
+          field: 'format',
+          headerName: '포맷',
+        },
+        {
+          field: 'url',
+          headerName: 'URL',
+        },
+      ];
+
+      const gridOptions = {
+        domLayout: 'autoHeight',
+        rowData: rowData,
+        columnDefs: columnDefs,
+        autoSizeStrategy: {
+          type: 'fitGridWidth',
+          defaultMinWidth: 150,
+        },
+        rowSelection: 'multiple',
+        defaultColDef: {
+          editable: false,
+          filter: true,
+        },
+      };
+
+      const gridDiv = document.querySelector('#myGrid');
+      const gridApi = agGrid.createGrid(gridDiv, gridOptions);
+    </script>
+  </body>
+</html>
