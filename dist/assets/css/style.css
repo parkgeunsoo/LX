@@ -2945,6 +2945,7 @@ footer .copyright {
   position: fixed;
   bottom: 30px;
   right: 40px;
+  display: none;
 }
 .top-btn:hover {
   transition: 0.5s;
@@ -4333,6 +4334,47 @@ footer .copyright {
 }
 .guide-content__body .move-link:hover {
   text-decoration: underline;
+}
+
+.error-wrap {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/error-bg.png");
+  background-size: cover;
+  padding-top: 190px;
+}
+.error-wrap .title {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  color: #222;
+}
+.error-wrap .desc {
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  color: #777;
+  margin-top: 35px;
+}
+.error-wrap .btn-group {
+  margin-top: 66px;
+}
+.error-wrap .btn-group .btn {
+  width: 170px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0px 10px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.error-wrap .btn-group .btn.back-btn {
+  background-color: #fff;
+  color: #000;
+}
+.error-wrap .btn-group .btn.main-btn {
+  background-color: #009982;
+  color: #fff;
 }
 
 .br-text {

@@ -85,9 +85,17 @@ var Common = {
           $("#selectedFile").text("선택된 파일이 없습니다.");
         }
       });
-      // 버튼 클릭 시 페이지 최상단으로 이동합니다.
+      $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop > 200) {
+          $('.top-btn').fadeIn(200);
+        } else {
+          $('.top-btn').fadeOut(200);
+        }
+      });
+    
       $('.top-btn').click(function() {
-        $('html, body').animate({scrollTop : 0}, 400); // 800ms 동안 최상단으로 스크롤
+        $('html, body').animate({scrollTop : 0}, 400); 
         return false;
       });
     });
