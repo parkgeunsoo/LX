@@ -2645,6 +2645,9 @@ select.mtz-monthpicker {
   justify-content: center;
   gap: 7px;
 }
+.filter-wrap .search-btn.lg {
+  height: 108px;
+}
 
 .head-content {
   display: flex;
@@ -3294,6 +3297,22 @@ footer .copyright {
 }
 .intro-list li.disabled:hover .txt2 {
   color: #999;
+}
+
+.datepicker-wrap {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+}
+.datepicker-wrap .btn-tabs {
+  border: 0;
+}
+.datepicker-wrap .btn-tabs .nav-link {
+  font-size: 16px;
+  border: 1px solid #ebebeb;
+  padding: 12px 10px;
 }
 
 .btns-sign {
@@ -4233,6 +4252,18 @@ footer .copyright {
 .nav-tabs {
   margin-top: 40px;
   gap: 45px;
+}
+.nav-tabs.half-tab {
+  width: 100%;
+  flex-flow: inherit;
+}
+.nav-tabs.half-tab .nav-item {
+  width: 50%;
+  text-align: center;
+}
+.nav-tabs.half-tab .nav-item .nav-link {
+  width: 100%;
+  justify-content: center;
 }
 .nav-tabs .nav-item {
   padding: 0;

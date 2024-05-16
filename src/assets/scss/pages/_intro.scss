@@ -175,3 +175,19 @@
     }
   }
 }
+
+.datepicker-wrap {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  border: 1px solid #ebebeb;
+  border-radius: 8px;
+  .btn-tabs {
+    border: 0;
+    .nav-link {
+      font-size: 16px;
+      border: 1px solid #ebebeb;
+      padding: 12px 10px;
+    }
+  }
+}
