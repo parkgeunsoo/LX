@@ -179,15 +179,94 @@
 .datepicker-wrap {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 30px;
   border: 1px solid #ebebeb;
   border-radius: 8px;
+  margin-top: 35px;
   .btn-tabs {
     border: 0;
+    gap: 10px;
+    margin-top: 0;
     .nav-link {
       font-size: 16px;
       border: 1px solid #ebebeb;
       padding: 12px 10px;
+      &.active {
+        background-color: #009881;
+        color: #fff;
+        border: 1px solid #009881;
+      }
+    }
+  }
+  .datepicker-range {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    .prev-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      opacity: 0.3;
+      transform: rotate(180deg);
+      &.active {
+        opacity: 1;
+      }
+    }
+    .next-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      opacity: 0.3;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  .picker {
+    border: 0;
+  }
+}
+
+.connect-wrap {
+  margin-top: 45px;
+  .connect-area {
+    width: 100%;
+    height: 460px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  .connect-table {
+    margin-top: 45px;
+  }
+  .table {
+    border: 1px solid #ebebeb;
+    thead {
+      th {
+        background-color: #fafafa;
+        font-size: 16px;
+        font-weight: 500;
+        color: #111;
+        padding: 9px 10px 8px;
+        &:first-child {
+          border-right: 1px solid #ebebeb;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &:first-child {
+            border-right: 1px solid #ebebeb;
+          }
+        }
+      }
+      td {
+        color: #777;
+        border-top: 1px solid #ebebeb;
+      }
     }
   }
 }

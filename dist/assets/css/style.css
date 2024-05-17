@@ -840,6 +840,12 @@ progress {
   background-image: url("../images/top-btn.png");
 }
 
+.icon-d-arrow {
+  width: 6px;
+  height: 12px;
+  background-image: url("../images/icon-d-arrow.svg");
+}
+
 .overflow-y-scroll {
   height: 100%;
   overflow-y: auto;
@@ -1915,6 +1921,18 @@ progress {
   overflow: auto;
   border: 1px solid #ebebeb;
   border-radius: 8px;
+}
+
+.backslash {
+  text-align: left;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="%23ebebeb" /></svg>');
+}
+.backslash div {
+  text-align: right;
+}
+.backslash span {
+  display: inline-block;
+  margin-top: 4px;
 }
 
 .pagination {
@@ -3302,17 +3320,88 @@ footer .copyright {
 .datepicker-wrap {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 30px;
   border: 1px solid #ebebeb;
   border-radius: 8px;
+  margin-top: 35px;
 }
 .datepicker-wrap .btn-tabs {
   border: 0;
+  gap: 10px;
+  margin-top: 0;
 }
 .datepicker-wrap .btn-tabs .nav-link {
   font-size: 16px;
   border: 1px solid #ebebeb;
   padding: 12px 10px;
+}
+.datepicker-wrap .btn-tabs .nav-link.active {
+  background-color: #009881;
+  color: #fff;
+  border: 1px solid #009881;
+}
+.datepicker-wrap .datepicker-range {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.datepicker-wrap .datepicker-range .prev-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  opacity: 0.3;
+  transform: rotate(180deg);
+}
+.datepicker-wrap .datepicker-range .prev-btn.active {
+  opacity: 1;
+}
+.datepicker-wrap .datepicker-range .next-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  opacity: 0.3;
+}
+.datepicker-wrap .datepicker-range .next-btn.active {
+  opacity: 1;
+}
+.datepicker-wrap .picker {
+  border: 0;
+}
+
+.connect-wrap {
+  margin-top: 45px;
+}
+.connect-wrap .connect-area {
+  width: 100%;
+  height: 460px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+}
+.connect-wrap .connect-table {
+  margin-top: 45px;
+}
+.connect-wrap .table {
+  border: 1px solid #ebebeb;
+}
+.connect-wrap .table thead th {
+  background-color: #fafafa;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111;
+  padding: 9px 10px 8px;
+}
+.connect-wrap .table thead th:first-child {
+  border-right: 1px solid #ebebeb;
+}
+.connect-wrap .table tbody tr td:first-child {
+  border-right: 1px solid #ebebeb;
+}
+.connect-wrap .table tbody td {
+  color: #777;
+  border-top: 1px solid #ebebeb;
 }
 
 .btns-sign {

@@ -52,6 +52,7 @@ var Common = {
         $("#alert-save-confirm").modal("hide"); // Confirm 모달 닫기
         $("#alert-save").modal("show"); // 다른 모달 표시
       });
+      $("#daterange").daterangepicker();
     });
 
     // 메뉴관리 메뉴
@@ -85,17 +86,17 @@ var Common = {
           $("#selectedFile").text("선택된 파일이 없습니다.");
         }
       });
-      $(window).scroll(function() {
+      $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
         if (scrollTop > 200) {
-          $('.top-btn').fadeIn(200);
+          $(".top-btn").fadeIn(200);
         } else {
-          $('.top-btn').fadeOut(200);
+          $(".top-btn").fadeOut(200);
         }
       });
-    
-      $('.top-btn').click(function() {
-        $('html, body').animate({scrollTop : 0}, 400); 
+
+      $(".top-btn").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 400);
         return false;
       });
     });
@@ -104,3 +105,32 @@ var Common = {
 
 Header.init();
 Common.init();
+
+// const incrementCount = document.getElementById("increment-count");
+// const decrementCount = document.getElementById("decrement-count");
+
+// const totalCount = document.getElementById("total-count");
+// var count = 1;
+
+// totalCount.innerHTML = count;
+
+// const handleIncrement = () => {
+//    count++;
+//    totalCount.innerHTML = count;
+
+//    if(count == 12){
+//       count = 1;
+//    }
+// };
+
+// const handleDecrement = () => {
+//    count--;
+//    totalCount.innerHTML = count;
+
+//    if( count == 1){
+//       count = 13;
+//    }
+// };
+
+// incrementCount.addEventListener("click", handleIncrement);
+// decrementCount.addEventListener("click", handleDecrement);

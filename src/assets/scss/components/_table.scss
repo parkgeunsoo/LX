@@ -117,3 +117,14 @@
   border: 1px solid #ebebeb;
   border-radius: 8px;
 }
+.backslash {
+  text-align: left;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="100%" y2="100%" stroke="%23ebebeb" /></svg>');
+  div {
+    text-align: right;
+  }
+  span {
+    display: inline-block;
+    margin-top: 4px;
+  }
+}

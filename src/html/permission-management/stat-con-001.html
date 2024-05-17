@@ -100,15 +100,32 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="tab-2" role="tabpanel" tabindex="0">
-
                         <div class="datepicker-wrap">
                             <div class="">
                                 사용자 접속
                                 <span class="text-green">453</span>
                                 회
                             </div>
-                            <div>
-                                <input type="text" class="form-control" placeholder="" data-picker="date" style="width: 160px" />
+                            <!-- <div class="cal-head">
+                                <a href="#" id="decrement-count">
+                                   <figure><img src="../../resources/pc/images/common/icon-arrow-left.svg" alt="전달"></figure>
+                                </a>
+                                <h3 class="right-text half-bottom padding-right">2022년 <span id="total-count" class="month"></span>월</h3>
+                                <div class="h-cal-li"></div>
+                                <a href="#" id="increment-count">
+                                   <figure class="right-arrow"><img src="../../resources/pc/images/common/icon-arrow-left.svg" alt="다음달"></figure>
+                                </a>
+                                <button class="calendar-m"><i class="ic-calendar"></i></button>
+                            </div> -->
+                            <div class="datepicker-range">
+                                <button type="button" class="prev-btn active">
+                                    <i class="icon-d-arrow"></i>
+                                </button>
+                                <input type="text" class="form-control  picker" placeholder="" value="2024-05-17" data-picker="date" style="width: 140px" />
+                                <button type="button" class="next-btn">
+                                    <i class="icon-d-arrow"></i>
+                                </button>
+                                <input type="text" id="daterange" name="daterange" />
                             </div>
                             <ul class="nav nav-tabs btn-tabs" role="tablist">
                                 <li class="nav-item" role="presentation">
@@ -121,6 +138,153 @@
                                     <button class="nav-link" data-bs-toggle="tab" data-bs-target="#month" type="button" role="tab" aria-selected="false">월간</button>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="connect-wrap">
+                            <div class="table-head">
+                                <div class="input-form">
+                                    <p class="input-form-label">시스템</p>
+                                    <div class="custom-select" style="width: 160px">
+                                        <select name="" id="" class="form-select">
+                                            <option value="">2D 사용자포탈</option>
+                                            <option value="">분류</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="connect-area">
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="connect-table">
+                                <div class="table-head justify-content-end">
+                                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active mr-10"></i> 엑셀다운로드</button>
+                                </div>
+                                <table class="table">
+                                    <colgroup>
+                                        <col width="100px">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th class='backslash' style='width:60px'>
+                                                <div>시</div>
+                                                <span>사용자</span>
+                                            </th>
+                                            <th class="text-center">1</th>
+                                            <th class="text-center">2</th>
+                                            <th class="text-center">3</th>
+                                            <th class="text-center">4</th>
+                                            <th class="text-center">5</th>
+                                            <th class="text-center">6</th>
+                                            <th class="text-center">7</th>
+                                            <th class="text-center">8</th>
+                                            <th class="text-center">9</th>
+                                            <th class="text-center">10</th>
+                                            <th class="text-center">11</th>
+                                            <th class="text-center">12</th>
+                                            <th class="text-center">13</th>
+                                            <th class="text-center">14</th>
+                                            <th class="text-center">15</th>
+                                            <th class="text-center">16</th>
+                                            <th class="text-center">17</th>
+                                            <th class="text-center">18</th>
+                                            <th class="text-center">19</th>
+                                            <th class="text-center">20</th>
+                                            <th class="text-center">21</th>
+                                            <th class="text-center">22</th>
+                                            <th class="text-center">23</th>
+                                            <th class="text-center">24</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">운영자</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center"> 관리자</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">사용자</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">1</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                            <td class="text-center">0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="btn-group justify-content-center">
+                            <button type="button" class="btn btn-min btn-auto btn-green btn-md">저장</button>
+                            <button type="button" class="btn btn-min btn-auto btn-dark btn-md">취소</button>
                         </div>
                     </div>
                 </div>
