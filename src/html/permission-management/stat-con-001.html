@@ -26,10 +26,12 @@
                 </div>
                 <ul class="nav nav-tabs half-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-selected="true">현황</button>
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-1" type="button"
+                            role="tab" aria-selected="true">현황</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-selected="false">통계</button>
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab"
+                            aria-selected="false">통계</button>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -65,7 +67,9 @@
                                     </div>
                                     <div class="col-1 d-flex justify-content-end">
                                         <div class="filter-flex justify-content-center">
-                                            <button type="button" class="btn btn-outline-green btn-auto search-btn lg"><i class="icon-search"></i> 검색</button>
+                                            <button type="button"
+                                                class="btn btn-outline-green btn-auto search-btn lg"><i
+                                                    class="icon-search"></i> 검색</button>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +96,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active mr-10"></i> 엑셀다운로드</button>
+                                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i
+                                            class="icon-download-active mr-10"></i> 엑셀다운로드</button>
                                 </div>
                             </div>
                             <div id="myGrid" class="ag-grid ag-theme-quartz"></div>
@@ -121,24 +126,50 @@
                                 <button type="button" class="prev-btn active">
                                     <i class="icon-d-arrow"></i>
                                 </button>
-                                <input type="text" class="form-control  picker" placeholder="" value="2024-05-17" data-picker="date" style="width: 140px" />
+                                <input type="text" class="form-control  picker" placeholder="" value="2024-05-17"
+                                    data-picker="date" style="width: 140px" />
                                 <button type="button" class="next-btn">
                                     <i class="icon-d-arrow"></i>
                                 </button>
-                                <input type="text" id="daterange" name="daterange" />
+                            </div>
+                            <div class="datepicker-range">
+                                <button type="button" class="prev-btn active">
+                                    <i class="icon-d-arrow"></i>
+                                </button>
+                                <input type="text" id="daterange" />
+                                <button type="button" class="next-btn">
+                                    <i class="icon-d-arrow"></i>
+                                </button>
+                            </div>
+                            <div class="datepicker-range">
+                                <button type="button" class="prev-btn active">
+                                    <i class="icon-d-arrow"></i>
+                                </button>
+                                <button type="button" class="next-btn">
+                                    <i class="icon-d-arrow"></i>
+                                </button>
                             </div>
                             <ul class="nav nav-tabs btn-tabs" role="tablist">
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link active btn btn-primary btn-md" data-bs-toggle="tab" data-bs-target="#day" type="button" role="tab" aria-selected="true">일간</button>
+                                    <button class="nav-link active btn btn-primary btn-md" data-bs-toggle="tab"
+                                        data-bs-target="#day" type="button" role="tab" aria-selected="true">일간</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#weeks" type="button" role="tab" aria-selected="false">주간</button>
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#weeks" type="button"
+                                        role="tab" aria-selected="false">주간</button>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#month" type="button" role="tab" aria-selected="false">월간</button>
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#month" type="button"
+                                        role="tab" aria-selected="false">월간</button>
                                 </li>
                             </ul>
                         </div>
+                        <!-- <div class="tab-content">
+                            <div class="tab-pane fade show active" id="day" role="tabpanel" tabindex="0">
+                            </div>
+                            <div class="tab-pane fade" id="weeks" role="tabpanel" tabindex="0"></div>
+                            <div class="tab-pane fade" id="month" role="tabpanel" tabindex="0"></div>
+                        </div> -->
                         <div class="connect-wrap">
                             <div class="table-head">
                                 <div class="input-form">
@@ -158,7 +189,8 @@
                             </div>
                             <div class="connect-table">
                                 <div class="table-head justify-content-end">
-                                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i class="icon-download-active mr-10"></i> 엑셀다운로드</button>
+                                    <button type="button" class="btn btn-min btn-auto btn-excel btn-md"><i
+                                            class="icon-download-active mr-10"></i> 엑셀다운로드</button>
                                 </div>
                                 <table class="table">
                                     <colgroup>
@@ -294,6 +326,16 @@
         </div>
     </div>
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            flatpickr("#daterange", {
+                mode: "range",
+                dateFormat: "Y-m-d",
+                showMonths: 2, // 두 개의 달력을 동시에 표시
+                onChange: function (selectedDates, dateStr, instance) {
+                    console.log("Selected dates: " + dateStr);
+                }
+            });
+        });
         const cellVertical = {
             "vertical-align": "middle"
         };

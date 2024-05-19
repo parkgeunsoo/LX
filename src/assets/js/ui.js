@@ -42,6 +42,7 @@ var Common = {
       yearSuffix: "년",
       dateFormat: "yy-mm-dd",
     });
+   
   },
 
   common: function () {

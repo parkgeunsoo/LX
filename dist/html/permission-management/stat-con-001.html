@@ -6,7 +6,7 @@
     <title>LX</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no, viewport-fit=cover" />
     <meta name="format-detection" content="telephone=no" />
-    <!-- <link rel="icon" type="image/png" href="../../assets/favicon/favicon.ico" sizes="32x32"> -->
+    <!-- <link rel="icon" type="image/png" href="../../asse+ts/favicon/favicon.ico" sizes="32x32"> -->
 
     <link rel="stylesheet" href="/assets/lib/jquery/jquery-ui.min.css" />
     <link rel="stylesheet" href="/assets/css/bootstrap-grid.css" />
@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
 
     <!-- dataRange picker -->
-    <script type="text/javascript" src="https://gcore.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://gcore.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://gcore.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <!-- // -->
 
     <script src="/assets/lib/jquery/jquery.min.js"></script>
@@ -305,7 +305,23 @@
                   <button type="button" class="next-btn">
                     <i class="icon-d-arrow"></i>
                   </button>
-                  <input type="text" id="daterange" name="daterange" />
+                </div>
+                <div class="datepicker-range">
+                  <button type="button" class="prev-btn active">
+                    <i class="icon-d-arrow"></i>
+                  </button>
+                  <input type="text" id="daterange" />
+                  <button type="button" class="next-btn">
+                    <i class="icon-d-arrow"></i>
+                  </button>
+                </div>
+                <div class="datepicker-range">
+                  <button type="button" class="prev-btn active">
+                    <i class="icon-d-arrow"></i>
+                  </button>
+                  <button type="button" class="next-btn">
+                    <i class="icon-d-arrow"></i>
+                  </button>
                 </div>
                 <ul class="nav nav-tabs btn-tabs" role="tablist">
                   <li class="nav-item" role="presentation">
@@ -319,6 +335,12 @@
                   </li>
                 </ul>
               </div>
+              <!-- <div class="tab-content">
+                            <div class="tab-pane fade show active" id="day" role="tabpanel" tabindex="0">
+                            </div>
+                            <div class="tab-pane fade" id="weeks" role="tabpanel" tabindex="0"></div>
+                            <div class="tab-pane fade" id="month" role="tabpanel" tabindex="0"></div>
+                        </div> -->
               <div class="connect-wrap">
                 <div class="table-head">
                   <div class="input-form">
@@ -487,6 +509,16 @@
       </div>
     </div>
     <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        flatpickr('#daterange', {
+          mode: 'range',
+          dateFormat: 'Y-m-d',
+          showMonths: 2, // 두 개의 달력을 동시에 표시
+          onChange: function (selectedDates, dateStr, instance) {
+            console.log('Selected dates: ' + dateStr);
+          },
+        });
+      });
       const cellVertical = {
         'vertical-align': 'middle',
       };
