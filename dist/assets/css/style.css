@@ -2511,6 +2511,18 @@ select.mtz-monthpicker {
   border-radius: 50% !important;
 }
 
+.ui-monthpicker tbody td {
+  border: 6px solid #FFF;
+}
+.ui-monthpicker .ui-state-default {
+  width: 100%;
+  border-radius: 4px;
+  background: #f1f3f4;
+}
+.ui-monthpicker .ui-state-default.ui-state-active {
+  border-radius: 4px !important;
+}
+
 #wrap {
   min-width: 1900px;
   min-height: 100dvh;
@@ -3346,6 +3358,7 @@ footer .copyright {
   display: flex;
   align-items: center;
   gap: 25px;
+  position: relative;
 }
 .datepicker-wrap .datepicker-range .prev-btn {
   width: 36px;
@@ -3388,6 +3401,14 @@ footer .copyright {
 }
 .datepicker-wrap .datepicker-range .years-next-btn.active {
   opacity: 1;
+}
+.datepicker-wrap .datepicker-range .ui-monthpicker-trigger {
+  position: absolute;
+  width: 115px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0;
 }
 .datepicker-wrap .picker {
   border: 0;
@@ -3491,6 +3512,20 @@ footer .copyright {
 .flatpickr-current-month input.cur-year {
   font-size: 18px !important;
   font-weight: 700 !important;
+}
+
+.flatpickr-current-month span.cur-month:hover {
+  background: transparent !important;
+}
+
+.numInputWrapper:hover {
+  background: transparent !important;
+}
+.numInputWrapper .arrowUp {
+  display: none;
+}
+.numInputWrapper .arrowDown {
+  display: none;
 }
 
 .cur-month {

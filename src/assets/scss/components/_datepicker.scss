@@ -141,3 +141,17 @@ select.mtz-monthpicker {
   background: #009881 !important;
   border-radius: 50% !important;
 }
+
+.ui-monthpicker{
+  tbody td{
+    border: 6px solid #FFF;
+  }
+  .ui-state-default{
+    width: 100%;
+    border-radius: 4px;
+    background: #f1f3f4;
+    &.ui-state-active{
+      border-radius: 4px !important;
+    }
+  }
+}

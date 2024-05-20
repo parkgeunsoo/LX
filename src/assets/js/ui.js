@@ -43,93 +43,15 @@ var Common = {
       dateFormat: "yy-mm-dd",
     });
 
-    const monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
-
-    $("#monthpicker").datepicker({
-      dateFormat: "yy-mm", // 날짜 형식을 연-월로 설정
-      changeMonth: false, // 월 변경 비활성화
-      changeYear: true,
-      showButtonPanel: true, // 버튼 패널 표시
-      yearRange: "c-10:c+10", // 연도 범위 설정
-      beforeShow: function (input, inst) {
-        setTimeout(function () {
-          const widget = $(inst.dpDiv);
-          widget.find(".ui-datepicker-calendar").hide();
-          widget.find(".ui-datepicker-title").css("text-align", "center");
-          if (!inst.selectedYear) {
-            inst.selectedYear = new Date().getFullYear();
-          }
-          if (!inst.selectedMonth && inst.selectedMonth !== 0) {
-            inst.selectedMonth = new Date().getMonth();
-          }
-          widget.find(".ui-datepicker-title").html(inst.selectedYear);
-          if (widget.find(".month-picker").length === 0) {
-            widget.find(".ui-datepicker-header").after(buildMonthPicker(inst));
-          }
-          addYearNavigationHandlers(inst);
-        }, 1);
-      },
-      onChangeMonthYear: function (year, month, inst) {
-        setTimeout(function () {
-          const widget = $(inst.dpDiv);
-          widget.find(".ui-datepicker-calendar").hide();
-          widget.find(".ui-datepicker-title").css("text-align", "center");
-          widget.find(".ui-datepicker-title").html(year);
-          inst.selectedYear = year; // 선택한 연도 업데이트
-          buildMonthPicker(inst); // 월 선택기를 다시 빌드
-          addYearNavigationHandlers(inst); // 연도 변경 화살표 핸들러 추가
-        }, 1);
-      },
-      onClose: function (dateText, inst) {
-        const widget = $(inst.dpDiv);
-        widget.find(".month-picker div").removeClass("selected");
-      },
+    $("#monthpicker").monthpicker({
+      monthNames: ['1월(JAN)', '2월(FEB)', '3월(MAR)', '4월(APR)', '5월(MAY)', '6월(JUN)',
+          '7월(JUL)', '8월(AUG)', '9월(SEP)', '10월(OCT)', '11월(NOV)', '12월(DEC)'],
+      monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+      showOn: "button",
+      changeYear: false,
+      yearRange: 'c-2:c+2',
+      dateFormat: 'yy-mm'
     });
-
-    function buildMonthPicker(inst) {
-      const monthPicker = $('<div class="month-picker"></div>');
-      const selectedYear = inst.selectedYear || new Date().getFullYear();
-      const selectedMonth = inst.selectedMonth || new Date().getMonth(); // 초기 값 설정
-      monthNames.forEach((month, index) => {
-        const isSelected = index === selectedMonth;
-        const monthDiv = $(`<div data-month="${index}" class="${isSelected ? "selected" : ""}">${month}</div>`);
-        monthDiv.on("click", function () {
-          const selectedMonth = $(this).data("month");
-          inst.selectedMonth = selectedMonth; // 선택한 월 업데이트
-          $("#monthpicker").datepicker("setDate", new Date(selectedYear, selectedMonth, 1));
-          $("#monthpicker").val(`${selectedYear}-${String(selectedMonth + 1).padStart(2, "0")}`);
-          $(".month-picker div").removeClass("selected");
-          $(this).addClass("selected");
-          inst.dpDiv.hide();
-        });
-        monthPicker.append(monthDiv);
-      });
-      $(".month-picker").remove(); // 이전 월 선택기를 제거
-      inst.dpDiv.find(".ui-datepicker-header").after(monthPicker); // 새로운 월 선택기를 추가
-      return monthPicker;
-    }
-
-    function addYearNavigationHandlers(inst) {
-      const widget = $(inst.dpDiv);
-      widget
-        .find(".ui-datepicker-next")
-        .off("click")
-        .on("click", function () {
-          const year = inst.selectedYear + 1;
-          inst.selectedYear = year;
-          $("#monthpicker").datepicker("setDate", new Date(year, inst.selectedMonth, 1));
-          $("#monthpicker").datepicker("refresh");
-        });
-      widget
-        .find(".ui-datepicker-prev")
-        .off("click")
-        .on("click", function () {
-          const year = inst.selectedYear - 1;
-          inst.selectedYear = year;
-          $("#monthpicker").datepicker("setDate", new Date(year, inst.selectedMonth, 1));
-          $("#monthpicker").datepicker("refresh");
-        });
-    }
   },
 
   common: function () {

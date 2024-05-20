@@ -203,6 +203,7 @@
     display: flex;
     align-items: center;
     gap: 25px;
+    position: relative;
     .prev-btn {
       width: 36px;
       height: 36px;
@@ -244,6 +245,14 @@
       &.active {
         opacity: 1;
       }
+    }
+    .ui-monthpicker-trigger{
+      position: absolute;
+      width: 115px;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0;
     }
   }
   .picker {
@@ -321,6 +330,7 @@
   line-height: 23px !important;
   max-width: 26px !important;
 }
+
 .flatpickr-current-month {
   display: flex;
   flex-direction: row-reverse;
@@ -349,6 +359,20 @@
 .flatpickr-current-month input.cur-year {
   font-size: 18px !important;
   font-weight: 700 !important;
+}
+.flatpickr-current-month span.cur-month:hover{
+  background: transparent !important;
+}
+.numInputWrapper{
+  &:hover{
+    background: transparent !important;
+  }
+  .arrowUp{
+    display: none;
+  }
+  .arrowDown{
+    display: none;
+  }
 }
 .cur-month {
   font-size: 18px !important;
