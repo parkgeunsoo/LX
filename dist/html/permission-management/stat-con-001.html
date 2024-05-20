@@ -16,7 +16,7 @@
     <!-- dataRange picker -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
     <!-- // -->
 
     <script src="/assets/lib/jquery/jquery.min.js"></script>
@@ -297,28 +297,34 @@
                                 </a>
                                 <button class="calendar-m"><i class="ic-calendar"></i></button>
                             </div> -->
+
+                <!-- 일별 -->
                 <div class="datepicker-range">
                   <button type="button" class="prev-btn active">
                     <i class="icon-d-arrow"></i>
                   </button>
-                  <input type="text" class="form-control picker" placeholder="" value="2024-05-17" data-picker="date" style="width: 140px" />
+                  <input type="text" class="form-control picker" placeholder="" value="2024-05-17" data-picker="date" style="width: 140px" readonly />
                   <button type="button" class="next-btn">
                     <i class="icon-d-arrow"></i>
                   </button>
                 </div>
+                <!-- 기간지정 -->
                 <div class="datepicker-range">
                   <button type="button" class="prev-btn active">
                     <i class="icon-d-arrow"></i>
                   </button>
-                  <input type="text" id="daterange" />
+                  <input type="text" id="daterange" class="form-control picker" value="2024-04-16 ~ 2024-05-22" />
                   <button type="button" class="next-btn">
                     <i class="icon-d-arrow"></i>
                   </button>
                 </div>
+
+                <!-- 월별 -->
                 <div class="datepicker-range">
                   <button type="button" class="prev-btn active">
                     <i class="icon-d-arrow"></i>
                   </button>
+                  <input type="text" class="form-control picker" value="2024-05" id="monthpicker" month-data-picker="date" style="width: 115px" readonly />
                   <button type="button" class="next-btn">
                     <i class="icon-d-arrow"></i>
                   </button>
@@ -512,12 +518,47 @@
       document.addEventListener('DOMContentLoaded', function () {
         flatpickr('#daterange', {
           mode: 'range',
-          dateFormat: 'Y-m-d',
+          dateFormat: 'Y-m-d', // 연도.월.일 형식으로 설정
           showMonths: 2, // 두 개의 달력을 동시에 표시
+          locale: 'ko', // 한국어로 설정
+          onReady: function (selectedDates, dateStr, instance) {
+            const monthElement = document.createElement('div');
+            monthElement.innerText = instance.months[instance.currentMonth];
+
+            const yearElement = document.createElement('div');
+            yearElement.innerText = instance.currentYear.toString();
+
+            const calendarContainer = instance.calendarContainer;
+            calendarContainer.appendChild(monthElement);
+            calendarContainer.appendChild(yearElement);
+
+            highlightSundays(instance);
+          },
+          onMonthChange: function (selectedDates, dateStr, instance) {
+            highlightSundays(instance);
+          },
+          onYearChange: function (selectedDates, dateStr, instance) {
+            highlightSundays(instance);
+          },
           onChange: function (selectedDates, dateStr, instance) {
             console.log('Selected dates: ' + dateStr);
           },
         });
+
+        function highlightSundays(instance) {
+          // 모든 날짜 셀을 순회
+          instance.calendarContainer.querySelectorAll('.flatpickr-day').forEach(function (dayElem) {
+            // 각 날짜 셀의 날짜 정보를 가져옴
+            const date = instance.parseDate(dayElem.dateObj, 'Y-m-d');
+            // 일요일이면 'sunday' 클래스를 추가
+            if (date.getDay() === 0) {
+              // 일요일(0)
+              dayElem.classList.add('sunday');
+            } else {
+              dayElem.classList.remove('sunday');
+            }
+          });
+        }
       });
       const cellVertical = {
         'vertical-align': 'middle',

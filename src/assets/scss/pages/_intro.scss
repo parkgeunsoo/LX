@@ -224,6 +224,27 @@
         opacity: 1;
       }
     }
+    .years-prev-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      opacity: 0.3;
+      transform: rotate(180deg);
+      &.active {
+        opacity: 1;
+      }
+    }
+    .years-next-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #000;
+      opacity: 0.3;
+      &.active {
+        opacity: 1;
+      }
+    }
   }
   .picker {
     border: 0;
@@ -269,4 +290,129 @@
       }
     }
   }
+}
+
+// dataRange picker css.
+#daterange {
+  width: 265px !important;
+  height: 40px !important;
+  font-size: 16px !important;
+  background-size: 16px 18px;
+  font-size: 15px;
+  padding: 10px 16px 10px 10px;
+  background-repeat: no-repeat;
+  background-position: 88% 50%;
+  background-image: url(../images/icon-calendar.png);
+}
+
+.flatpickr-calendar {
+  width: 440px !important;
+  font-size: 12px !important;
+  padding: 20px !important;
+}
+.dayContainer {
+  width: 200px !important;
+  min-width: 200px !important;
+  max-width: 200px !important;
+}
+.flatpickr-day,
+.flatpickr-weekday {
+  height: 23px !important;
+  line-height: 23px !important;
+  max-width: 26px !important;
+}
+.flatpickr-current-month {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.flatpickr-day.inRange {
+  background: #cceae6 !important;
+  border-color: #cceae6 !important;
+}
+.flatpickr-day.selected {
+  background-color: #009881 !important;
+  max-width: 23px !important;
+}
+.flatpickr-day.selected.startRange,
+.flatpickr-day.startRange.startRange,
+.flatpickr-day.endRange.startRange {
+  border-radius: 50% !important;
+}
+.flatpickr-day.selected.endRange,
+.flatpickr-day.startRange.endRange,
+.flatpickr-day.endRange.endRange {
+  border-radius: 50% !important;
+}
+.flatpickr-day.inRange {
+  box-shadow: 0 0 0 #cceae6, 3px 0 0 #cceae6 !important;
+}
+.flatpickr-current-month input.cur-year {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+.cur-month {
+  font-size: 18px !important;
+}
+span.flatpickr-weekday {
+  max-width: 30px !important;
+}
+.sunday {
+  color: #fe3b30 !important; /* 텍스트 색상 설정 */
+}
+.flatpickr-months {
+  margin-bottom: 12px;
+
+  .flatpickr-prev-month {
+    top: 21px !important;
+    width: 32px;
+    height: 32px !important;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon-d-arrow.svg);
+    background-position: center;
+    transform: rotate(180deg);
+    padding: 0 !important;
+    left: 15px !important;
+    svg {
+      display: none;
+    }
+  }
+  .flatpickr-next-month {
+    top: 23px !important;
+    width: 32px;
+    height: 32px !important;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon-d-arrow.svg);
+    background-position: center;
+    padding: 0 !important;
+    right: 15px !important;
+    svg {
+      display: none;
+    }
+  }
+}
+.ui-widget {
+  font-family: "Pretendard";
+}
+.month-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.month-picker div {
+  width: calc(33.3% - 4px);
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f1f3f4;
+  border-radius: 4px;
+}
+.month-picker div:hover,
+.month-picker div.selected {
+  background-color: #009881;
+  color: #fff;
+}
+
+.ui-datepicker-current,
+.ui-datepicker-close {
+  display: none; /* 오늘, 완료 버튼 숨김 */
 }

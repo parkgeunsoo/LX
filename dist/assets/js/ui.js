@@ -32,16 +32,98 @@ var Common = {
     });
   },
   datepickerRun: function datepickerRun() {
+    // 일반 달력 Datepicker 설정
     $("[data-picker='date']").datepicker({
       dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
       monthNames: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
       monthNamesShort: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
       showOtherMonths: false,
-      //selectOtherMonths: true,
       showMonthAfterYear: true,
       yearSuffix: "년",
       dateFormat: "yy-mm-dd"
     });
+    var monthNames = ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
+    $("#monthpicker").datepicker({
+      dateFormat: "yy-mm",
+      // 날짜 형식을 연-월로 설정
+      changeMonth: false,
+      // 월 변경 비활성화
+      changeYear: true,
+      showButtonPanel: true,
+      // 버튼 패널 표시
+      yearRange: "c-10:c+10",
+      // 연도 범위 설정
+      beforeShow: function beforeShow(input, inst) {
+        setTimeout(function () {
+          var widget = $(inst.dpDiv);
+          widget.find(".ui-datepicker-calendar").hide();
+          widget.find(".ui-datepicker-title").css("text-align", "center");
+          if (!inst.selectedYear) {
+            inst.selectedYear = new Date().getFullYear();
+          }
+          if (!inst.selectedMonth && inst.selectedMonth !== 0) {
+            inst.selectedMonth = new Date().getMonth();
+          }
+          widget.find(".ui-datepicker-title").html(inst.selectedYear);
+          if (widget.find(".month-picker").length === 0) {
+            widget.find(".ui-datepicker-header").after(buildMonthPicker(inst));
+          }
+          addYearNavigationHandlers(inst);
+        }, 1);
+      },
+      onChangeMonthYear: function onChangeMonthYear(year, month, inst) {
+        setTimeout(function () {
+          var widget = $(inst.dpDiv);
+          widget.find(".ui-datepicker-calendar").hide();
+          widget.find(".ui-datepicker-title").css("text-align", "center");
+          widget.find(".ui-datepicker-title").html(year);
+          inst.selectedYear = year; // 선택한 연도 업데이트
+          buildMonthPicker(inst); // 월 선택기를 다시 빌드
+          addYearNavigationHandlers(inst); // 연도 변경 화살표 핸들러 추가
+        }, 1);
+      },
+      onClose: function onClose(dateText, inst) {
+        var widget = $(inst.dpDiv);
+        widget.find(".month-picker div").removeClass("selected");
+      }
+    });
+    function buildMonthPicker(inst) {
+      var monthPicker = $('<div class="month-picker"></div>');
+      var selectedYear = inst.selectedYear || new Date().getFullYear();
+      var selectedMonth = inst.selectedMonth || new Date().getMonth(); // 초기 값 설정
+      monthNames.forEach(function (month, index) {
+        var isSelected = index === selectedMonth;
+        var monthDiv = $("<div data-month=\"".concat(index, "\" class=\"").concat(isSelected ? "selected" : "", "\">").concat(month, "</div>"));
+        monthDiv.on("click", function () {
+          var selectedMonth = $(this).data("month");
+          inst.selectedMonth = selectedMonth; // 선택한 월 업데이트
+          $("#monthpicker").datepicker("setDate", new Date(selectedYear, selectedMonth, 1));
+          $("#monthpicker").val("".concat(selectedYear, "-").concat(String(selectedMonth + 1).padStart(2, "0")));
+          $(".month-picker div").removeClass("selected");
+          $(this).addClass("selected");
+          inst.dpDiv.hide();
+        });
+        monthPicker.append(monthDiv);
+      });
+      $(".month-picker").remove(); // 이전 월 선택기를 제거
+      inst.dpDiv.find(".ui-datepicker-header").after(monthPicker); // 새로운 월 선택기를 추가
+      return monthPicker;
+    }
+    function addYearNavigationHandlers(inst) {
+      var widget = $(inst.dpDiv);
+      widget.find(".ui-datepicker-next").off("click").on("click", function () {
+        var year = inst.selectedYear + 1;
+        inst.selectedYear = year;
+        $("#monthpicker").datepicker("setDate", new Date(year, inst.selectedMonth, 1));
+        $("#monthpicker").datepicker("refresh");
+      });
+      widget.find(".ui-datepicker-prev").off("click").on("click", function () {
+        var year = inst.selectedYear - 1;
+        inst.selectedYear = year;
+        $("#monthpicker").datepicker("setDate", new Date(year, inst.selectedMonth, 1));
+        $("#monthpicker").datepicker("refresh");
+      });
+    }
   },
   common: function common() {
     // confirm 모달
@@ -51,7 +133,6 @@ var Common = {
         $("#alert-save-confirm").modal("hide"); // Confirm 모달 닫기
         $("#alert-save").modal("show"); // 다른 모달 표시
       });
-      $("#daterange").daterangepicker();
     });
 
     // 메뉴관리 메뉴
