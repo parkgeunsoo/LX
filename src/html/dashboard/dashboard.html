@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    @@include('@@webRoot/_include/_head.html')
+</head>
+
+<body>
+    <div id="wrap">
+        @@include('@@webRoot/_include/_header.html')
+        <div class="content">
+            @@include('@@webRoot/_include/_aside.html')
+            <div class="sub-content">
+                <div class="dashboard-title">
+                    DASHBOARD
+                </div>
+                <div class="dashboard-counting-wrap">
+                    <div class="dashboard-counting-list">
+                        <div class="dashboard-counting today">
+                            <div class="dashboard-counting-desc">
+                                <p class="badge">오늘</p>
+                                <p class="date">2024-05-10</p>
+                            </div>
+                            <p class="text">LX플랫폼</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-counting-list">
+                        <div class="dashboard-counting">
+                            <div class="dashboard-counting-desc">
+                                <p class="title">접속자수</p>
+                                <p class="cnt">12</p>
+                            </div>
+                            <div class="img">
+                                <img src="@@webRoot/assets/images/icon-dashboard-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-counting-list">
+                        <div class="dashboard-counting">
+                            <div class="dashboard-counting-desc">
+                                <p class="title">총 접속자수</p>
+                                <p class="cnt">1,982</p>
+                            </div>
+                            <div class="img">
+                                <img src="@@webRoot/assets/images/icon-dashboard-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-counting-list">
+                        <div class="dashboard-counting">
+                            <div class="dashboard-counting-desc">
+                                <p class="title">API 호출수</p>
+                                <p class="cnt">352</p>
+                            </div>
+                            <div class="img">
+                                <img src="@@webRoot/assets/images/icon-dashboard-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-counting-list">
+                        <div class="dashboard-counting">
+                            <div class="dashboard-counting-desc">
+                                <p class="title">총 API 호출수</p>
+                                <p class="cnt">2,201</p>
+                            </div>
+                            <div class="img">
+                                <img src="@@webRoot/assets/images/icon-dashboard-4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="dashboard-box">
+                            <div class="dashboard-box__head">
+                                <p class="title">사용자 접속</p>
+                                <a href="javascript:void(0)" class="more">
+                                    <i class="icon-plus"></i>
+                                    더보기
+                                </a>
+                            </div>
+                            <div class="dashboard-box__content">
+                                <div class="btns">
+                                    <!-- click시 active -->
+                                    <button type="button"
+                                        class="btn fixed-width btn-outline-gray btn-sm active">1달</button>
+                                    <button type="button" class="btn fixed-width btn-outline-gray btn-sm">1년</button>
+                                </div>
+                                <!-- 작업하실때 style bg는 지워주세요 -->
+                                <div class="chart-wrap h-240" style="background-color: gray;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="dashboard-box">
+                            <div class="dashboard-box__head">
+                                <p class="title">메뉴별 접속</p>
+                                <a href="javascript:void(0)" class="more">
+                                    <i class="icon-plus"></i>
+                                    더보기
+                                </a>
+                            </div>
+                            <div class="dashboard-box__content">
+                                <!-- 작업하실때 style bg는 지워주세요 -->
+                                <div class="chart-wrap h-300" style="background-color: gray;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="dashboard-box">
+                            <div class="dashboard-box__head">
+                                <p class="title">API 호출 (카테고리별)</p>
+                                <a href="javascript:void(0)" class="more">
+                                    <i class="icon-plus"></i>
+                                    더보기
+                                </a>
+                            </div>
+                            <div class="dashboard-box__content">
+                                <div class="btns">
+                                    <!-- click시 active -->
+                                    <button type="button"
+                                        class="btn fixed-width btn-outline-gray btn-sm active">오늘</button>
+                                    <button type="button" class="btn fixed-width btn-outline-gray btn-sm">전체</button>
+                                </div>
+                                <!-- 작업하실때 style bg는 지워주세요 -->
+                                <div class="chart-wrap h-240" style="background-color: gray;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="dashboard-box">
+                            <div class="dashboard-box__head">
+                                <p class="title">개발계획신청</p>
+                                <a href="javascript:void(0)" class="more">
+                                    <i class="icon-plus"></i>
+                                    더보기
+                                </a>
+                            </div>
+                            <div class="dashboard-box__content">
+                                <!-- 작업하실때 style bg는 지워주세요 -->
+                                <div class="chart-wrap h-300" style="background-color: gray;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="dashboard-box city">
+                            <div class="dashboard-box__head">
+                                <p class="title">지자체별 접속</p>
+                                <a href="javascript:void(0)" class="more">
+                                    <i class="icon-plus"></i>
+                                    더보기
+                                </a>
+                            </div>
+                            <ul class="city-list">
+                                <li>
+                                    <p class="city">서울특별시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">울산광역시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">인천광역시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">전북특별자치도</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">인천광역시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">LX</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">서울특별시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">서울특별시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">서울특별시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">서울특별시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                                <li>
+                                    <p class="city">서울특별시</p>
+                                    <p class="cnt">2,740</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @@include('@@webRoot/_include/_footer.html')
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -44,18 +44,20 @@ function htmllintReporter(filepath, issues) {
 }
 
 function html() {
-  return gulp
-    .src([paths.html])
-    .pipe(htmllint({}, htmllintReporter))
-    .pipe(
-      fileinclude({
-        prefix: "@@", //사용할땐 앞에@@ 를 붙이면됨
-        basepath: "@file",
-      })
-    )
-    .pipe(prettier({ singleQuote: true, printWidth: 300 }))
-    .pipe(gulp.dest(dist))
-    .pipe(connect.reload());
+  return (
+    gulp
+      .src([paths.html])
+      //.pipe(htmllint({}, htmllintReporter))
+      .pipe(
+        fileinclude({
+          prefix: "@@", //사용할땐 앞에@@ 를 붙이면됨
+          basepath: "@file",
+        })
+      )
+      .pipe(prettier({ singleQuote: true, printWidth: 300 }))
+      .pipe(gulp.dest(dist))
+      .pipe(connect.reload())
+  );
 }
 
 function js() {
@@ -109,8 +111,8 @@ function server(done) {
   connect.server({
     root: "./dist/",
     livereload: true,
-    //host: "192.168.0.138",
-    port: 9655,
+    // host: "192.168.0.138",
+    port: 9200,
   });
 
   done();
